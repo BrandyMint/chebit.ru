@@ -998,7 +998,7 @@ fieldset {
   border: none;
   margin-bottom: 20px;
   margin-left: 0;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 10px 10px 20px;
 }
 /* line 18, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset.buttons {
@@ -1072,7 +1072,7 @@ div label.string, div label.date, div label.select, div label.text, div label.pa
 /* line 69, ../../app/stylesheets/sass_tools/simple_form.sass */
 label {
   float: left;
-  width: 200px;
+  width: 170px;
   cursor: pointer;
   display: block;
   font-size: 14px;
@@ -1154,7 +1154,7 @@ select {
 
 /* line 129, ../../app/stylesheets/sass_tools/simple_form.sass */
 label {
-  width: 200px;
+  width: 170px;
 }
 /* line 130, ../../app/stylesheets/sass_tools/simple_form.sass */
 label.checks, label.boolean, label.radio, label.check {
@@ -1205,7 +1205,7 @@ span.error {
   display: block;
   clear: both;
   margin-bottom: 10px;
-  padding-left: 203px;
+  padding-left: 173px;
   font-weight: bold;
 }
 
@@ -1251,7 +1251,7 @@ legend {
 span.hint, small.hint {
   clear: both;
   display: block;
-  padding-left: 203px;
+  padding-left: 173px;
   color: #777777;
   font-size: 12px;
 }

@@ -993,18 +993,18 @@ button[disabled]:active {
   text-shadow: none;
 }
 
-/* line 13, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 14, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset {
   border: none;
   margin-bottom: 20px;
   margin-left: 0;
   padding: 20px 10px 10px 20px;
 }
-/* line 18, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 19, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset.buttons {
   padding: 0px 20px 10px 20px;
 }
-/* line 20, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 21, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset.inputs {
   background: #eeeeee;
   -moz-border-radius: 10px;
@@ -1014,11 +1014,11 @@ fieldset.inputs {
   -khtml-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 23, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 24, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset h2 {
   margin: 0 0 12px 0;
 }
-/* line 26, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 27, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset .act input {
   margin-bottom: 11px;
 }
@@ -1032,47 +1032,47 @@ fieldset .act input {
 /*     color: #aaa */
 /*     &.first */
 /*       border-top: none */
-/* line 38, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 39, ../../app/stylesheets/sass_tools/simple_form.sass */
 div {
   padding: 0px;
 }
-/* line 40, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 41, ../../app/stylesheets/sass_tools/simple_form.sass */
 div.string, div.boolean, div.date, div.select, div.text, div.password, div.radio, div.email {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
 }
-/* line 45, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 46, ../../app/stylesheets/sass_tools/simple_form.sass */
 div.boolean input, div.check input, div.radio input {
   width: 13px;
   display: block;
   float: left;
 }
-/* line 49, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 50, ../../app/stylesheets/sass_tools/simple_form.sass */
 div label {
   display: block;
 }
-/* line 51, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 52, ../../app/stylesheets/sass_tools/simple_form.sass */
 div label.collection_check_boxes, div label.collection_radio {
   display: inline;
   float: left;
   margin: 0px 12px 0px 0px;
   line-height: 13px;
 }
-/* line 56, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 57, ../../app/stylesheets/sass_tools/simple_form.sass */
 div label.checkboxes, div label.radio, div label.boolean {
   display: block;
   clear: both;
 }
-/* line 61, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 62, ../../app/stylesheets/sass_tools/simple_form.sass */
 div label.string, div label.date, div label.select, div label.text, div label.password, div label.email {
   clear: both;
 }
 
-/* line 69, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 70, ../../app/stylesheets/sass_tools/simple_form.sass */
 label {
   float: left;
-  width: 170px;
+  width: 270px;
   cursor: pointer;
   display: block;
   font-size: 14px;
@@ -1080,18 +1080,18 @@ label {
   margin-top: 6px;
   text-shadow: white 0px 1px 0px;
 }
-/* line 80, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 81, ../../app/stylesheets/sass_tools/simple_form.sass */
 label.radio {
   display: block;
   clear: both;
   float: none;
   margin-bottom: 10px;
 }
-/* line 85, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 86, ../../app/stylesheets/sass_tools/simple_form.sass */
 label.required {
   font-weight: bold;
 }
-/* line 88, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 89, ../../app/stylesheets/sass_tools/simple_form.sass */
 label abbr {
   border: none;
   color: red;
@@ -1100,12 +1100,12 @@ label abbr {
   width: 7px;
   padding-right: 5px;
 }
-/* line 95, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 96, ../../app/stylesheets/sass_tools/simple_form.sass */
 label small {
   color: #777777;
 }
 
-/* line 101, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 102, ../../app/stylesheets/sass_tools/simple_form.sass */
 input, textarea, select {
   background: white;
   border: 1px solid #cccccc;
@@ -1118,15 +1118,16 @@ input, textarea, select {
   font-family: arial, helvetica, verdana, "Lucida Grande", "Lucida Sans Unicode";
   font-size: 16px;
   font-weight: normal;
+  width: 350px;
 }
 
-/* line 110, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 111, ../../app/stylesheets/sass_tools/simple_form.sass */
 input, textarea {
   padding: 5px 0px;
   text-indent: 5px;
 }
 
-/* line 115, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 116, ../../app/stylesheets/sass_tools/simple_form.sass */
 select {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -1138,25 +1139,25 @@ select {
   padding: 5px;
 }
 
-/* line 121, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 122, ../../app/stylesheets/sass_tools/simple_form.sass */
 .checks input, .boolean input, .radio input, .check input {
   width: 13px;
   margin: 0 5px 7px 0;
 }
-/* line 124, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 125, ../../app/stylesheets/sass_tools/simple_form.sass */
 .checks input, .checks label, .boolean input, .boolean label, .radio input, .radio label, .check input, .check label {
   display: inline;
 }
-/* line 126, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 127, ../../app/stylesheets/sass_tools/simple_form.sass */
 .checks label.block, .boolean label.block, .radio label.block, .check label.block {
   display: block;
 }
 
-/* line 129, ../../app/stylesheets/sass_tools/simple_form.sass */
-label {
-  width: 170px;
-}
 /* line 130, ../../app/stylesheets/sass_tools/simple_form.sass */
+label {
+  width: 270px;
+}
+/* line 131, ../../app/stylesheets/sass_tools/simple_form.sass */
 label.checks, label.boolean, label.radio, label.check {
   font-weight: normal;
   margin-top: 0px;
@@ -1164,64 +1165,64 @@ label.checks, label.boolean, label.radio, label.check {
   display: inline;
   line-height: 18px;
 }
-/* line 137, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 138, ../../app/stylesheets/sass_tools/simple_form.sass */
 label.collection_radio {
   margin-top: 0px;
   font-weight: normal;
 }
 
-/* line 144, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 145, ../../app/stylesheets/sass_tools/simple_form.sass */
 #error_message {
   font-size: 14px;
   color: red;
   font-weight: bold;
 }
 
-/* line 148, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 149, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset .fieldWithErrors {
   margin: 0px;
   width: 100%;
   padding: 0 0 2px 0;
 }
-/* line 152, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 153, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset .fieldWithErrors select {
   border-color: red;
   background-color: #ffcccc;
 }
-/* line 155, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 156, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset .fieldWithErrors label {
   color: #666666;
 }
-/* line 157, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 158, ../../app/stylesheets/sass_tools/simple_form.sass */
 fieldset .fieldWithErrors input, fieldset .fieldWithErrors textarea {
   background-color: #ffcccc;
   border-color: red;
 }
 
-/* line 161, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 162, ../../app/stylesheets/sass_tools/simple_form.sass */
 span.error {
   font-size: 13px;
   color: red;
   display: block;
   clear: both;
   margin-bottom: 10px;
-  padding-left: 173px;
+  padding-left: 273px;
   font-weight: bold;
 }
 
-/* line 170, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 171, ../../app/stylesheets/sass_tools/simple_form.sass */
 legend {
   color: #4b7399;
   text-align: right;
   font-style: italic;
 }
 
-/* line 175, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 176, ../../app/stylesheets/sass_tools/simple_form.sass */
 .clear {
   clear: both;
 }
 
-/* line 181, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 182, ../../app/stylesheets/sass_tools/simple_form.sass */
 #flash {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1234,28 +1235,28 @@ legend {
   padding: 20px;
   text-align: center;
 }
-/* line 187, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 188, ../../app/stylesheets/sass_tools/simple_form.sass */
 #flash.notice {
   background-color: #25b023;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#42cb7c), to(#25b023));
   background-image: -moz-linear-gradient(center top, #42cb7c 0%, #25b023 100%);
 }
-/* line 189, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 190, ../../app/stylesheets/sass_tools/simple_form.sass */
 #flash.error {
   background-color: #880000;
   background-image: -webkit-gradient(linear, left top, left bottom, from(red), to(#880000));
   background-image: -moz-linear-gradient(center top, red 0%, #880000 100%);
 }
 
-/* line 196, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 197, ../../app/stylesheets/sass_tools/simple_form.sass */
 span.hint, small.hint {
   clear: both;
   display: block;
-  padding-left: 173px;
+  padding-left: 273px;
   color: #777777;
   font-size: 12px;
 }
-/* line 202, ../../app/stylesheets/sass_tools/simple_form.sass */
+/* line 203, ../../app/stylesheets/sass_tools/simple_form.sass */
 span.hint.indent, small.hint.indent {
   text-indent: 20px;
   display: block;

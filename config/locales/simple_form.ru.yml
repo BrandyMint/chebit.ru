@@ -1,0 +1,72 @@
+ru:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'обязательно'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Some errors were found, please take a look:"
+    placeholders:
+      #  login: 'Псевдоним'
+      full_name: 'Василий Пупкин'
+      password: '****'
+      telefon: '+7-999-111-22-33'
+    labels:
+      full_name: 'Фамилия и имя'
+      login: 'Логин'
+      tel: Телефон
+      email: 'Email'
+      password: 'Пароль'
+      password_confirmation: 'Подтверждение'
+      occupation: 'Спецальность' # Профессия, направление деятельности
+      firm: 'Компания'
+      website: 'Веб-сайт'
+      tag_list: 'Технологии'
+      discourse_state: Хотите сделать свой доклад?
+      discourse_subject: Если да, но на какую тему
+      price_confirm: Согласны сделать взнос в 100-200 руб. на питание в течени дня?
+      note: Хотите добавить о себе еще что-нибудь?
+    hints:
+      login: 'Латиница и цифры'
+      full_name: 'Пожалуйста, на русском'
+      tel: Можем и позвонить
+      tag_list: 'Теги, например: ruby, PHP, html5, flash, mysql и т.п.'
+      occupation: 'дизайнер, верстальщик, программист, менеджер, студент и т.д.'
+      discourse_state: Нам нужны докладчики
+      price_confirm: 'Снеки, чай, кофе, конфеты'
+
+  #   = f.input :login
+  #   = f.input :full_name
+  #   = f.input :email, :hint => 'Для аватарки используется <a href="http://gravatar.com/" target="_blank">gravatar.com</a>'.html_safe
+  #   = f.input :password
+  #   = f.input :password_confirmation
+  # -# = f.inputs do
+  # %fieldset.inputs
+  #   = f.input :occupation
+  #   = f.input :firm
+  #   = f.input :url
+    
+  #   -# = f.input :twitter
+  # -# = f.inputs do
+  # %fieldset.inputs
+  #   = f.input :tag_list
+  #   = f.input :discourse_state, :as => :select, :collection => {'Может быть' => :maybe, 'Да, мне есть о чем рассказать!' => :yes, 'Я только послушаю..' => :no}
+  #   = f.input :discourse_subject
+  #   = f.input :price_confirm, :as => :select, :collection => {'Согласен' => true, 'Нет!' => false}
+
+    # Labels and hints examples
+    # labels:
+    #   password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail para efetuar o sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   username: 'User name to sign in.'
+    #   password: 'No special characters, please.'
+

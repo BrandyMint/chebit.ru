@@ -51,3 +51,10 @@ gem "omniauth", :git => "https://github.com/intridea/omniauth.git"
 gem "compass"
 gem "nifty-generators", :group => :development
 gem "jquery-rails", ">= 0.2.6"
+gem "state_machine"
+gem 'acts-as-taggable-on'
+gem "simple_form"
+gem "active_record_defaults"
+gem "rfc-822"
+
+# gem "annotate"

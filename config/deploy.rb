@@ -18,15 +18,15 @@
                :umask,              '02')
 =end
 
-set :application, "chebytoday.ru"
-set :domain, "chebytoday.ru"
+set :application, "chebit.ru"
+set :domain, "chebit.ru"
 set :rails_env, "production"
 #  set :ssh_flags, "-p 222"
-set :deploy_to, "/usr/local/www/chebytoday.ru"
+set :deploy_to, "/usr/local/www/chebit.ru"
 #set :revision,              'master'
 set :keep_releases,	3
 # set :rsync_flags, "--rsh ssh"
-set :repository, 'ssh://dapi.orionet.ru/home/danil/code/chebytoday/.git/'
+set :repository, 'ssh://dapi.orionet.ru/home/danil/code/chebit/.git/'
 
 # for rails
 set :shared_paths, {
@@ -36,7 +36,7 @@ set :shared_paths, {
   'bundle' => 'vendor/bundle'
 }
 
-local_link='dapi.orionet.ru:/home/danil/code/chebytoday'
+local_link='dapi.orionet.ru:/home/danil/code/chebit'
   
 namespace :vlad do
 
@@ -45,16 +45,7 @@ namespace :vlad do
       vlad:update
       vlad:migrate
       vlad:start_web
-      vlad:restart_scheduler
     ]
-#      vlad:cleanup
-
-  # 
-
-  desc "Restart scheduler"
-  remote_task :restart_scheduler do
-    run "cd #{current_release}; RAILS_ENV=production rake scheduler:start"
-  end
   
   # # Add an after_update hook
   # #
@@ -89,7 +80,7 @@ namespace :vlad do
   desc "Share config files (database.yml and app_config.yml)"
   remote_task :share_configs do
     puts "Share config files"
-    run "cd #{current_release}/config/; scp #{local_link}/config/database.yml . ; scp #{local_link}/config/app_config.yml ."
+    run "cd #{current_release}/config/; scp #{local_link}/config/database.yml ."
   end
 
   desc "Exec bundle --deployment"

@@ -1,7 +1,8 @@
 $primary_color: #4b7399
 
 body
-  background-color: $primary_color
+  // background-color: $primary_color
+  background-color: #333
   font:
     family: Verdana, Helvetica, Arial
     size: 14px
@@ -17,12 +18,16 @@ a
   overflow: hidden
 
 #container
-  width: 75%
-  margin: 0 auto
-  background: white
-  padding: 20px 40px
+  width: $content_width
+  margin: 30px auto 10px auto
+  background-image: url(/images/bg.png)
+  background-repeat: repeat-x
+  background-position: top
+  background-color: white
+  // padding: 20px 40px
   border: solid 1px black
-  margin-top: 20px
+  // +border-radius( 10px )
+  +box-shadow( black ) 
 
 #flash_notice,
 #flash_error,

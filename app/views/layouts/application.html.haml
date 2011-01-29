@@ -1,9 +1,10 @@
-!!!
+!!! 5
 %html
 
   %head
-    %title
-      = yield(:title) || "chebit"
+    %title chebit - чебоксарская конференция веб-разработчиков
+    -# = yield(:title) || "chebit"
+      
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'print.css', :media => 'print'
@@ -15,24 +16,16 @@
   %body
     #container
       #header
-        
-        = render 'devise/shared/login'
-        
-        %h1= link_to 'chebit', root_path
-        = show_flash.html_safe
+        = render "shared/header" 
       #content
-      - if show_title?
-        %h2= yield(:title)
+        - if show_title?
+          %h2= yield(:title)
 
-      = yield
+        = yield
         
       #footer
-        %p
-          Developed by 
-          %a{:href=>'http://dapi.ru'} danil 
-          %a{:href=>'http://twitter.com/pismenny/'} @pismenny
-        %p
-          Powered By Ruby On Rails
-          %br
-          = link_to(image_tag('/images/rails.png'),'http://rubyonrails.org/')
+        = render "shared/footer" 
+    #bottom
+      = render "shared/bottom"
 
+    = render :partial => "shared/reformal" 

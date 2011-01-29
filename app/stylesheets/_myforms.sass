@@ -1,0 +1,62 @@
+@import formtastic_base
+//+float-form(!floated_total_width,!floated_label_width,!floated_input_width,!floated_label_padding_x, !floated_button_align,"left")
+// +stack-form(250px, 100px, 0px, "buttons-right", 51px)
+//(!floated_total_width,!floated_label_width,!floated_input_width,!floated_label_padding_x, !floated_button_align, !floated_label_text_align, !floated_select_width )
+//  +float-form(450px,150px,200px,0px,"buttons-right", "left", 0px )
+
+// <li class="string optional" id="user_firm_input">
+//   <label for="user_firm">Firm</label>
+//    <input id="user_firm" maxlength="255" name="user[firm]" type="text" />
+//  </li> 
+// <li class="boolean optional" id="user_price_confirm_input">
+//    <input name="user[price_confirm]" type="hidden" value="0" />
+//    <label for="user_price_confirm">
+//       <input id="user_price_confirm" name="user[price_confirm]" type="checkbox" value="1" />
+//       Price confirm
+//    </label>
+// </li> 
+
+$fs = 14px
+form.formtastic
+  +float-form-right(600px, 250px, 300px, 30px, buttons-right)
+  width: 500px
+
+  font-size: $fs
+
+  input, select
+    font-size: $fs
+    padding: 2px 5px
+  
+  fieldset.inputs
+    +border-radius( 10px )
+    background-color: #eee
+    border: 0px
+    padding: 25px 30px
+    margin-bottom: 30px
+
+  fieldset.buttons
+    border: 0px
+    padding: 25px 30px
+  
+  //+stack-form(250px, 100px, 0px, "buttons-right", 51px)
+  // +formtastic-errors-on-top
+  abbr
+    display: none
+    visibility: hidden
+  li.error
+    color: red
+  .inline-errors
+    font-size: 9px
+    width: 170px
+    clear: both
+  li
+    width: auto
+    height: $fs*2+5px
+    vertical-align: top
+    line-height: $fs*2+5px
+  label
+    color: #666
+  li.required
+    label
+      color: #666
+      font-weight: bold

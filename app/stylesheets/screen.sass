@@ -1,22 +1,60 @@
-@import nifty
 
 // $primary_color = #4B7399
-$content_width = 900px
-/* @import "compass/css3/border-radius"
+$content_width = 800px
+@import "compass/css3/border-radius"
 /* @import "compass/css3/gradient"
-/* @import "compass/css3/box-shadow"
-/* @import "compass/css3/text-shadow"
+@import "compass/css3/box-shadow"
+@import "compass/css3/text-shadow"
 @import "compass/utilities/links/link-colors"
 @import "compass/utilities/lists/horizontal-list"
 
+@import nifty
+
+// @import blue_button
+@import buttons
+@import "sass_tools/mixins.sass"
+@import "sass_tools/simple_form.sass"
+
+
+@import header
+#content
+  padding: 0 40px
+
+@import footer  
+#bottom
+  font-size: 11px
+  width: $content_width
+  margin: 0px auto
+  text-align: right
+  color: #999
+  a
+    +link-colors(#999, red)
+
+button.thoughtbot
+  width: auto
+  padding: 10px 15px
+
+
+
+// @import myforms
+// @import simple_form2
+
+.left
+  float: left
+.right
+  float: right
+
 a
-  +link-colors(#4b7399)
+  +link-colors(#4b7399, red)
 
 
 ul#login
   +horizontal-list
   float: right
 
-#footer
-  margin: 40px
-  text-align: center
+ul
+  // margin: 0px
+  padding: 0px
+  li
+    padding: 10px 0px 0px 0px
+

@@ -1,22 +1,4 @@
 # -*- coding: utf-8 -*-
-=begin
-    simple_set(:deploy_timestamped, true,
-               :deploy_via,         :export,
-               :keep_releases,      5,
-               :migrate_args,       "",
-               :migrate_target,     :latest,
-               :rails_env,          "production",
-               :rake_cmd,           "rake",
-               :revision,           "head",
-               :rsync_cmd,          "rsync",
-               :rsync_flags,        ['-azP', '--delete'],
-               :ssh_cmd,            "ssh",
-               :ssh_flags,          [],
-               :sudo_cmd,           "sudo",
-               :sudo_flags,         ['-p Password:'],
-               :sudo_prompt,        /^Password:/,
-               :umask,              '02')
-=end
 
 set :application, "chebit.ru"
 set :domain, "chebit.ru"

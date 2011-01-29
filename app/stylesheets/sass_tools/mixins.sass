@@ -1,0 +1,93 @@
+=v-grad(!color_1,!color_2)
+  :background-color = !color_2
+  :background-image -webkit-gradient(linear, left top, left bottom, from(#{!color_1}), to(#{!color_2}))
+  :background-image -moz-linear-gradient(center top, #{!color_1} 0%, #{!color_2} 100%)
+
+=h-grad(!color_1,!color_2)
+  :background = !color_1
+  :background -webkit-gradient(linear, left top, right top, from(#{!color_1}), to(#{!color_2}))
+  :background -moz-linear-gradient(center left, #{!color_1} 0%, #{!color_2} 100%)
+
+=shiny-button(!color_1,!color_2,!color_3,!lightness=20,!hover=true)
+  :background = !color_2
+  :background -webkit-gradient(linear, left top, left bottom, color-stop(0, #{!color_1}), color-stop(0.17, #{!color_2}), color-stop(1, #{!color_3}) )
+  :background -moz-linear-gradient(top, #{!color_1} 0%, #{!color_2} 17%,  #{!color_3} 100%)
+  :text-align center
+  :text-decoration none
+  @if !hover
+    &:hover
+      :background = !color_2 + !lightness
+      :background -webkit-gradient(linear, left top, left bottom, color-stop(0, #{!color_1 + !lightness}), color-stop(0.14, #{!color_2 + !lightness}), color-stop(1, #{!color_3 + !lightness}) )
+      :background -moz-linear-gradient(top, #{!color_1 + !lightness} 0%, #{!color_2 + !lightness} 14%,  #{!color_3 + !lightness} 100%)
+  @else
+    :cursor default
+
+=silver-button
+  +shiny-button(#fff,#eaeaea,#ccc)
+  :border 1px solid #999
+  :color #444
+  +letterpress
+
+=black-button
+  +shiny-button(#c8c8c8,#b0b0b0,#232323)
+  :border 1px solid #777
+  :color #fff
+  +letterpress(#111)
+
+=silver-button-pressed
+  +shiny-button(#666,#777,#999)
+  :border 1px solid #666
+  :color #fff
+  +letterpress(#333)
+
+=tab_menu(!radius=5px,!margin_left=5px)
+  +horizontal-list
+  li
+    :margin-left = !margin_left
+    :padding 0
+    &.first
+      :margin-left 0
+    a
+      :display block
+      +border-top-radius(!radius)
+=inset-box-shadow(!color = !default_box_shadow_color, !hoff = !default_box_shadow_h_offset, !voff = !default_box_shadow_v_offset, !blur = !default_box_shadow_blur)
+  :-webkit-box-shadow= "inset" !hoff !voff !blur !color 
+  :-moz-box-shadow= !hoff !voff !blur !color "inset"
+
+=letterpress(!color=#fff)
+  +text-shadow(!color, 0px, 1px, 0px)
+
+=dl-horizontal(!dt_width = 25%, !dd_width = 75%)
+  :clear both
+  :overflow none
+  :float left
+  :width 100%
+  dt, dd
+    :float left
+    :clear none
+    :display block
+    :margin 0px
+  dt
+    :width = !dt_width
+  dd
+    :width = !dd_width
+
+=silver-tabs
+  li
+    :margin 0px
+    :padding 0px
+    :display block
+    :float left
+    :font-size 12px
+    :width 33%
+    &.first a
+      +border-left-radius(14px)
+    &.last a
+      +border-right-radius(14px)
+  a,input
+    :display block
+    +silver-button
+    :padding 5px 0px
+    :width 100%
+    &.active
+      +silver-button-pressed

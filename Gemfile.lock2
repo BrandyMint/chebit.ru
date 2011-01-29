@@ -273,7 +273,6 @@ DEPENDENCIES
   russian!
   shoulda
   simple_form
-  sqlite3-ruby
   state_machine
   stateful_link
   vlad

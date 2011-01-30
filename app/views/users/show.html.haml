@@ -1,0 +1,11 @@
+%h2 Участник &#8470;#{@user.id}
+
+.b-user-show
+  .avatar
+    = img_gravatar( @user.email, :size => 80 ).html_safe
+
+  = show_table( @user, [:full_name, :firm, :occupation, :email, :website, :tag_list ])
+  .clear
+  %p.note= @user.note
+
+= go_back  

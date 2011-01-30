@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
@@ -32,6 +33,18 @@ class User < ActiveRecord::Base
 
   acts_as_taggable
   acts_as_taggable_on :tags
+
+  def show_email
+    email.gsub('@',' [собачка] ')
+  end
+
+  def show_tag_list
+    tag_list
+  end
+
+  def show_website
+    "<a href=\"#{website}\">#{website}</a>".html_safe
+  end
 
 
 end

@@ -1297,7 +1297,7 @@ span.hint.indent, small.hint.indent {
 /* line 8, ../../app/stylesheets/_header.sass */
 #header .logo {
   float: left;
-  width: 300px;
+  width: 270px;
 }
 /* line 11, ../../app/stylesheets/_header.sass */
 #header .logo h1 {
@@ -1319,7 +1319,6 @@ span.hint.indent, small.hint.indent {
 }
 /* line 25, ../../app/stylesheets/_header.sass */
 #header .logo .desc {
-  width: 400px;
   padding: 0px 0px 0px 0px;
   color: gray;
   font-style: italic;
@@ -1329,7 +1328,7 @@ span.hint.indent, small.hint.indent {
 #header .info {
   font-size: 11px;
   float: right;
-  width: 280px;
+  width: 305px;
   color: gray;
 }
 /* line 37, ../../app/stylesheets/_header.sass */
@@ -1354,7 +1353,7 @@ span.hint.indent, small.hint.indent {
   background-position: bottom;
   background-color: white;
   border-top: 1px dashed #999999;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 0px 40px 20px 40px;
   font-size: 11px;
   color: gray;
@@ -1410,13 +1409,33 @@ span.hint.indent, small.hint.indent {
   color: red;
 }
 
-/* line 50, ../../app/stylesheets/screen.sass */
+/* line 2, ../../app/stylesheets/_show_table.sass */
+table.show_table th {
+  text-align: left;
+  width: 200px;
+  color: #666666;
+}
+
+/* line 2, ../../app/stylesheets/_b-user-show.sass */
+.b-user-show .avatar {
+  float: right;
+}
+/* line 4, ../../app/stylesheets/_b-user-show.sass */
+.b-user-show table.show_table {
+  float: left;
+}
+/* line 6, ../../app/stylesheets/_b-user-show.sass */
+.b-user-show table.show_table .user_tag_list {
+  color: gray;
+}
+
+/* line 53, ../../app/stylesheets/screen.sass */
 button.thoughtbot {
   width: auto;
   padding: 10px 15px;
 }
 
-/* line 55, ../../app/stylesheets/screen.sass */
+/* line 57, ../../app/stylesheets/screen.sass */
 a {
   color: #4b7399;
 }
@@ -1425,15 +1444,30 @@ a:hover {
   color: red;
 }
 
-/* line 59, ../../app/stylesheets/screen.sass */
+/* line 60, ../../app/stylesheets/screen.sass */
+a.back {
+  padding-top: 10px;
+}
+
+/* line 63, ../../app/stylesheets/screen.sass */
+h2 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+/* line 66, ../../app/stylesheets/screen.sass */
+h2 span {
+  color: #cccccc;
+}
+
+/* line 70, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 62, ../../app/stylesheets/screen.sass */
+/* line 73, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 64, ../../app/stylesheets/screen.sass */
+/* line 75, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -1463,14 +1497,14 @@ ul#login li:first-child, ul#login li.first {
 ul#login li:last-child, ul#login li.last {
   padding-right: 0;
 }
-/* line 68, ../../app/stylesheets/screen.sass */
+/* line 79, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 73, ../../app/stylesheets/screen.sass */
+/* line 84, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }
@@ -1483,42 +1517,56 @@ ul#login li {
 /*   margin-left: -1ex; */
 /*   margin-right: 1ex; */
 /* } */
-/* line 88, ../../app/stylesheets/screen.sass */
+/* line 99, ../../app/stylesheets/screen.sass */
 img.barcamp {
   width: 300px;
   float: right;
   padding: 0 0 15px 15px;
 }
 
-/* line 93, ../../app/stylesheets/screen.sass */
-.tags {
+/* line 104, ../../app/stylesheets/screen.sass */
+.g-tags {
   padding-top: 40px;
   color: gray;
+}
+
+/* line 108, ../../app/stylesheets/screen.sass */
+.users {
+  padding-top: 20px;
 }
 
 /* line 1, ../../app/stylesheets/_b-user.sass */
 .b-user {
   float: left;
-  width: 300px;
-  height: 100px;
-  border: 1px dotted #999999;
+  width: 225px;
+  height: 50px;
+  padding: 0px 10px 15px 0px;
 }
-/* line 6, ../../app/stylesheets/_b-user.sass */
+/* line 7, ../../app/stylesheets/_b-user.sass */
 .b-user .avatar {
   float: left;
   padding: 0px 10px 5px 0px;
 }
-/* line 9, ../../app/stylesheets/_b-user.sass */
+/* line 10, ../../app/stylesheets/_b-user.sass */
 .b-user .name {
+  line-height: 13px;
   /* font-weight: bold */
   /* color: #666 */
 }
-/* line 12, ../../app/stylesheets/_b-user.sass */
+/* line 15, ../../app/stylesheets/_b-user.sass */
+.b-user .occupation {
+  padding-top: 5px;
+  font-size: 11px;
+  line-height: 11px;
+  color: gray;
+}
+/* line 20, ../../app/stylesheets/_b-user.sass */
 .b-user .info {
   font-size: 11px;
   color: gray;
 }
-/* line 15, ../../app/stylesheets/_b-user.sass */
+/* line 25, ../../app/stylesheets/_b-user.sass */
 .b-user .info .tags {
+  padding-top: 7px;
   font-style: italic;
 }

@@ -8,14 +8,16 @@
 
 
 - if signed_in?
-  %p Вы зарегистрированы.
+  %p
+    %b Вы зарегистрированы.
 - else
   %br
     = link_to "<button class='cupid-green'>Регистрация..</button>".html_safe, new_registration_path(User)
 
+%br
+  = render 'users/users'
+
 .clear
-.tags
+.g-tags
   %em
     Ruby, PHP, Java Servlet, ASP.NET, Perl, Macromedia Flash, Adobe Flex, MySQL, postgresql, JavaScript, AJAX, HTML5, xHTML, CSS3, Apache, ngnix, Linux, TDD/BDD, rspec, cucumber &hellip;
--# %br
--#   = render 'shared/users'

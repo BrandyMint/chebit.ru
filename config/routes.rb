@@ -1,7 +1,15 @@
 Chebit::Application.routes.draw do
+  get "users/show"
+
   devise_for :users
 
   root :to => "welcome#index"
+
+  resources :users do
+    member do
+      get 'show'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

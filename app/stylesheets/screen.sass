@@ -47,13 +47,24 @@ $content_width = 800px
   a
     +link-colors(#999, red)
 
+@import show_table
+@import b-user-show
+
 button.thoughtbot
   width: auto
   padding: 10px 15px
 
-
 a
   +link-colors(#4b7399, red)
+
+a.back
+  padding-top: 10px
+
+h2
+  padding-top: 20px
+  padding-bottom: 10px
+  span
+    color: #ccc
 
 
 ul
@@ -90,8 +101,11 @@ img.barcamp
   float: right
   padding: 0 0 15px 15px
 
-.tags
+.g-tags
   padding-top: 40px
   color: gray
+
+.users
+  padding-top: 20px
 
 @import b-user

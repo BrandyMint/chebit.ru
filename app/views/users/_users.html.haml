@@ -1,0 +1,6 @@
+.users
+  %h2
+    Участники
+    %span (#{@users.count})
+  = render :partial=>'users/user', :collection => @users
+  .clear

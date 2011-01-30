@@ -1,0 +1,7 @@
+.b-user
+  .avatar
+    = img_gravatar( user.email, :size => 40 ).html_safe
+  .name
+    = link_to user.full_name, user
+  .occupation
+    = user.occupation

@@ -8,7 +8,7 @@
 
 
 - if signed_in?
-  %p Вы зарегистрированы
+  %p Вы зарегистрированы.
 - else
   %br
     = link_to "<button class='cupid-green'>Регистрация..</button>".html_safe, new_registration_path(User)

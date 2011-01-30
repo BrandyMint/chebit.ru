@@ -1354,7 +1354,7 @@ span.hint.indent, small.hint.indent {
   background-color: white;
   border-top: 1px dashed #999999;
   margin-top: 30px;
-  padding: 0px 40px 20px 40px;
+  padding: 10px 40px 20px 40px;
   font-size: 11px;
   color: gray;
   width: auto;
@@ -1364,7 +1364,12 @@ span.hint.indent, small.hint.indent {
   margin-top: 15px;
 }
 /* line 15, ../../app/stylesheets/_footer.sass */
+#footer span {
+  float: left;
+}
+/* line 17, ../../app/stylesheets/_footer.sass */
 #footer ul.partners {
+  float: left;
   margin: 0;
   padding: 0;
   border: 0;
@@ -1391,6 +1396,17 @@ span.hint.indent, small.hint.indent {
 #footer ul.partners li:last-child, #footer ul.partners li.last {
   padding-right: 0;
 }
+/* line 20, ../../app/stylesheets/_footer.sass */
+#footer ul.partners li {
+  padding-top: 0px;
+}
+/* line 23, ../../app/stylesheets/_footer.sass */
+#footer ul.partners li:before {
+  color: #666666;
+  content: ",";
+  margin-left: -1ex;
+  margin-right: 1ex;
+}
 
 /* line 41, ../../app/stylesheets/screen.sass */
 #bottom {
@@ -1398,11 +1414,11 @@ span.hint.indent, small.hint.indent {
   width: 800px;
   margin: 0px auto;
   text-align: right;
-  color: #999999;
+  color: #666666;
 }
 /* line 47, ../../app/stylesheets/screen.sass */
 #bottom a {
-  color: #999999;
+  color: #777777;
 }
 /* line 24, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 #bottom a:hover {

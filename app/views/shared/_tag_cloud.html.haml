@@ -1,0 +1,7 @@
+%ul.tag_cloud
+  - tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class|
+    %li.tag= tag.name
+    -# = link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class
+  
+  -# %em
+  -#   Ruby, PHP, Java Servlet, ASP.NET, Perl, Macromedia Flash, Adobe Flex, MySQL, postgresql, JavaScript, AJAX, HTML5, xHTML, CSS3, Apache, ngnix, Linux, TDD/BDD, rspec, cucumber 

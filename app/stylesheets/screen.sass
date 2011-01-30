@@ -72,6 +72,16 @@ ul
   padding: 0px
   li
     padding: 10px 0px 0px 0px
+  &.tag_cloud
+    +horizontal-list
+    li
+      color: gray
+      font-style: italic
+    li:before
+      color: #666
+      content: ","
+      margin-left: -1ex
+      margin-right: 1ex
   &#login
     +horizontal-list
     list-style: none inside
@@ -107,5 +117,6 @@ img.barcamp
 
 .users
   padding-top: 20px
+  padding-bottom: 50px
 
 @import b-user

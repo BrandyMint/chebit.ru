@@ -14,9 +14,12 @@
     = csrf_meta_tag
     = yield(:head)
   %body
+    #topper
+      = render "devise/shared/login"
+      .clear
     #container
       #header
-        = render "shared/header" 
+        = render "layouts/header" 
       #content
         - if show_title?
           %h2= yield(:title)
@@ -24,8 +27,8 @@
         = yield
         
       #footer
-        = render "shared/footer" 
+        = render "layouts/footer" 
     #bottom
-      = render "shared/bottom"
+      = render "layouts/bottom"
 
-    = render :partial => "shared/reformal" 
+    = render :partial => "layouts/reformal" 

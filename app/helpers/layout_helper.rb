@@ -28,11 +28,11 @@ module LayoutHelper
         klass = name
         klass = 'notice' if name.to_s=='alert'
         klass = 'error' if name.to_s=='failure'
-        content_tag :div, msg.html_safe, :class => klass
+        content_tag :div, msg.html_safe, :class => klass, :id => "flash_#{klass}"
       end
       html.to_s.html_safe
     end
-    s
+    s.html_safe
   end
 
   

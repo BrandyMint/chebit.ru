@@ -1,0 +1,10 @@
+.b-user
+  .avatar
+    = img_gravatar( user.email, :size => 40 ).html_safe
+  .name
+    = user.full_name
+  .info
+    .occupation
+      = user.occupation
+    .tags
+      = user.tag_list

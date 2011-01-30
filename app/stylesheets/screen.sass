@@ -10,11 +10,28 @@ $content_width = 800px
 
 @import nifty
 
-// @import blue_button
 @import buttons
+// @import blue_button
+
 @import "sass_tools/mixins.sass"
 @import "sass_tools/simple_form.sass"
+// @import myforms
+// @import simple_form2
 
+
+#topper
+  width: $content_width
+  margin: 30px auto 0px auto
+  color: #999
+  font-size: 12px
+  .avatar
+    display: inline
+    padding-right: 5px
+  a
+    +link-colors(#999, red)
+
+.flashes
+  padding-top: 20px
 
 @import header
 #content
@@ -22,7 +39,7 @@ $content_width = 800px
 
 @import footer  
 #bottom
-  font-size: 11px
+  font-size: 12px
   width: $content_width
   margin: 0px auto
   text-align: right
@@ -35,26 +52,46 @@ button.thoughtbot
   padding: 10px 15px
 
 
-
-// @import myforms
-// @import simple_form2
-
-.left
-  float: left
-.right
-  float: right
-
 a
   +link-colors(#4b7399, red)
 
-
-ul#login
-  +horizontal-list
-  float: right
 
 ul
   // margin: 0px
   padding: 0px
   li
     padding: 10px 0px 0px 0px
+  &#login
+    +horizontal-list
+    list-style: none inside
+    float: right
+    li:before
+      color: #666
+      content: "|"
+      margin-left: -1ex
+      margin-right: 1ex
+    li
+      padding-left: 10px
+      //  &#x00B7;
+      
 
+/* ul{
+/*   list-style: none inside;
+/*   }
+/* ul>li: before{
+/*   content: "\2043";
+/*   margin-left: -1ex;
+/*   margin-right: 1ex;
+/* }
+// welcome/index
+
+img.barcamp
+  width: 300px
+  float: right
+  padding: 0 0 15px 15px
+
+.tags
+  padding-top: 40px
+  color: gray
+
+@import b-user

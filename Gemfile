@@ -30,7 +30,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 #   gem 'webrat'
 # end
 gem "haml-rails"
-gem "formtastic"
+# gem "formtastic"
 gem "rails_config"
 gem "stateful_link"
 gem "wirble", :group => [:test, :development]
@@ -56,5 +56,6 @@ gem 'acts-as-taggable-on'
 gem "simple_form"
 gem "active_record_defaults"
 gem "rfc-822"
+gem "img_gravatar"
 
 # gem "annotate"

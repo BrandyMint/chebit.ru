@@ -1,6 +1,9 @@
 %ul#login
   - if signed_in?
-    %li= link_to "#{current_user.name || current_user.email}", edit_user_registration_path
+    %li
+      .avatar= img_gravatar( current_user.email, :size => 12 ).html_safe
+      = current_user.full_name || current_user.email
+      (#{ link_to "профиль", edit_user_registration_path })
     %li= link_to 'выйти', destroy_user_session_path
   - elsif controller_name != 'sessions'
-    %li= link_to "Вход..", new_user_session_path
+    %li= link_to "вход..", new_user_session_path

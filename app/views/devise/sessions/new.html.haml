@@ -1,12 +1,18 @@
 %h2 Вход
 
-= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   = f.error_messages
-  = f.inputs do
+  // = f.inputs do
+  %fieldset.inputs
     = f.input :email
     = f.input :password
     = f.input :remember_me, :as => :boolean, :checked=>true
-  = f.buttons do
-    = f.commit_button "Войти"
+    // = f.buttons do
+    // = f.button :submit
+  %fieldset.buttons
+    -# = f.button :submit
+    %center
+      %button.thoughtbot Войти
+
 
 = render :partial => "devise/shared/links"

@@ -25,7 +25,7 @@ a img {
 /* line 20, ../../app/stylesheets/_nifty.sass */
 #container {
   width: 800px;
-  margin: 30px auto 10px auto;
+  margin: 20px auto 10px auto;
   background-image: url(/images/bg.png);
   background-repeat: repeat-x;
   background-position: top;
@@ -1072,7 +1072,7 @@ div label.string, div label.date, div label.select, div label.text, div label.pa
 /* line 70, ../../app/stylesheets/sass_tools/simple_form.sass */
 label {
   float: left;
-  width: 270px;
+  width: 200px;
   cursor: pointer;
   display: block;
   font-size: 14px;
@@ -1118,7 +1118,7 @@ input, textarea, select {
   font-family: arial, helvetica, verdana, "Lucida Grande", "Lucida Sans Unicode";
   font-size: 16px;
   font-weight: normal;
-  width: 350px;
+  width: 450px;
 }
 
 /* line 111, ../../app/stylesheets/sass_tools/simple_form.sass */
@@ -1155,7 +1155,7 @@ select {
 
 /* line 130, ../../app/stylesheets/sass_tools/simple_form.sass */
 label {
-  width: 270px;
+  width: 200px;
 }
 /* line 131, ../../app/stylesheets/sass_tools/simple_form.sass */
 label.checks, label.boolean, label.radio, label.check {
@@ -1206,7 +1206,7 @@ span.error {
   display: block;
   clear: both;
   margin-bottom: 10px;
-  padding-left: 273px;
+  padding-left: 203px;
   font-weight: bold;
 }
 
@@ -1252,7 +1252,7 @@ legend {
 span.hint, small.hint {
   clear: both;
   display: block;
-  padding-left: 273px;
+  padding-left: 203px;
   color: #777777;
   font-size: 12px;
 }
@@ -1260,6 +1260,32 @@ span.hint, small.hint {
 span.hint.indent, small.hint.indent {
   text-indent: 20px;
   display: block;
+}
+
+/* line 22, ../../app/stylesheets/screen.sass */
+#topper {
+  width: 800px;
+  margin: 30px auto 0px auto;
+  color: #999999;
+  font-size: 12px;
+}
+/* line 27, ../../app/stylesheets/screen.sass */
+#topper .avatar {
+  display: inline;
+  padding-right: 5px;
+}
+/* line 30, ../../app/stylesheets/screen.sass */
+#topper a {
+  color: #999999;
+}
+/* line 24, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+#topper a:hover {
+  color: red;
+}
+
+/* line 33, ../../app/stylesheets/screen.sass */
+.flashes {
+  padding-top: 20px;
 }
 
 /* line 2, ../../app/stylesheets/_header.sass */
@@ -1316,7 +1342,7 @@ span.hint.indent, small.hint.indent {
   font-weight: bold;
 }
 
-/* line 20, ../../app/stylesheets/screen.sass */
+/* line 37, ../../app/stylesheets/screen.sass */
 #content {
   padding: 0 40px;
 }
@@ -1367,15 +1393,15 @@ span.hint.indent, small.hint.indent {
   padding-right: 0;
 }
 
-/* line 24, ../../app/stylesheets/screen.sass */
+/* line 41, ../../app/stylesheets/screen.sass */
 #bottom {
-  font-size: 11px;
+  font-size: 12px;
   width: 800px;
   margin: 0px auto;
   text-align: right;
   color: #999999;
 }
-/* line 30, ../../app/stylesheets/screen.sass */
+/* line 47, ../../app/stylesheets/screen.sass */
 #bottom a {
   color: #999999;
 }
@@ -1384,23 +1410,13 @@ span.hint.indent, small.hint.indent {
   color: red;
 }
 
-/* line 33, ../../app/stylesheets/screen.sass */
+/* line 50, ../../app/stylesheets/screen.sass */
 button.thoughtbot {
   width: auto;
   padding: 10px 15px;
 }
 
-/* line 42, ../../app/stylesheets/screen.sass */
-.left {
-  float: left;
-}
-
-/* line 44, ../../app/stylesheets/screen.sass */
-.right {
-  float: right;
-}
-
-/* line 47, ../../app/stylesheets/screen.sass */
+/* line 55, ../../app/stylesheets/screen.sass */
 a {
   color: #4b7399;
 }
@@ -1409,7 +1425,15 @@ a:hover {
   color: red;
 }
 
-/* line 51, ../../app/stylesheets/screen.sass */
+/* line 59, ../../app/stylesheets/screen.sass */
+ul {
+  padding: 0px;
+}
+/* line 62, ../../app/stylesheets/screen.sass */
+ul li {
+  padding: 10px 0px 0px 0px;
+}
+/* line 64, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -1417,6 +1441,7 @@ ul#login {
   outline: 0;
   overflow: hidden;
   *zoom: 1;
+  list-style: none inside;
   float: right;
 }
 /* line 56, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
@@ -1438,12 +1463,62 @@ ul#login li:first-child, ul#login li.first {
 ul#login li:last-child, ul#login li.last {
   padding-right: 0;
 }
-
-/* line 55, ../../app/stylesheets/screen.sass */
-ul {
-  padding: 0px;
+/* line 68, ../../app/stylesheets/screen.sass */
+ul#login li:before {
+  color: #666666;
+  content: "|";
+  margin-left: -1ex;
+  margin-right: 1ex;
 }
-/* line 58, ../../app/stylesheets/screen.sass */
-ul li {
-  padding: 10px 0px 0px 0px;
+/* line 73, ../../app/stylesheets/screen.sass */
+ul#login li {
+  padding-left: 10px;
+}
+
+/* ul{ */
+/*   list-style: none inside; */
+/*   } */
+/* ul>li: before{ */
+/*   content: "\2043"; */
+/*   margin-left: -1ex; */
+/*   margin-right: 1ex; */
+/* } */
+/* line 88, ../../app/stylesheets/screen.sass */
+img.barcamp {
+  width: 300px;
+  float: right;
+  padding: 0 0 15px 15px;
+}
+
+/* line 93, ../../app/stylesheets/screen.sass */
+.tags {
+  padding-top: 40px;
+  color: gray;
+}
+
+/* line 1, ../../app/stylesheets/_b-user.sass */
+.b-user {
+  float: left;
+  width: 300px;
+  height: 100px;
+  border: 1px dotted #999999;
+}
+/* line 6, ../../app/stylesheets/_b-user.sass */
+.b-user .avatar {
+  float: left;
+  padding: 0px 10px 5px 0px;
+}
+/* line 9, ../../app/stylesheets/_b-user.sass */
+.b-user .name {
+  /* font-weight: bold */
+  /* color: #666 */
+}
+/* line 12, ../../app/stylesheets/_b-user.sass */
+.b-user .info {
+  font-size: 11px;
+  color: gray;
+}
+/* line 15, ../../app/stylesheets/_b-user.sass */
+.b-user .info .tags {
+  font-style: italic;
 }

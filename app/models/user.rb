@@ -5,22 +5,23 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible( :email, :password, :password_confirmation, :remember_me,
-                   :tel, :login, :firm,
-                   :full_name, :occupation, :website, :note,
+  attr_accessible( :full_name, :email, :password, :password_confirmation,
+                   :remember_me,
+                   :tel, :firm,
+                   :occupation, :website, :note,
                    :discourse_state, :discourse_subject, :price_confirm, :tag_list )
   
 
   defaults :price_confirm => true
   
   validates_presence_of :full_name
-  validates_presence_of :login
-  validates_uniqueness_of :login
-  validates_uniqueness_of :tel
+  # validates_presence_of :login
+  # validates_uniqueness_of :login
 
   # validates_format_of :email, :with => RFC822::EMAIL
 
 
+  default_scope order(:id)
 
 
   state_machine :discourse_state, :initial => :maybe do

@@ -7,9 +7,11 @@
   %li Кому есть что рассказать и кто хочет узнать новое о любимом занятии.
 
 
-%br
-  = link_to "<button class='cupid-green'>Регистрация..</button>".html_safe, new_registration_path(User)
-
+- if signed_in?
+  %p Вы зарегистрированы
+- else
+  %br
+    = link_to "<button class='cupid-green'>Регистрация..</button>".html_safe, new_registration_path(User)
 
 .clear
 .tags

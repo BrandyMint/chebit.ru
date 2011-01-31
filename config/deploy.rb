@@ -27,6 +27,7 @@ namespace :vlad do
       vlad:update
       vlad:migrate
       vlad:start_web
+vlad:cleanup
     ]
   
   # # Add an after_update hook

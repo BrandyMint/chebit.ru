@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible( :full_name, :email, :password, :password_confirmation,
                    :remember_me,
                    :tel, :firm,
-                   :occupation, :website, :note,
+                   :occupation, :website, :note, :twitter,
                    :discourse_state, :discourse_subject, :price_confirm, :tag_list )
   
 
@@ -46,6 +46,19 @@ class User < ActiveRecord::Base
     "<a href=\"#{website}\">#{website}</a>".html_safe
   end
 
+  def update_with_password(params={}) 
+    if params[:password].blank? 
+      params.delete(:password) 
+      params.delete(:password_confirmation) if params[:password_confirmation].blank? 
+    end 
+    update_attributes(params) 
+  end 
+
+  protected
+  
+  # def password_required?
+  #   !persisted? || password.present? || password_confirmation.present?
+  # end
 
 end
 

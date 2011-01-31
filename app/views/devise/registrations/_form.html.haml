@@ -1,13 +1,15 @@
+= flash
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  // = f.error_messages
+  -# = f.error_messages
   -# = f.inputs do
   %fieldset.inputs
     %legend Личные данные
     = f.input :full_name
     = f.input :email, :as => :email, :hint => 'Для аватарки используется <a href="http://gravatar.com/" target="_blank">gravatar.com</a>'.html_safe
     = f.input :tel, :as => :tel
-    = f.input :password
-    = f.input :password_confirmation
+    - if resource.new_record?
+      = f.input :password
+      = f.input :password_confirmation
   -# = f.inputs do
   %fieldset.inputs
     %legend Занятость

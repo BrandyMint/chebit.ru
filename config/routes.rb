@@ -1,15 +1,18 @@
 Chebit::Application.routes.draw do
-  get "users/show"
 
   devise_for :users
-
+  devise_scope :user do
+    resources :users, :only => [:show]
+  end 
   root :to => "welcome#index"
 
-  resources :users do
-    member do
-      get 'show'
-    end
-  end
+  # resources :users do
+  #   member do
+  #     get 'show'
+  #   end
+  # end
+
+  # match 'users/:id' => 'users#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

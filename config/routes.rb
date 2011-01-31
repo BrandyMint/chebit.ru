@@ -3,7 +3,10 @@ Chebit::Application.routes.draw do
   devise_for :users
   devise_scope :user do
     resources :users, :only => [:show]
-  end 
+  end
+  
+  # https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-edit-their-password-
+  
   root :to => "welcome#index"
 
   # resources :users do

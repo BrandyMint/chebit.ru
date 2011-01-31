@@ -58,4 +58,6 @@ gem "active_record_defaults"
 gem "rfc-822"
 gem "img_gravatar"
 
+gem "exception_notification"
+
 # gem "annotate"

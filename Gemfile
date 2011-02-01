@@ -58,6 +58,8 @@ gem "active_record_defaults"
 gem "rfc-822"
 gem "img_gravatar"
 
-gem "exception_notification"
+gem 'exception_notification_rails3', :require => 'exception_notifier'
+
+#gem "exception_notification_rails3" #, :require => 'exception_notification'
 
 # gem "annotate"

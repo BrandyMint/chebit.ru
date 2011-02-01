@@ -1,5 +1,7 @@
 Chebit::Application.routes.draw do
 
+  resources :discourses
+
   resources :sections
 
   devise_for :users

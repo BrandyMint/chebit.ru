@@ -1,0 +1,19 @@
+= simple_form_for(@discourse) do |f|
+  - if @discourse.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@discourse.errors.count, "error")
+        prohibited this discourse from being saved:
+
+      %ul
+      - @discourse.errors.full_messages.each do |msg|
+        %li= msg
+
+  .inputs
+    = f.input :subject
+    = f.input :text
+    = f.input :author_id
+    = f.input :assigner_id
+
+  .actions
+    = f.button :submit

@@ -1,0 +1,25 @@
+%h1 Listing discourses
+
+%table
+  %tr
+    %th Subject
+    %th Text
+    %th Author
+    %th Assigner
+    %th
+    %th
+    %th
+
+  - @discourses.each do |discourse|
+    %tr
+      %td= discourse.subject
+      %td= discourse.text
+      %td= discourse.author_id
+      %td= discourse.assigner_id
+      %td= link_to 'Show', discourse
+      %td= link_to 'Edit', edit_discourse_path(discourse)
+      %td= link_to 'Destroy', discourse, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Discourse', new_discourse_path

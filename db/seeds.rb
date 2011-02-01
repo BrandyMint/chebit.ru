@@ -1,4 +1,4 @@
-# -*- coding: undecided -*-
+# -*- coding: utf-8 -*-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -9,15 +9,20 @@
 
 Section.create(
                [
-                :name => 'Инвестирование',
-                :desc => 'Поиск финансов, бизнес-планирование'
+                :name => 'Финансирование стартапов',
+                :desc => 'Поиск инвестора, бизнес-планирование, презентация бизнес-идеи'
                ],
                [
                 :name=>'Front End',
-                :desc=>'HTML, CSS, JavaScript, Flash'
-                ],
+                :desc=>'HTML, CSS, JavaScript, Flash, Usability'
+               ],
                [
-                :name=>'Маркетинг и продажи в сети',
+                :name=>'Маркетинг и продажи',
                 :desc=>'Методы привлечения посетителей, упаравление рекламными компаниями'
-                ]
+               ],
+               [
+                :name=>'',
+                :desc=>'Методы привлечения посетителей, упаравление рекламными компаниями'
+               ],
+               
                )

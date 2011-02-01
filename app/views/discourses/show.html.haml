@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Subject:
+  = @discourse.subject
+%p
+  %b Text:
+  = @discourse.text
+%p
+  %b Author:
+  = @discourse.author_id
+%p
+  %b Assigner:
+  = @discourse.assigner_id
+
+= link_to 'Edit', edit_discourse_path(@discourse)
+\|
+= link_to 'Back', discourses_path

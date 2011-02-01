@@ -2,6 +2,7 @@ class SectionsController < ApplicationController
   # GET /sections
   # GET /sections.xml
   def index
+    raise "Super error"
     @sections = Section.all
 
     respond_to do |format|

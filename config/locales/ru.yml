@@ -1,0 +1,20 @@
+ru:
+  attributes:
+    full_name: 'Фамилия и имя'
+    login: 'Логин'
+    tel: Телефон
+    email: 'Email'
+    password: 'Пароль'
+    password_confirmation: 'Подтверждение'
+    occupation: 'Спецальность' # Профессия, направление деятельности
+    firm: 'Компания'
+    website: 'Веб-сайт'
+    tag_list: 'Технологии'
+    discourse_state: Хотите сделать свой доклад?
+    discourse_subject: Если да, но на какую тему
+    price_confirm: Согласны сделать взнос в 100-200 руб. на питание в течени дня?
+    note: Хотите добавить о себе еще что-нибудь?
+    remember_me: Запомнить меня на долго
+  notifier:
+    notify_admin_about_newbie:
+      subject: "[CHEBiT] Новичек"

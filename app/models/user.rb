@@ -21,6 +21,8 @@ class User < ActiveRecord::Base
 
   # validates_format_of :email, :with => RFC822::EMAIL
 
+  after_create :notify_admin
+
 
   default_scope order(:id)
 
@@ -33,6 +35,10 @@ class User < ActiveRecord::Base
 
   acts_as_taggable
   acts_as_taggable_on :tags
+
+  def to_s
+    full_name
+  end
 
   def show_email
     email.gsub('@',' [собачка] ')
@@ -52,7 +58,11 @@ class User < ActiveRecord::Base
       params.delete(:password_confirmation) if params[:password_confirmation].blank? 
     end 
     update_attributes(params) 
-  end 
+  end
+
+  def notify_admin
+    Notifier.notify_admin_about_newbie(self).deliver!
+  end
 
   protected
   

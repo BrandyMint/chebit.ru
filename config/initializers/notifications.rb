@@ -1,7 +1,7 @@
 Chebit::Application.config.middleware.use( ExceptionNotifier,
                                            # :email_prefix => "[Whatever] ",
                                            :sender_address => Settings.mail.sender,
-                                           :exception_recipients => Settings.mail.receiver
+                                           :exception_recipients => Settings.mail.admin_email
                                            )
 #end
 

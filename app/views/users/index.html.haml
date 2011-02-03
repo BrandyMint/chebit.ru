@@ -1,1 +1,5 @@
-= render 'users/users'
+.users
+  %h1
+    Участники
+    %span (#{@users.count})
+  = render 'users/users'

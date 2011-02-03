@@ -2,12 +2,18 @@
 #header
   // width: 100%
   border-bottom: 1px dashed #999
-  margin-bottom: 40px
+  margin-bottom: 0px
   // margin: 0px auto
-  padding: 20px 40px 20px 40px
+  padding: $padding_top $padding_width $padding_top $padding_width
+  h2 
+    color: gray
+    float: right
+    padding: 0px
+    margin: 10px 0px 10px 0px
+    font-size: 20px
   .logo
     float: left
-    width: 270px
+    width: 200px
     h1 
       font-family: impact, sans-serif
       font-size: 48px
@@ -32,10 +38,16 @@
   .info
     font-size: 11px
     float: right
-    width: 305px
+    width: auto 
+    /* 370px
     color: gray
     p
-      padding: 0
-      margin: 5px
+      text-align: right
+      padding: 0 0 7px 0
+      margin: 0 0 5px 0
       span
         font-weight: bold
+      &.conf
+        font-weight: bold
+        color: #333
+        font-size: 12px

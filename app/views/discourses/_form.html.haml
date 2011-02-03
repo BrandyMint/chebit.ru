@@ -1,4 +1,4 @@
-= form_for( @discourse ) do |f|
+= form_for( @discourse || Discourse.new ) do |f|
   -# = form_for(@discourse) do |f|
 
     -# - if @discourse.errors.any?

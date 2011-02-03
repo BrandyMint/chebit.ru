@@ -1,33 +1,82 @@
-%h1
-  Веб-технологии, интернет-стартап.
--# %p 
--#   В поиске команды, финансов, идеи, технологии.
-= image_tag '/images/barcamp.jpg', :width=>300, :class=>'barcamp'
+.toc
+  %h2 Секция &laquo;Финансы&raquo;
+  %ul
+    %li
+      Отбор проектов для инвестиций
+      %i (презентация стартапов)
+    %li
+      Доклады:
+      %ol
+        %li 
+          Инвестиции или бутстраппинг?
+        %li
+          Способы монетизации.
+        %li
+          Реклама и маркетинг интернет-проектов.
+        %li
+          Управление проектами.
 
-%ul
-  Конференция для тех, кто:
-  %li Знаком с интернет-технологиями;
-  %li Занимается разработкой веб-приложений: сайтов, сервисов и игр для интернет;
-  %li Кому есть что рассказать и кто хочет узнать новое о любимом занятии.
+  %h2 Секция &laquo;Технологии&raquo;
+  %ul
+    
+    %li
+      Front-end (html, css, JavaScript, Flash)
+      %ol
+        %li Эффективная валидная верска. Compass (HAML и SASS).
+        %li jQuery &#8212; выбор профессионала.
+    %li
+      Серверная разработка
+      %ol
+        %li Разработка через тестирвоание.
+        %li В веб по рельсам (Ruby On Rails)
+        %li SQL или noSQL (не реляционные базы данных)
+        %li Семинар по темам: деплоинг, железо, администрирование
+      
+-# Находим идею, команду, инвестиции.
 
+.sidebar
+  = image_tag '/images/barcamp.jpg', :width=>300, :class=>'barcamp'
+  %ul
+    %li Есть идея, ищите деньги?
+    %li Занимаетесь разработкой, нужна команда?
+    %li Хотите узнать новые технологии или поделиться с другими?
+  .members
+    .left
+      - if signed_in?
+        %p
+          %b Вы зарегистрированы.
+      - else
+        = link_to "<button class='cupid-green'>Регистрация..</button>".html_safe, new_registration_path(User)
+    .link_to_all
+      = link_to users_path do 
+        Все участники..
+  .clear
+    
+    
+.clear
+-# 1. Реклама, маркетинг и продажи в интернет.
+-# Методы привлечения посетителей, управление рекламными кампаниями в интернет.
 
-- if signed_in?
-  %p
-    %b Вы зарегистрированы.
-- else
-  %br
-    = link_to "<button class='cupid-green'>Регистрация..</button>".html_safe, new_registration_path(User)
+-# 2. Финансирование стартапов.
+-# Поиск инвестора, бизнес-планирование, презентация бизнес-идеи.
 
-%br
-  %h2
-    = link_to users_path do 
-      Участники
-      %span (#{User.all.count})
-  -# %h2
-  -#   = link_to discourses_path do
-  -#     Доклады
-  -#     %span (#{Discourse.all.count})
+-# 4. FrontEnd
+-# Дизайн и верстка (html, css), JavaScript, Flash, юзабилити.
+
+-# 5. Серверная разработка.
+-# Управление командой, технологии разработки, PHP, Perl, Ruby, TDD/BDD, базы данных и т.д. и т.п.
+
+-# = render 'discourses/welcome'
+-# %h2
+-#   = link_to discourses_path do
+-#     Доклады
+-#     %span (#{Discourse.all.count})
+
+= render 'layouts/likes'
+
 
 .clear
+
+
 
 = render 'shared/tag_cloud'

@@ -4,6 +4,7 @@ describe User do
   pending "add some examples to (or delete) #{__FILE__}"
 end
 
+
 # == Schema Information
 #
 # Table name: users
@@ -26,10 +27,13 @@ end
 #  updated_at           :datetime
 #  full_name            :string(255)     not null
 #  firm                 :string(255)
-#  url                  :string(255)
+#  website              :string(255)
 #  occupation           :string(255)
 #  note                 :text
 #  discourse_state      :string(255)
 #  discourse_subject    :string(255)
+#  price_confirm        :boolean         default(FALSE), not null
+#  twitter              :string(255)
+#  tel                  :string(255)
 #
 

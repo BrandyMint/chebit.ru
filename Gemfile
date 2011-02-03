@@ -62,4 +62,6 @@ gem 'exception_notification_rails3', :require => 'exception_notifier'
 
 #gem "exception_notification_rails3" #, :require => 'exception_notification'
 
-# gem "annotate"
+gem "annotate"
+
+gem "cancan"

@@ -1,19 +1,21 @@
-= simple_form_for(@discourse) do |f|
-  - if @discourse.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@discourse.errors.count, "error")
-        prohibited this discourse from being saved:
+= form_for( @discourse ) do |f|
+  -# = form_for(@discourse) do |f|
 
-      %ul
-      - @discourse.errors.full_messages.each do |msg|
-        %li= msg
+    -# - if @discourse.errors.any?
+    -#   #error_explanation
+    -#     %h2
+    -#       = pluralize(@discourse.errors.count, "error")
+    -#       prohibited this discourse from being saved:
 
-  .inputs
-    = f.input :subject
-    = f.input :text
-    = f.input :author_id
-    = f.input :assigner_id
+    -#     %ul
+    -#     - @discourse.errors.full_messages.each do |msg|
+    -#       %li= msg
+  = f.text_field :subject
+  -# = f.input :text
+  -# = f.input :author_id
+  -# = f.input :assigner_id
+  %button.cupid-green Ok
+  -# = link_to "<button class='cupid-green'>Я бы сам сделал доклад..</button>".html_safe, new_discourse_path
 
-  .actions
-    = f.button :submit
+  -# .actions
+  -#   = f.button :submit

@@ -23,6 +23,8 @@ class User < ActiveRecord::Base
 
   after_create :notify_admin
 
+  has_many :assigned_discourses, :class_name => Discourse, :foreign_key => :assigner_id
+  has_many :authored_discourses, :class_name => Discourse, :foreign_key => :author_id
 
   default_scope order(:id)
 
@@ -72,6 +74,7 @@ class User < ActiveRecord::Base
 
 end
 
+
 # == Schema Information
 #
 # Table name: users
@@ -94,10 +97,13 @@ end
 #  updated_at           :datetime
 #  full_name            :string(255)     not null
 #  firm                 :string(255)
-#  url                  :string(255)
+#  website              :string(255)
 #  occupation           :string(255)
 #  note                 :text
 #  discourse_state      :string(255)
 #  discourse_subject    :string(255)
+#  price_confirm        :boolean         default(FALSE), not null
+#  twitter              :string(255)
+#  tel                  :string(255)
 #
 

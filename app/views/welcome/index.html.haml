@@ -1,3 +1,7 @@
+%h1
+  Веб-технологии, интернет-стартап.
+-# %p 
+-#   В поиске команды, финансов, идеи, технологии.
 = image_tag '/images/barcamp.jpg', :width=>300, :class=>'barcamp'
 
 %ul
@@ -15,7 +19,14 @@
     = link_to "<button class='cupid-green'>Регистрация..</button>".html_safe, new_registration_path(User)
 
 %br
-  = render 'users/users'
+  %h2
+    = link_to users_path do 
+      Участники
+      %span (#{User.all.count})
+  %h2
+    = link_to discourses_path do
+      Доклады
+      %span (#{Discourse.all.count})
 
 .clear
 

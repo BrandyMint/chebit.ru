@@ -22,42 +22,31 @@ $padding_top = $padding_bottom
 // @import myforms
 // @import simple_form2
 
+
+@import topper
+@import header
+@import content
+@import footer  
+@import bottom
+
+@import show_table
+@import b-user
+@import b-user-show
+.users
+  padding-top: 20px
+  padding-bottom: 50px
+
+@import discourses
+@import sidebar
+@import toc
+
+
 h1
   padding-bottom: 30px
-
-
-#topper
-  width: $content_width
-  margin: 30px auto 0px auto
-  color: #999
-  font-size: 12px
-  .avatar
-    display: inline
-    padding-right: 5px
-  a
-    +link-colors(#999, red)
-
 .flashes
   padding-top: 20px
 
-@import header
-#content
-  padding: 25px $padding_width 10px $padding_width
 
-@import footer  
-#bottom
-  font-size: 12px
-  width: $content_width
-  margin: 0px auto
-  text-align: right
-  color: #666
-  a
-    +link-colors(#777, red)
-
-@import show_table
-@import b-user-show
-
-@import discourses
 
 button.thoughtbot
   width: auto
@@ -65,9 +54,8 @@ button.thoughtbot
 
 a
   +link-colors(#4b7399, red)
-
-a.back
-  padding-top: 10px
+  &.back
+    padding-top: 10px
 
 h2
   padding-top: 20px
@@ -81,6 +69,9 @@ h2
 .right
   float: right
 
+.likes
+  padding-top: 40px
+  padding-bottom: 20px
 
 ul
   // margin: 0px
@@ -124,11 +115,3 @@ ul
 /* .g-tags
 /*   padding-top: 40px
 /*   color: gray
-
-.users
-  padding-top: 20px
-  padding-bottom: 50px
-
-@import b-user
-@import sidebar
-@import toc

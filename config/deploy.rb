@@ -70,6 +70,8 @@ vlad:cleanup
   remote_task :bundle do
     puts "Exec bundle"
     #run "cd #{current_release}; sudo bundle install --deployment" # На FreeBSD только через sudo
+    
+    # Вызывать sudo только для setup?
     run "cd #{current_release}; bundle --without development --without test" # На FreeBSD только через sudo
     # chown current_release after bundle
   end

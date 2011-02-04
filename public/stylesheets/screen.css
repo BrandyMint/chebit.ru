@@ -1342,20 +1342,21 @@ h1 {
   font-size: 11px;
   float: right;
   width: auto;
+  padding-top: 3px;
   /* 370px */
   color: gray;
 }
-/* line 44, ../../app/stylesheets/_header.sass */
+/* line 45, ../../app/stylesheets/_header.sass */
 #header .info p {
   text-align: right;
   padding: 0 0 7px 0;
   margin: 0 0 5px 0;
 }
-/* line 48, ../../app/stylesheets/_header.sass */
+/* line 49, ../../app/stylesheets/_header.sass */
 #header .info p span {
   font-weight: bold;
 }
-/* line 50, ../../app/stylesheets/_header.sass */
+/* line 51, ../../app/stylesheets/_header.sass */
 #header .info p.conf {
   font-weight: bold;
   color: #333333;

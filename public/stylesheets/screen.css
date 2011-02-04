@@ -1447,34 +1447,34 @@ table.show_table th {
 /* line 1, ../../app/stylesheets/_b-user.sass */
 .b-user {
   float: left;
-  width: 225px;
+  width: 235px;
   height: 50px;
   padding: 0px 10px 15px 0px;
 }
-/* line 7, ../../app/stylesheets/_b-user.sass */
+/* line 8, ../../app/stylesheets/_b-user.sass */
 .b-user .avatar {
   float: left;
   padding: 0px 10px 5px 0px;
 }
-/* line 10, ../../app/stylesheets/_b-user.sass */
+/* line 11, ../../app/stylesheets/_b-user.sass */
 .b-user .name {
   line-height: 13px;
   /* font-weight: bold */
   /* color: #666 */
 }
-/* line 15, ../../app/stylesheets/_b-user.sass */
+/* line 16, ../../app/stylesheets/_b-user.sass */
 .b-user .occupation {
   padding-top: 5px;
   font-size: 11px;
   line-height: 11px;
   color: gray;
 }
-/* line 20, ../../app/stylesheets/_b-user.sass */
+/* line 21, ../../app/stylesheets/_b-user.sass */
 .b-user .info {
   font-size: 11px;
   color: gray;
 }
-/* line 25, ../../app/stylesheets/_b-user.sass */
+/* line 26, ../../app/stylesheets/_b-user.sass */
 .b-user .info .tags {
   padding-top: 7px;
   font-style: italic;
@@ -1623,6 +1623,7 @@ h2 span {
 
 /* line 76, ../../app/stylesheets/screen.sass */
 .ad {
+  margin-top: 20px;
   padding: 10px 20px 10px 20px;
   text-align: center;
   font-size: 14px;
@@ -1635,15 +1636,15 @@ h2 span {
   background-color: #eeeeee;
 }
 
-/* line 84, ../../app/stylesheets/screen.sass */
+/* line 85, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 87, ../../app/stylesheets/screen.sass */
+/* line 88, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 89, ../../app/stylesheets/screen.sass */
+/* line 90, ../../app/stylesheets/screen.sass */
 ul.tag_cloud {
   margin: 0;
   padding: 0;
@@ -1672,19 +1673,19 @@ ul.tag_cloud li:first-child, ul.tag_cloud li.first {
 ul.tag_cloud li:last-child, ul.tag_cloud li.last {
   padding-right: 0;
 }
-/* line 92, ../../app/stylesheets/screen.sass */
+/* line 93, ../../app/stylesheets/screen.sass */
 ul.tag_cloud li {
   color: gray;
   font-style: italic;
 }
-/* line 95, ../../app/stylesheets/screen.sass */
+/* line 96, ../../app/stylesheets/screen.sass */
 ul.tag_cloud li:before {
   color: #666666;
   content: ",";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 100, ../../app/stylesheets/screen.sass */
+/* line 101, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -1714,14 +1715,14 @@ ul#login li:first-child, ul#login li.first {
 ul#login li:last-child, ul#login li.last {
   padding-right: 0;
 }
-/* line 104, ../../app/stylesheets/screen.sass */
+/* line 105, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 109, ../../app/stylesheets/screen.sass */
+/* line 110, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }

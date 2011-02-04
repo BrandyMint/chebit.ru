@@ -1622,14 +1622,28 @@ h2 span {
 }
 
 /* line 76, ../../app/stylesheets/screen.sass */
+.ad {
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+}
+
+/* line 84, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 79, ../../app/stylesheets/screen.sass */
+/* line 87, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 81, ../../app/stylesheets/screen.sass */
+/* line 89, ../../app/stylesheets/screen.sass */
 ul.tag_cloud {
   margin: 0;
   padding: 0;
@@ -1637,6 +1651,7 @@ ul.tag_cloud {
   outline: 0;
   overflow: hidden;
   *zoom: 1;
+  padding-top: 20px;
 }
 /* line 56, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
 ul.tag_cloud li {
@@ -1657,19 +1672,19 @@ ul.tag_cloud li:first-child, ul.tag_cloud li.first {
 ul.tag_cloud li:last-child, ul.tag_cloud li.last {
   padding-right: 0;
 }
-/* line 83, ../../app/stylesheets/screen.sass */
+/* line 92, ../../app/stylesheets/screen.sass */
 ul.tag_cloud li {
   color: gray;
   font-style: italic;
 }
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 95, ../../app/stylesheets/screen.sass */
 ul.tag_cloud li:before {
   color: #666666;
   content: ",";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 91, ../../app/stylesheets/screen.sass */
+/* line 100, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -1699,14 +1714,14 @@ ul#login li:first-child, ul#login li.first {
 ul#login li:last-child, ul#login li.last {
   padding-right: 0;
 }
-/* line 95, ../../app/stylesheets/screen.sass */
+/* line 104, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 100, ../../app/stylesheets/screen.sass */
+/* line 109, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }

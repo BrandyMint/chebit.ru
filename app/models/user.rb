@@ -42,9 +42,9 @@ class User < ActiveRecord::Base
     full_name
   end
 
-  def show_email
-    email.gsub('@',' [собачка] ')
-  end
+  def anti_email
+     email.gsub('@',' [собачка] ')
+   end
 
   def show_tag_list
     tag_list
@@ -64,6 +64,14 @@ class User < ActiveRecord::Base
 
   def notify_admin
     Notifier.notify_admin_about_newbie(self).deliver!
+  end
+
+  def to_label
+    to_s
+  end
+
+  def self.typus_constantize
+    self
   end
 
   protected

@@ -4,6 +4,7 @@ ru:
     login: 'Логин'
     tel: Телефон
     email: 'Email'
+    anti_email: 'Email'
     password: 'Пароль'
     password_confirmation: 'Подтверждение'
     occupation: 'Спецальность' # Профессия, направление деятельности

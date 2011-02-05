@@ -4,7 +4,10 @@
   .avatar
     = img_gravatar( @user.email, :size => 80 ).html_safe
 
-  = show_table( @user, [:full_name, :firm, :occupation, :email, :website, :tag_list ])
+  - if signed_in?
+    = show_table( @user, [:full_name, :firm, :occupation, :email, :tel, :website, :tag_list ])
+  - else 
+    = show_table( @user, [:full_name, :firm, :occupation, :website, :tag_list ])
   .clear
   %p.note= @user.note
 

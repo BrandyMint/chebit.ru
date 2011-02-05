@@ -6,3 +6,5 @@
 
     %p
       = link_to @user, user_url(@user)
+    %p
+      = mail_to @user.email

@@ -7,22 +7,22 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
-Section.create(
-               [
-                :name => 'Финансирование стартапов',
-                :desc => 'Поиск инвесторов, бизнес-планирование, презентация бизнес-идеи'
-               ],
-               [
-                :name=>'Маркетинг и продажи',
-                :desc=>'Методы привлечения посетителей, упаравление рекламными компаниями'
-               ],
-               [
-                :name=>'Front End',
-                :desc=>'HTML, CSS, JavaScript, Flash, Usability'
-               ],
-               [
-                :name=>'',
-                :desc=>'Методы привлечения посетителей, упаравление рекламными компаниями'
-               ],
-               
-               )
+Section.create!(
+                [
+                 {
+                   :name=>'Инвестирование стартапов',
+                   :desc=>'Поиск инвесторов, бизнес-планирование, презентация бизнес-идеи'
+                 },
+                 {
+                   :name=>'Маркетинг и продажи в интернет',
+                   :desc=>'Методы привлечения посетителей, упаравление рекламными компаниями'
+                 },
+                 {
+                   :name=>'Front-end разработа',
+                   :desc=>'HTML, CSS, JavaScript, Flash, Usability'
+                 },
+                 {
+                   :name=>'Back-end разработка',
+                   :desc=>'PHP, Perl, Ruby, TDD, Unix, SQL и т.д.'
+                 }
+               ] )

@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   end
   
   def index
-    @users = User.all
+    @tags = params[:tags]
+    @users = @tags ? User.tagged_with(@tags) : User.all
   end
 
 end

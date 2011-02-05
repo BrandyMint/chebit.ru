@@ -1,13 +1,26 @@
 class Discourse < ActiveRecord::Base
 
-  attr_protected :moderated?
+  # attr_protected :is_moderated
 
-  belongs_to :author, :class_name => User
-  belongs_to :assigner, :class_name => User
+  belongs_to :author, :class_name => "User"
+  belongs_to :assigner, :class_name => "User"
 
   belongs_to :section
-  
-  
+
+  validates_presence_of :subject
+
+  default :is_moderated=>true
+
+  acts_as_list :scope=>:section_id
+
+  default_scope order(:position)
+
+  before_save :set_author
+
+  def set_author
+    self.author = self.assigner if assigner.present? && !author
+  end
+
 end
 
 # == Schema Information

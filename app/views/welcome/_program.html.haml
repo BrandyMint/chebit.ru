@@ -1,0 +1,13 @@
+.program
+  - Section.all.each do |section|
+    %h2= section.name
+
+    %ul
+      - section.discourses.all.each do |discours|
+        %li
+          = discours.subject
+          - if discours.assigner
+            .assigner= link_to discours.assigner, discours.assigner
+          - else
+            .wait_assigner ищет докладчика
+      

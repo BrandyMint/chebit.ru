@@ -1,5 +1,8 @@
 class Section < ActiveRecord::Base
   has_many :discourses
+  acts_as_list
+
+  default_scope order(:position)
 end
 
 # == Schema Information

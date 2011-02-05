@@ -1,6 +1,8 @@
-%ul.tag_cloud
+%ul.tag_cloud#tags
   - tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class|
-    %li.tag= tag.name
+    %li.tag(class=css_class)
+      = tag.name
+      %sup= tag.count
     -# = link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class
   
   -# %em

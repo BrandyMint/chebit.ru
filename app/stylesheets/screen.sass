@@ -35,10 +35,17 @@ $padding_top = $padding_bottom
 .users
   padding-top: 20px
   padding-bottom: 50px
+  h2.left
+    padding-top: 0
+    margin-top: 0
+    span
+      color: gray
 
 @import discourses
 @import sidebar
-@import toc
+// @import toc
+@import program
+@import tags
 
 
 h1
@@ -87,17 +94,6 @@ ul
   padding: 0px
   li
     padding: 10px 0px 0px 0px
-  &.tag_cloud
-    +horizontal-list
-    padding-top: 20px
-    li
-      color: gray
-      font-style: italic
-    li:before
-      color: #666
-      content: ","
-      margin-left: -1ex
-      margin-right: 1ex
   &#login
     +horizontal-list
     list-style: none inside

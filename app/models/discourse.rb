@@ -17,6 +17,8 @@ class Discourse < ActiveRecord::Base
 
   before_save :set_author
 
+  KIND=%w(discourse seminar other)
+
   def set_author
     self.author = self.assigner if assigner.present? && !author
   end

@@ -6,8 +6,9 @@
       - section.discourses.all.each do |discours|
         %li
           = discours.subject
-          - if discours.assigner
-            .assigner= link_to discours.assigner, discours.assigner
-          - else
-            .wait_assigner ищет докладчика
+          - unless discours.kind=='other'
+            - if discours.assigner
+              .assigner= link_to discours.assigner, discours.assigner
+            - else
+              .wait_assigner ищет докладчика
       

@@ -7,6 +7,8 @@ Discourse:
     #default: subject, position #, text, author, assigner, is_moderated
     default: subject, section, kind, position, author, assigner, is_moderated
     form: section, subject, text, kind, author, assigner, position, is_moderated
+    options:
+      selectors: kind
   order_by: section_id, position
   relationships: assigner, author, section
   filters: created_at

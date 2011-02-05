@@ -3,6 +3,8 @@ class Section < ActiveRecord::Base
   acts_as_list
 
   default_scope order(:position)
+
+  scope :show, where(:show=>true)
 end
 
 # == Schema Information

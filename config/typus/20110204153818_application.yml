@@ -20,7 +20,7 @@ Discourse:
 Section:
   fields:
     default: name, position
-    form: name, desc, position
+    form: name, desc, position, show
   order_by: position
   # relationships: discourses
   application: chebit

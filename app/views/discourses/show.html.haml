@@ -1,18 +1,27 @@
 %p#notice= notice
 
-%p
-  %b Subject:
-  = @discourse.subject
-%p
-  %b Text:
-  = @discourse.text
-%p
-  %b Author:
-  = @discourse.author_id
-%p
-  %b Assigner:
-  = @discourse.assigner_id
+.b-discourse
+  %p.right
+    Секция
+    %span  &laquo;#{@discourse.section}&raquo;
+  .clear
+  %h1 Доклад &laquo;#{@discourse}&raquo;
+  - if @discourse.author.present? && @discourse.author!=@discourse.assigner
+    %p
+      Автор темы:
+      %span= @discourse.author
+  %p
+    Докладчик:
+    - if @discourse.assigner
+      = link_to @discourse.assigner, @discourse.assigner
+    - else
+      %i
+        в поисках
+  %p.text
+    = @discourse.text
 
-= link_to 'Edit', edit_discourse_path(@discourse)
-\|
-= link_to 'Back', discourses_path
+-# = link_to 'Edit', edit_discourse_path(@discourse)
+-# \|
+-# = link_to 'Back', discourses_path
+
+= go_back

@@ -26,6 +26,7 @@ ru:
       occupation: 'дизайнер, верстальщик, программист, менеджер, студент и т.д.'
       discourse_state: Нам нужны докладчики
       price_confirm: 'Снеки, чай, кофе, конфеты'
+      
 
   #   = f.input :login
   #   = f.input :full_name

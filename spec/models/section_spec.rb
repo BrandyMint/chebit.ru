@@ -4,6 +4,7 @@ describe Section do
   pending "add some examples to (or delete) #{__FILE__}"
 end
 
+
 # == Schema Information
 #
 # Table name: sections
@@ -13,5 +14,7 @@ end
 #  desc       :text
 #  created_at :datetime
 #  updated_at :datetime
+#  position   :integer         not null
+#  show       :boolean         default(TRUE), not null
 #
 

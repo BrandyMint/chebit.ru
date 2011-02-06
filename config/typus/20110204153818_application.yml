@@ -29,10 +29,10 @@ Section:
 
 User:
   fields:
-    default: email, last_sign_in_at, full_name, firm, website, occupation, twitter, tel
-    form: email, reset_password_token, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, confirmation_token, confirmed_at, confirmation_sent_at, authentication_token, full_name, firm, website, occupation, note, discourse_state, discourse_subject, price_confirm, twitter, tel
+    default: full_name, email, last_sign_in_at, invest_money, firm, website, occupation, tel
+    form: full_name, email, firm, website, occupation, note, tel, twitter, invest_money, tag_list
   order_by: created_at
-  relationships: assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
+  # relationships: assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
   filters: created_at
   search: 
   application: chebit

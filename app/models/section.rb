@@ -5,7 +5,12 @@ class Section < ActiveRecord::Base
   default_scope order(:position)
 
   scope :show, where(:show=>true)
+
+  def to_s
+    name
+  end
 end
+
 
 # == Schema Information
 #
@@ -16,5 +21,7 @@ end
 #  desc       :text
 #  created_at :datetime
 #  updated_at :datetime
+#  position   :integer         not null
+#  show       :boolean         default(TRUE), not null
 #
 

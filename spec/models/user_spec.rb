@@ -5,6 +5,7 @@ describe User do
 end
 
 
+
 # == Schema Information
 #
 # Table name: users
@@ -32,8 +33,10 @@ end
 #  note                 :text
 #  discourse_state      :string(255)
 #  discourse_subject    :string(255)
-#  price_confirm        :boolean         default(FALSE), not null
+#  price_confirm        :boolean         default(TRUE), not null
 #  twitter              :string(255)
 #  tel                  :string(255)
+#  invest_money         :decimal(, )     default(0.0), not null
+#  role                 :string(255)
 #
 

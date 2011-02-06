@@ -23,36 +23,26 @@ class DiscoursesController < ApplicationController
 
   # # GET /discourses/1
   # # GET /discourses/1.xml
-  # def show
-  #   @discourse = Discourse.find(params[:id])
-
-  #   respond_to do |format|
-  #     format.html # show.html.erb
-  #     format.xml  { render :xml => @discourse }
-  #   end
-  # end
+   def show
+     @discourse = Discourse.find(params[:id])
+     respond_with @discourse
+   end
 
   # # GET /discourses/new
   # # GET /discourses/new.xml
-  # def new
-  #   @discourse = Discourse.new
-
-  #   respond_to do |format|
-  #     format.html # new.html.erb
-  #     format.xml  { render :xml => @discourse }
-  #   end
-  # end
-
-  # # GET /discourses/1/edit
+   def new
+     authenticate_user! if params[:me]=='assigner'
+     @discourse = Discourse.new
+     respond_with @discourse
+   end
   # def edit
   #   @discourse = Discourse.find(params[:id])
   # end
 
-  # # POST /discourses
-  # # POST /discourses.xml
-  # def create
-  #   @discourse = Discourse.new(params[:discourse])
-
+   def create
+     @discourse = Discourse.create(params[:discourse])
+     respond_with @discourse
+   end
   #   respond_to do |format|
   #     if @discourse.save
   #       format.html { redirect_to(@discourse, :notice => 'Discourse was successfully created.') }

@@ -1,5 +1,10 @@
 ru:
   attributes:
+    subject: Тема
+    text: Подробнее
+    section: Секция
+    author: Автор темы
+    assigner: Доклад делает
     full_name: 'Фамилия и имя'
     login: 'Логин'
     tel: Телефон

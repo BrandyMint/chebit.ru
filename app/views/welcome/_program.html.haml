@@ -1,14 +1,18 @@
 .program
+  %h1 Программа конференции
   - Section.show.each do |section|
-    %h2= section.name
+    %h2 Секция &laquo;#{section.name}&raquo;
 
-    %ul
-      - section.discourses.all.each do |discours|
+    %ol
+      - section.discourses.all.each do |d|
         %li
-          = discours.subject
-          - unless discours.kind=='other'
-            - if discours.assigner
-              .assigner= link_to discours.assigner, discours.assigner
+          - if d.kind=='discourse'
+            = link_to "&laquo;#{d}&raquo;".html_safe, d
+            - if d.assigner
+              .assigner
+                доклад, 
+                = link_to d.assigner, d.assigner
             - else
               .wait_assigner ищет докладчика
-      
+          - else
+            = link_to d, d

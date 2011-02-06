@@ -23,20 +23,27 @@ class Discourse < ActiveRecord::Base
     self.author = self.assigner if assigner.present? && !author
   end
 
+  def to_s
+    subject
+  end
+
 end
+
 
 # == Schema Information
 #
 # Table name: discourses
 #
-#  id          :integer         not null, primary key
-#  subject     :string(255)
-#  text        :text
-#  author_id   :integer
-#  assigner_id :integer
-#  section_id  :integer
-#  moderated?  :boolean         default(FALSE), not null
-#  created_at  :datetime
-#  updated_at  :datetime
+#  id           :integer         not null, primary key
+#  subject      :string(255)
+#  text         :text
+#  author_id    :integer
+#  assigner_id  :integer
+#  section_id   :integer
+#  is_moderated :boolean         default(FALSE), not null
+#  created_at   :datetime
+#  updated_at   :datetime
+#  position     :integer         not null
+#  kind         :string(255)     default("discourse"), not null
 #
 

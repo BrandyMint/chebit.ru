@@ -66,3 +66,5 @@ gem "annotate"
 gem "cancan"
 gem "typus"
 gem "acts_as_list"
+
+gem "cancan"

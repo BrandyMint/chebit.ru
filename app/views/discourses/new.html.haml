@@ -1,5 +1,8 @@
-%h1 New discourse
+- if params[:me]=='author'
+  %h1 Я хочу услышать доклаж о
+- else
+  %h1 Я хочу сделать доклад на тему
 
 = render 'form'
 
-= link_to 'Back', discourses_path
+= go_back

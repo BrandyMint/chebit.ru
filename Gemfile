@@ -49,7 +49,6 @@ gem "ruby_parser", :group => :development
 gem "devise", :git => "git://github.com/plataformatec/devise.git"
 gem "omniauth", :git => "https://github.com/intridea/omniauth.git"
 gem "compass"
-# gem "compass-colors"
 gem "nifty-generators", :group => :development
 gem "jquery-rails", ">= 0.2.6"
 gem "state_machine"

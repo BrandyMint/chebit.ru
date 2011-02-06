@@ -63,7 +63,7 @@ vlad:cleanup
   desc "Share config files (database.yml and app_config.yml)"
   remote_task :share_configs do
     puts "Share config files"
-    run "cd #{current_release}/config/; scp #{local_link}/config/database.yml .; scp -r #{local_link}/config/settings* ."
+    run "cd #{current_release}/config/; scp #{local_link}/config/database.yml . ; scp -r #{local_link}/config/settings* ."
   end
 
   desc "Exec bundle --deployment"

@@ -21,7 +21,7 @@
       - if signed_in?
         = link_to 'взять доклад на себя', discourse_path(@discourse, :assigner=>'me'), :method=>'put', :class=>'lucid'
       - else
-        = link_to 'войдите', new_session_path
+        = link_to 'войдите', new_user_session_path
         на сайт или 
         = link_to 'зарегистрируйтесь', new_user_registration_path
         , чтобы взять этот доклад на себя

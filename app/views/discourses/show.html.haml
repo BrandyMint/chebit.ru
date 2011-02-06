@@ -18,6 +18,8 @@
     - else
       %i
         в поисках
+      - if signed?
+        = link_to 'взять доклад на себя', update_discourse_path(@discourse, :assigner=>'me')
   %p.text
     = @discourse.text
 

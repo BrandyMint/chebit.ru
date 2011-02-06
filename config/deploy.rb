@@ -72,7 +72,7 @@ vlad:cleanup
     #run "cd #{current_release}; sudo bundle install --deployment" # На FreeBSD только через sudo
     
     # Вызывать sudo только для setup?
-    run "cd #{current_release}; bundle --without development --without test" # На FreeBSD только через sudo
+    run "cd #{current_release}; sudo bundle --without development --without test" # На FreeBSD только через sudo
     # chown current_release after bundle
   end
 

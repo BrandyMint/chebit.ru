@@ -12,10 +12,11 @@ module ApplicationHelper
     end
   end
 
-  def go_back
+  def go_back(path=nil)
+    path||=:back
     (
      content_tag( :div, '', :class=>'clear') << 
-     link_to( "&larr; назад".html_safe, :back, :class => 'back' )
+     link_to( "&larr; назад".html_safe, path, :class => 'back' )
      )
   end
 end

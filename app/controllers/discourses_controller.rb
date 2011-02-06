@@ -4,6 +4,8 @@ class DiscoursesController < ApplicationController
 
   respond_to :html, :json
 
+  before_filter :authenticate_user!, :only=>[:update]
+
   def index
     @discourse = Discourse.new
     respond_with @discourses = Discourse.all #  @websites = current_user.websites
@@ -56,9 +58,12 @@ class DiscoursesController < ApplicationController
 
   # # PUT /discourses/1
   # # PUT /discourses/1.xml
-  # def update
-  #   @discourse = Discourse.find(params[:id])
-
+   def update
+     @discourse = Discourse.find(params[:id])
+     params[:discourse] = { :assigner => current_user }  if params[:assigner]
+     @discourse.update_attributes(params[:discourse])
+     respond_with  @discourse
+   end
   #   respond_to do |format|
   #     if @discourse.update_attributes(params[:discourse])
   #       format.html { redirect_to(@discourse, :notice => 'Discourse was successfully updated.') }

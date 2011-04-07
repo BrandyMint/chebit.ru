@@ -31,6 +31,7 @@ namespace :vlad do
       vlad:bundle_install
       vlad:migrate
       vlad:start_app
+      vlad:hoptoad
       vlad:cleanup
     ]
 

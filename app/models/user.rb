@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
 
   # validates_format_of :email, :with => RFC822::EMAIL
 
-  after_create :notify_admin
+  # after_create :notify_admin
 
   has_many :assigned_discourses, :class_name => Discourse.name, :foreign_key => :assigner_id
   has_many :authored_discourses, :class_name => Discourse.name, :foreign_key => :author_id

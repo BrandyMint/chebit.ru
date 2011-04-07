@@ -42,9 +42,9 @@ gem "shoulda", :group => [:test, :development]
 gem "factory_girl_rails", :group => [:test, :development]
 gem "factory_girl_generator", :group => [:test, :development]
 gem "russian", :git => "https://github.com/dima4p/russian.git"
-# gem 'vlad', ">=2.2.0", :group => :development
-# gem 'vlad-helpers', :group => :development, :git => 'git://github.com/dapi/vlad-helpers.git'
-# gem "vlad-git", :group => :development
+gem 'vlad', ">=2.2.0", :group => :deploy
+gem 'vlad-helpers', :group => :deploy, :git => 'git://github.com/dapi/vlad-helpers.git'
+gem "vlad-git", :group => :deploy
 gem "hpricot", :group => :development
 gem "ruby_parser", :group => :development
 gem "devise", :git => "git://github.com/plataformatec/devise.git"

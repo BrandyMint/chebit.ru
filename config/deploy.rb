@@ -19,7 +19,6 @@ namespace :vlad do
     'bundle' => 'vendor/bundle'
   }
 
-
   set :copy_files, {
     '/config/database.yml' => '/config/database.yml',
     '/config/settings*'    => '/config/',

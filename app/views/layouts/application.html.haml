@@ -4,7 +4,7 @@
   %head
     %title CHEBiT - BarCamp-конференция в Чебоксарах
     -# = yield(:title) || "chebit"
-      
+
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     %meta(name="google-site-verification" content="Rw9mqWwoRuPj8QTpPPOYrZeBrUeHc9_MyBXxmyhQB7g")
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
@@ -23,16 +23,16 @@
       .clear
     #container
       #header
-        = render "layouts/header" 
+        = render "layouts/header"
       #content
         - if show_title?
           %h2= yield(:title)
 
         = yield
-        
+
       #footer
-        = render "layouts/footer" 
+        = render "layouts/footer"
     #bottom
       = render "layouts/bottom"
 
-    = render :partial => "layouts/reformal" 
+    = render :partial => "layouts/reformal"

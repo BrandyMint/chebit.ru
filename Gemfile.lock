@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/dapi/vlad-helpers.git
-  revision: 6c973a03a3f2b44ab4868fc6cf62927102b69283
+  revision: c80050904ba1ffca7853571227c9c4337661a4e6
   specs:
     vlad-helpers (0.2.7)
 

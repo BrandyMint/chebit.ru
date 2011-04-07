@@ -1,4 +1,5 @@
 vendor/bundle
+public/stylesheets/*
 rerun*
 coverage*
 capybara*

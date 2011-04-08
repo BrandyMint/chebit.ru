@@ -18,6 +18,7 @@
 
 .sidebar
   = image_tag '/images/barcamp.jpg', :width=>300, :class=>'barcamp'
+  = render 'shared/twitter_widget'
   .members
     .left
       - if signed_in?

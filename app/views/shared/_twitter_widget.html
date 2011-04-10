@@ -3,26 +3,26 @@
 new TWTR.Widget({
   version: 2,
   type: 'search',
-  search: '#chebit',
+  search: 'chebit',
   interval: 6000,
   title: '',
-  subject: 'CHEBiT',
-  width: 250,
-  height: 300,
+  subject: 'CHEBiT в твиттере (#chebit)',
+  width: 'auto',
+  height: 200,
   theme: {
     shell: {
-      background: '#8ec1da',
+      background: '#4b7399',
       color: '#ffffff'
     },
     tweets: {
       background: '#ffffff',
       color: '#444444',
-      links: '#1985b5'
+      links: '#4b7399'
     }
   },
   features: {
-    scrollbar: false,
-    loop: true,
+    scrollbar: true,
+    loop: false,
     live: true,
     hashtags: true,
     timestamp: true,
@@ -32,4 +32,3 @@ new TWTR.Widget({
   }
 }).render().start();
 </script>
-

@@ -6,4 +6,5 @@
       (#{ link_to "профиль", edit_user_registration_path })
     %li= link_to 'выйти', destroy_user_session_path
   - elsif controller_name != 'sessions'
-    %li= link_to "вход..", new_user_session_path
+    %li= link_to 'Регистрация..', new_registration_path(User)
+    %li= link_to "Вход..", new_user_session_path

@@ -20,7 +20,7 @@ $padding_top: $padding_bottom
 @import topper
 @import header
 @import content
-@import footer  
+@import footer
 @import bottom
 
 @import show_table
@@ -38,6 +38,11 @@ $padding_top: $padding_bottom
       color: gray
 
 @import discourses
+
+.leftside
+  float: left
+  width: 400px
+
 @import sidebar
 // @import toc
 @import program
@@ -46,6 +51,7 @@ $padding_top: $padding_bottom
 @import welcome
 
 
+$link_color: #4b7399
 
 h1
   padding-bottom: 30px
@@ -53,7 +59,7 @@ h1
   padding-top: 20px
 
 a
-  +link-colors(#4b7399, red)
+  +link-colors($link_color, red)
   &.back
     padding-top: 10px
   // Яркие ссылки
@@ -84,7 +90,7 @@ h2
   font-size: 14px
   +border-radius(10px)
   background-color: #eee
-  
+
 
 ul
   // margin: 0px
@@ -103,7 +109,7 @@ ul
     li
       padding-left: 10px
       //  &#x00B7;
-      
+
 
 /* ul{
 /*   list-style: none inside;

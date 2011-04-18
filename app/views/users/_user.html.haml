@@ -5,5 +5,11 @@
     = link_to user.full_name, user_path( user )
   .occupation
     = user.occupation
-  .tags
-    = user.tag_list
+  .user-desc
+    .user-discourses-counts
+      - if user.assigned_discourses.exists?
+        Предложения: #{user.assigned_discourses.count}
+      - if user.authored_discourses.exists?
+        Доклады: #{user.authored_discourses.count}
+    .tags
+      = user.tag_list

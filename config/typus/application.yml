@@ -6,22 +6,34 @@ Conference:
   fields:
     default: name # , date
     form: name, date, desc
-  order_by: date
+  order_by: -date
   application: chebit
   relationships: sections
+  actions:
+    show: show
   options:
-    default_action_on_item: show
+    default_action_on_item: edit
     action_after_save: index
+
+ConferenceSection:
+  fields:
+    default: conference, section, position
+  relationships: conference, section
+  order_by: conference_id, position
+  options:
+    action_after_save: index
+  application: chebit
+
 
 Discourse:
   fields:
     #default: subject, position #, text, author, assigner, is_moderated
-    default: conference, section, subject, kind, position, author, assigner, is_moderated
+    default: conference, section, position, subject, kind, author, assigner, is_moderated
     form: conference, section, subject, text, kind, author, assigner, position, is_moderated
     options:
       # read_only: conference
       selectors: kind
-  order_by: section_id, position
+  order_by: conference_id, section_id, position
   relationships: assigner, author, section
   filters: created_at
   search:
@@ -38,15 +50,6 @@ Section:
   application: chebit
   options:
     action_after_save: index
-
-ConferenceSection:
-  fields:
-    default: conference, section, position
-  relationships: conference, section
-  order_by: position
-  options:
-    action_after_save: index
-  application: chebit
 
 User:
   fields:

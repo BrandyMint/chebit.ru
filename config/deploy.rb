@@ -1,33 +1,35 @@
 # -*- coding: utf-8 -*-
 namespace :vlad do
-
   set :application, "chebit.ru"
-  set :domain, "wwwdata@aydamaster.ru"
+  set :domain, "wwwdata@chebit.ru"
   set :rails_env, "production"
   set :deploy_to, "/home/wwwdata/chebit.ru"
-  set :revision,  current_revision # 'master/HEAD'
+  # set :revision,  current_revision # 'master/HEAD'
   set :keep_releases,	3
-  set :local_link, 'danil@dapi.orionet.ru:/home/danil/code/chebit'
-  set :repository, 'ssh://danil@dapi.orionet.ru/home/danil/code/chebit/.git/'
+  set :repository, 'git@github.com:dapi/chebit.ru.git'
   set :web_command, "sudo apache2ctl"
+
+  #set :local_link, 'danil@dapi.orionet.ru:/home/danil/code/chebit'
 
   # for rails
   set :shared_paths, {
     'log'    => 'log',
     'system' => 'public/system',
     'pids'   => 'tmp/pids',
-    'bundle' => 'vendor/bundle'
+    'bundle' => 'vendor/bundle',
+    'config/database.yml' => 'config/database.yml',
+    'config/settings' => 'config/settings',
+    'config/settings.yml' => 'config/settings.yml'
   }
 
-  set :copy_files, {
-    '/config/database.yml' => '/config/database.yml',
-    '/config/settings*'    => '/config/',
-  }
+  # set :copy_files, {
+  #   '/config/database.yml' => '/config/database.yml',
+  #   '/config/settings*'    => '/config/',
+  # }
 
   desc "Full deployment cycle"
   task "deploy" => %w[
       vlad:update
-      vlad:copy_files
       vlad:bundle_install
       vlad:migrate
       vlad:start_app
@@ -35,9 +37,11 @@ namespace :vlad do
       vlad:cleanup
     ]
 
-  remote_task :update do
-    puts revision
-    Rake::Task['vlad:copy_files'].invoke
-    Rake::Task['vlad:bundle_install'].invoke
+  namespace :db do
+    task :clone do
+      run "ssh wwwdata@chebit.ru 'cd /home/wwwdata/chebit.ru/current/; pg_dump -U danil -O chebit_orionet' > ./tmp/production_dump.sql"
+      sh 'cat ./tmp/production_dump.sql | psql chebit_development'
+      Rake::Task["db:migrate"].invoke
+    end
   end
 end

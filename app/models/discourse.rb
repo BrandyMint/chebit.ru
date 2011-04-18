@@ -13,7 +13,7 @@ class Discourse < ActiveRecord::Base
 
   default :is_moderated=>true
 
-  acts_as_list :scope=>:section_id
+  acts_as_list :scope=>:conference_section_id
 
   default_scope order(:position)
 

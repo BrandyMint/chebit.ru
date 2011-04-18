@@ -31,11 +31,10 @@ Discourse:
     default: conference_section, section, position, subject, kind, author, assigner, is_moderated
     form: conference_section, section, subject, text, kind, author, assigner, position, is_moderated
     options:
-      # read_only: conference
       selectors: kind
   order_by: conference_section_id, section_id, position
   relationships:
-  filters: created_at
+  filters: conference_section, section
   search:
   application: chebit
   options:
@@ -44,10 +43,10 @@ Discourse:
 
 Section:
   fields:
-    default: name, position
-    form: name, desc, position, show
-  order_by: position
-  relationships: conferences
+    default: name
+    form: name, desc, show
+  order_by: id
+  relationships: conference_sections
   application: chebit
   options:
     action_after_save: index

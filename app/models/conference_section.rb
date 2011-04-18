@@ -2,6 +2,8 @@ class ConferenceSection < ActiveRecord::Base
   belongs_to :section
   belongs_to :conference
 
+  has_many :discourses
+
   default_scope order("conference_id desc, position")
 
   validates_presence_of :section

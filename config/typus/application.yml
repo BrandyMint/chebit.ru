@@ -28,8 +28,8 @@ ConferenceSection:
 Discourse:
   fields:
     #default: subject, position #, text, author, assigner, is_moderated
-    default: conference_section, section, position, subject, kind, author, assigner, is_moderated
-    form: conference_section, section, subject, text, kind, author, assigner, position, is_moderated
+    default: conference_section, subject, section, assigner, is_moderated, position
+    form: subject, conference_section, section, text, kind, author, assigner, position, is_moderated
     options:
       selectors: kind
   order_by: conference_section_id, section_id, position

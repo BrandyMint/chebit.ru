@@ -2,5 +2,5 @@
 %h1.conference_name= @conference.name
 %p.conference_desc= @conference.desc
 
-- @conference.sections.each do |section|
-  = render 'sections/section', :section=>section, :conference=>@conference
+- @conference.conference_sections.each do |cs|
+  = render 'conference_sections/conference_section', :conference_section=>cs

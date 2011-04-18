@@ -8,3 +8,7 @@
     .wait_assigner ищет докладчика
 - else
   = link_to discourse, discourse
+
+- if discourse.conference and discourse.conference.is_passed
+  %p.discourse-description
+    = discourse.text

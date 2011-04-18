@@ -4,8 +4,8 @@
 
 Conference:
   fields:
-    default: name # , date
-    form: name, date, desc
+    default: name, date, is_passed
+    form: name, date, is_passed, desc
   order_by: -date
   application: chebit
   relationships: sections

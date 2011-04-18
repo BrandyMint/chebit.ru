@@ -1,18 +1,16 @@
 Chebit::Application.routes.draw do
 
-  resources :conferences
-
+  resources :conferences, :only=>[:show]
   resources :discourses
-
-  resources :sections
+  resources :sections, :only=>[:show]
 
   devise_for :users
   devise_scope :user do
     resources :users, :only => [:show, :index]
   end
-  
+
   # https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-edit-their-password-
-  
+
   root :to => "welcome#index"
 
   # resources :users do

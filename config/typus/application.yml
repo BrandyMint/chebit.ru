@@ -19,7 +19,7 @@ ConferenceSection:
   fields:
     default: conference, section, position
   relationships: conference, section
-  order_by: conference_id, position
+  order_by: -conference_id, position
   options:
     action_after_save: index
   application: chebit
@@ -28,17 +28,18 @@ ConferenceSection:
 Discourse:
   fields:
     #default: subject, position #, text, author, assigner, is_moderated
-    default: conference, section, position, subject, kind, author, assigner, is_moderated
-    form: conference, section, subject, text, kind, author, assigner, position, is_moderated
+    default: conference_section, section, position, subject, kind, author, assigner, is_moderated
+    form: conference_section, section, subject, text, kind, author, assigner, position, is_moderated
     options:
       # read_only: conference
       selectors: kind
-  order_by: conference_id, section_id, position
-  relationships: assigner, author, section
+  order_by: conference_section_id, section_id, position
+  relationships:
   filters: created_at
   search:
   application: chebit
   options:
+    per_page: 50
     action_after_save: index
 
 Section:

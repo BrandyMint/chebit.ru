@@ -1,0 +1,5 @@
+%h2.section_name Секция &laquo;#{section.name}&raquo;
+%ol.section
+  - section.discourses.all.each do |d|
+    %li.discourse
+      = render 'discourses/discourse', :discourse=>d

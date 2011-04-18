@@ -1,4 +1,20 @@
 ru:
+  date:
+    formats:
+      default: %d.%m.%Y
+      human: %d %b %Y
+      short: %m
+  time:
+    formats:
+      standart: %Y-%m-%d %H:%M
+      # default: %a %d %b %Y, %H:%M
+      default: %d %b %Y, %H:%M
+      full: %a %d %b %Y, %H:%M:%S %z
+      short: %d %b %Y, %H:%M
+      forum_short: %d.%m.%Y
+      forum_today: Сегодня в %H:%M
+      forum_yesterday: Вчера в %H:%M
+      forum_long_ago: %d.%m.%Y в %H:%M
   attributes:
     subject: Тема
     text: Подробнее

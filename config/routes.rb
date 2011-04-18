@@ -1,5 +1,7 @@
 Chebit::Application.routes.draw do
 
+  resources :conferences
+
   resources :discourses
 
   resources :sections

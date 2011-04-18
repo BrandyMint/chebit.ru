@@ -2,17 +2,29 @@
 #
 # Use the README file as a reference to customize settings.
 
+Conference:
+  fields:
+    default: name # , date
+    form: name, date, desc
+  order_by: date
+  application: chebit
+  relationships: sections
+  options:
+    default_action_on_item: show
+    action_after_save: index
+
 Discourse:
   fields:
     #default: subject, position #, text, author, assigner, is_moderated
-    default: subject, section, kind, position, author, assigner, is_moderated
-    form: section, subject, text, kind, author, assigner, position, is_moderated
+    default: conference, section, subject, kind, position, author, assigner, is_moderated
+    form: conference, section, subject, text, kind, author, assigner, position, is_moderated
     options:
+      # read_only: conference
       selectors: kind
   order_by: section_id, position
   relationships: assigner, author, section
   filters: created_at
-  search: 
+  search:
   application: chebit
   options:
     action_after_save: index
@@ -22,10 +34,19 @@ Section:
     default: name, position
     form: name, desc, position, show
   order_by: position
-  # relationships: discourses
+  relationships: conferences
   application: chebit
   options:
     action_after_save: index
+
+ConferenceSection:
+  fields:
+    default: conference, section, position
+  relationships: conference, section
+  order_by: position
+  options:
+    action_after_save: index
+  application: chebit
 
 User:
   fields:
@@ -34,6 +55,6 @@ User:
   order_by: created_at
   # relationships: assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
   filters: created_at
-  search: 
+  search:
   application: chebit
 

@@ -66,6 +66,8 @@ gem 'hoptoad_notifier'
 gem "annotate"
 gem "cancan"
 gem "typus"
+
+#https://github.com/swanandp/acts_as_list
 gem "acts_as_list"
 
 gem "cancan"

@@ -6,6 +6,7 @@ class Discourse < ActiveRecord::Base
   belongs_to :assigner, :class_name => "User"
 
   belongs_to :section
+  belongs_to :conference
 
   validates_presence_of :subject
 

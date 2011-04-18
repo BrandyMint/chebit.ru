@@ -1,5 +1,9 @@
 class Section < ActiveRecord::Base
   has_many :discourses
+  has_many :conference_sections
+  has_many :conferences, :through=>:conference_sections
+
+
   acts_as_list
 
   default_scope order(:position)

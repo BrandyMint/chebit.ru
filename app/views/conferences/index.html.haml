@@ -1,0 +1,23 @@
+%h1 Listing conferences
+
+%table
+  %tr
+    %th Name
+    %th Date
+    %th Desc
+    %th
+    %th
+    %th
+
+  - @conferences.each do |conference|
+    %tr
+      %td= conference.name
+      %td= conference.date
+      %td= conference.desc
+      %td= link_to 'Show', conference
+      %td= link_to 'Edit', edit_conference_path(conference)
+      %td= link_to 'Destroy', conference, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Conference', new_conference_path

@@ -4,6 +4,6 @@ class AddKindToDiscourses < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column, :discourses, :kind
+    remove_column :discourses, :kind
   end
 end

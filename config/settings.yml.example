@@ -1,5 +1,5 @@
-secret_token: 123
-pepper: 456
+secret_token: abc123
+pepper: abc456
 mail:
   sender: danil@orionet.ru
   exceptions_recipients: danil@orionet.ru

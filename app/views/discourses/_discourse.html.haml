@@ -1,0 +1,14 @@
+- if discourse.kind=='discourse'
+  = link_to "&laquo;#{discourse}&raquo;".html_safe, discourse
+  - if discourse.assigner
+    .assigner
+      доклад,
+      = link_to discourse.assigner, discourse.assigner
+  - else
+    .wait_assigner ищет докладчика
+- else
+  = link_to discourse, discourse
+
+- if discourse.conference and discourse.conference.is_passed
+  %p.discourse-description
+    = discourse.text.html_safe

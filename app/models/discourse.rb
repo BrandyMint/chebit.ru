@@ -4,15 +4,15 @@ class Discourse < ActiveRecord::Base
 
   belongs_to :author, :class_name => "User"
   belongs_to :assigner, :class_name => "User"
-
   belongs_to :section
-  belongs_to :conference
+  belongs_to :conference_section
+  has_one :conference, :through => :conference_section
 
   validates_presence_of :subject
 
   default :is_moderated=>true
 
-  acts_as_list :scope=>:section_id
+  acts_as_list :scope=>:conference_section_id
 
   default_scope order(:position)
 

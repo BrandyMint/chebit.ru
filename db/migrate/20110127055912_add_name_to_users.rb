@@ -1,6 +1,6 @@
 class AddNameToUsers < ActiveRecord::Migration
   def self.up
-    add_column :users, :full_name, :string, :null => false
+    add_column :users, :full_name, :string, :null => false, :default => ''
     add_column :users, :firm, :string
     add_column :users, :url, :string
     add_column :users, :occupation, :string

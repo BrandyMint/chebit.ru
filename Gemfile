@@ -1,12 +1,11 @@
 source 'http://rubygems.org'
 
 gem 'rails', '~> 3.0.6'
-gem 'pg'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "haml-rails"
 gem "rails_config"
 gem "stateful_link"
-gem "devise", :git => "git://github.com/plataformatec/devise.git"
+gem "devise", :git => "https://github.com/plataformatec/devise.git"
 gem "omniauth", :git => "https://github.com/intridea/omniauth.git"
 gem "compass"
 gem "jquery-rails", ">= 0.2.6"
@@ -44,6 +43,6 @@ end
 
 group :deploy do
   gem 'vlad', ">=2.2.0"
-  gem 'vlad-helpers', :git => 'git://github.com/dapi/vlad-helpers.git'
+  gem 'vlad-helpers', :git => 'https://github.com/dapi/vlad-helpers.git'
   gem "vlad-git"
 end

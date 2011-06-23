@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem "nifty-generators", :group => :development
+
 gem 'rails', '~> 3.0.6'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "haml-rails"
@@ -46,3 +48,4 @@ group :deploy do
   gem 'vlad-helpers', :git => 'https://github.com/dapi/vlad-helpers.git'
   gem "vlad-git"
 end
+gem "mocha", :group => :test

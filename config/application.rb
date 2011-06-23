@@ -40,5 +40,7 @@ module Chebit
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    #Локализация
+    I18n.locale=:ru 
   end
 end

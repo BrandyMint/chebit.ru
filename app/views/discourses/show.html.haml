@@ -28,9 +28,9 @@
           , чтобы взять этот доклад на себя
   %p.text
     = @discourse.text.html_safe
-
 -# = link_to 'Edit', edit_discourse_path(@discourse)
 -# \|
 -# = link_to 'Back', discourses_path
 
 = go_back root_path
+= render :partial => "shared/comments", :locals => {:item => @discourse}

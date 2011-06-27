@@ -1,18 +1,18 @@
 #comments
   %h2.comments-header
-  комментарии (
-  %span.js-comments-count 
-  = item.comments.count
-  )
+    комментарии (
+    %span.js-comments-count 
+    = item.comments.count
+    )
   %ul.hentry
-    %li.comment_holder.vote_holder
+    %li.comment_holder
       .msg-meta
         - if item.comments.empty?
           Нет комментариев для показа.
         - else
           - for comment in item.comments
-            %ul.menu.info.author.hcardo
-              %li.fn.nickname.username
+            %ul.hentry
+              %li.comment_holder
                 - if @discourse.assigner
                   = link_to comment.author,comment.author
               %li.date

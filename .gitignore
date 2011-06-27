@@ -39,3 +39,5 @@ tmp/*
 db/*.sqlite3
 db/schema.rb
 features/rcov/
+*~
+*.swp

@@ -1,5 +1,4 @@
 #comments
-  clear:left
   h2.comments-header
     margin: 0px 0 20 px
     padding-left: 23px
@@ -7,9 +6,8 @@
     letter-spacing: -1px
     color: #afa56a
     background: #fff url(/images/comments.gif) 0 60% no-repeat
-  ul.hentry
-    clear:both
-    width: auto
-    li.comment_holder
-      float:left
-      list-style:none
+  ul.comment_user
+    float: left
+    +horizontal-list
+    li
+      padding-top: 0px

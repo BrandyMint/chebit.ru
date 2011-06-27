@@ -4,26 +4,25 @@
     %span.js-comments-count 
     = item.comments.count
     )
-  %ul.hentry
-    %li.comment_holder
-      .msg-meta
-        - if item.comments.empty?
-          Нет комментариев для показа.
-        - else
-          - for comment in item.comments
-            %ul.hentry
-              %li.comment_holder
-                - if @discourse.assigner
-                  = link_to comment.author,comment.author
-              %li.date
-                = comment.created_at(:forum_long_ago)
-            %div
-              = comment.content
-Добавить комментарий
-- form_for [item, Comment.new()] do |f|
-  = f.error_messages
-  %p
-    = f.label  'Сообщение'
-    %br/
-    = f.text_area :content
-  %p= f.submit
+  - if item.comments.empty?
+    Нет комментариев для показа.
+  - else
+    - for comment in item.comments
+      .comment_msg
+        .msg-meta
+          %ul.comment_user
+            %li
+              - if @discourse.assigner
+                = link_to comment.author,comment.author
+            %li.date
+              = comment.created_at(:forum_long_ago)
+        .msg-content           
+          = comment.content
+  Добавить комментарий
+  - form_for [item, Comment.new()] do |f|
+    = f.error_messages
+    %p
+      = f.label  'Сообщение'
+      %br/
+      = f.text_area :content
+    %p= f.submit

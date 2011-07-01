@@ -14,12 +14,6 @@ GIT
       warden (~> 1.0.3)
 
 GIT
-  remote: https://github.com/dima4p/russian.git
-  revision: 0af1e31cbec3a7907c17364453a0a8b0f64a0c4a
-  specs:
-    russian (0.2.8.pre)
-
-GIT
   remote: https://github.com/intridea/omniauth.git
   revision: 1ed18cbba27f2cf1ae232d53174fd569a9393fab
   specs:
@@ -113,7 +107,7 @@ GEM
     faraday (0.6.1)
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
-      rack (>= 1.1.0, < 2)
+      rack (< 2, >= 1.1.0)
     fastercsv (1.5.4)
     haml (3.0.25)
     haml-rails (0.3.4)
@@ -207,6 +201,7 @@ GEM
     ruby_parser (2.0.6)
       sexp_processor (~> 3.0)
     rubyntlm (0.1.1)
+    russian (0.2.7)
     sexp_processor (3.0.5)
     shoulda (2.11.3)
     simple_form (1.3.1)
@@ -264,7 +259,7 @@ DEPENDENCIES
   rspec-rails
   ruby-debug
   ruby_parser
-  russian!
+  russian
   shoulda
   simple_form
   sqlite3-ruby

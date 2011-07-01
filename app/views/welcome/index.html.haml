@@ -1,8 +1,9 @@
 .info
   %p
-    = link_to "Итоги первой конференции (состоялась 9 апреля 2010 года)", conference_path(Conference.find(1))
+    = link_to "<b>Актукально:</b> обсуждение августовской конференции CHEBIT'11-02 (05.2011)", 'http://gorups.google.com/group/chebit/'
   %p
-  %p Следующая конференция состоится по мере набора докладчиков.
+    = link_to "Итоги CHEBIT'11-01 (9.04.2011)", conference_path(Conference.find(1))
+  %p
   %div
     .left
       = link_to users_path do
@@ -11,16 +12,6 @@
     .clear
   %ul
     %li 10.04.2011 <a href="http://atner.livejournal.com/115518.html">Этнер Егоров Лица конференции chebit. По горячим следам</a>
-
-  -# %p Идея проста &mdash; если вы хотите что-то узнать &mdash; попросите об этом рассказать, а сами расскажите о том, что знаете вы.
-  -# %p Для докладчиков есть проектор, фломастерная достка. Все доклады записываются на камеру, позже монтируются и выкладываются в интернет.
-  -# %p Вход свободный, желательно предварительно зарегистрироваться на сайте. Форма одежды еще более свободная. В зале бесплатный WiFi от beeline, кофе-чай-конфеты, рядом кафетерий.
-  -# %p Легие алкогольне напитки не возбранаются, barcamp!
-  -# .discourses_menu
-  -#   .left= link_to 'Мне есть о чем рассказать..', new_discourse_path(:me=>'assigner')
-  -#   .right= link_to 'Я бы послушал о..', new_discourse_path(:me=>'author')
-  -#   .clear
-
 
 .clear
 
@@ -34,6 +25,6 @@
 
 .clear
 
-.ad
-  Объявление:
-  = link_to 'Требуется ruby-программист на full/half-time, можно удаленно', 'https://docs.google.com/document/pub?id=1196rRixBpNSeNDvnPL2UUuBGjuStcxYTfR4M2Z3Bl-Y'
+-# .ad
+-#   Объявление:
+-#   = link_to 'Требуется ruby-программист на full/half-time, можно удаленно', 'https://docs.google.com/document/pub?id=1196rRixBpNSeNDvnPL2UUuBGjuStcxYTfR4M2Z3Bl-Y'

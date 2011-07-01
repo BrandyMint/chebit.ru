@@ -27,7 +27,8 @@ gem "typus"
 gem "acts_as_list"
 gem "cancan"
 
-gem "russian", :git => "https://github.com/dima4p/russian.git"
+# gem "russian", :git => "https://github.com/dima4p/russian.git"
+gem "russian"
 
 group :development, :test do
   gem "wirble"

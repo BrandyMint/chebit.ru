@@ -1,4 +1,4 @@
-#comments
+#comments 
   h2.comments-header
     margin: 0px 0 20 px
     padding-left: 23px
@@ -6,8 +6,41 @@
     letter-spacing: -1px
     color: #afa56a
     background: #fff url(/images/comments.gif) 0 60% no-repeat
+  #Стиль для общего списка комментариев
+  ul.all_comments
+    list-style-type: none
   ul.comment_user
-    float: left
+    background: white 
+    position: relative
     +horizontal-list
     li
       padding-top: 0px
+  .comment_content
+    clear:left
+    color: #afa56a
+    margin: 0px
+  .msg-meta
+    position: relative
+    .folding-dot-holder
+      z-index: 0 
+      display: none
+      position: absolute
+      top: -4px
+      left: 0px
+      width: 1px
+      height: 1px
+    #Для реализации точки, которая указывает на комментарий
+    .folding-dot
+      z-index: 0 
+      width: 500px
+      left: -20px
+      top: -4px
+      height: 5px
+      background: red
+      right: 0px
+      top: 11px
+      position: absolute
+      background: url(/images/bg-folding-dot-light.png)
+  .comment_holder
+    float: left
+    width: 100%

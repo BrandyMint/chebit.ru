@@ -24,6 +24,7 @@
           .comment_content
             = comment.content
           = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
+          = render :partial => "shared/comments", :locals => {:item => comment}
   Добавить комментарий
   - form_for [item, Comment.new()] do |f|
     = f.error_messages

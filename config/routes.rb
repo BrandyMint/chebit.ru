@@ -1,11 +1,15 @@
 Chebit::Application.routes.draw do |map|
 
   resources :conferences, :only=>[:show]
+  #Для создания и редактирования комментариев внутри дискуссий
   map.resources :discourses do |item|
     item.resources :comments, :only=>[:create]
   end
-  resources :comments, :only=>[:destroy]
-  
+  #Для удаления комментариев
+  #Для добавления к комментариям комментариев
+  map.resources :comments, :only=>[:destroy] do |item|
+    item.resources :comments, :only=>[:create]
+  end
   resources :sections, :only=>[:show]
 
   devise_for :users

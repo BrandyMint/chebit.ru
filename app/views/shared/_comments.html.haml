@@ -23,6 +23,7 @@
                   = comment.created_at(:forum_long_ago)
           .comment_content
             = comment.content
+          = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
   Добавить комментарий
   - form_for [item, Comment.new()] do |f|
     = f.error_messages

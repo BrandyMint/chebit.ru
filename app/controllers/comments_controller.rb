@@ -25,7 +25,11 @@ class CommentsController < ApplicationController
   def edit
     @comment = Comment.find(params[:id])
   end
-
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to @comment.commentable, :notice => "Комментарий успешно удален."
+  end
   private
 
   def find_commentable
@@ -46,9 +50,4 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    redirect_to comments_url, :notice => "Successfully destroyed comment."
-  end
 end

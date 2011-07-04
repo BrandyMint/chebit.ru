@@ -2,8 +2,9 @@ Chebit::Application.routes.draw do |map|
 
   resources :conferences, :only=>[:show]
   map.resources :discourses do |item|
-    item.resources :comments, :only=>[:create,:destroy]
+    item.resources :comments, :only=>[:create]
   end
+  resources :comments, :only=>[:destroy]
   
   resources :sections, :only=>[:show]
 

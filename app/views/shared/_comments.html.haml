@@ -1,11 +1,13 @@
 #comments
-  %h2.comments-header
-    комментарии (
-    %span.js-comments-count 
-    = item.comments.count
-    )
+  -if ! item.instance_of?(Comment)#Если не комментарий
+    %h2.comments-header
+      комментарии (
+      %span.js-comments-count 
+      = item.comments.count
+      )
   - if item.comments.empty?
-    Нет комментариев для показа.
+    -if ! item.instance_of?(Comment)#Если не комментарий
+      Нет комментариев для показа.
   - else
     - for comment in item.comments
       %ul.all_comments
@@ -24,12 +26,9 @@
           .comment_content
             = comment.content
           = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
-          = render :partial => "shared/comments", :locals => {:item => comment}
-  Добавить комментарий
-  - form_for [item, Comment.new()] do |f|
-    = f.error_messages
-    %p
-      = f.label  'Сообщение'
-      %br/
-      = f.text_area :content
-    %p= f.submit
+          = render :partial => "shared/form_newcomment", :locals => {:item => comment}
+          - if item.comments.any?
+            = render :partial => "shared/comments", :locals => {:item => comment}
+  -if ! item.instance_of?(Comment)#Если не комментарий
+    Добавить комментарий
+    = render :partial => "shared/form_newcomment", :locals => {:item => item}

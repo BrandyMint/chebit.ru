@@ -28,8 +28,9 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
+    debugger
     @comment.destroy
-    redirect_to @comment.commentable, :notice => "Комментарий успешно удален."
+    redirect_to find_comment_main_parent(@comment.commentable), :notice => "Комментарий успешно удален."
   end
 
   private
@@ -38,7 +39,7 @@ class CommentsController < ApplicationController
   def find_comment_main_parent(comment)
     loop do
       #Если объект не комментарий
-      return comment if !comment.instance_of?(Comment) 
+      return comment if ! comment.instance_of?(Comment) 
       comment = comment.commentable
     end
   end

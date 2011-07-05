@@ -41,10 +41,11 @@ group :development, :test do
   gem "factory_girl_generator"
   gem "hpricot"
   gem "ruby_parser"
-end
+  
+  gem 'wirble'
+  gem 'vlad', :path => '~/code/gems/vlad/' #, :git=>'git://github.com/dapi/vlad.git' # '~> 2.2.0',
+  gem 'vlad-extras', :path => '~/code/gems/vlad-extras/'
+  gem 'vlad-git', :path => '~/code/gems/vlad-git/'
+  gem 'vlad-unicorn'
 
-# group :deploy do
-#   gem 'vlad', ">=2.2.0"
-#   gem 'vlad-helpers', :git => 'git://github.com/dapi/vlad-helpers.git'
-#   gem "vlad-git"
-# end
+end

@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0.6'
+gem 'rails', '~> 3.0.8'
 gem 'pg'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "haml-rails"
@@ -32,7 +32,7 @@ gem "russian"
 
 group :development, :test do
   gem "wirble"
-  gem "ruby-debug"
+  #gem "ruby-debug"
   gem "rcov"
   gem "rspec"
   gem "rspec-rails"
@@ -43,8 +43,8 @@ group :development, :test do
   gem "ruby_parser"
 end
 
-group :deploy do
-  gem 'vlad', ">=2.2.0"
-  gem 'vlad-helpers', :git => 'git://github.com/dapi/vlad-helpers.git'
-  gem "vlad-git"
-end
+# group :deploy do
+#   gem 'vlad', ">=2.2.0"
+#   gem 'vlad-helpers', :git => 'git://github.com/dapi/vlad-helpers.git'
+#   gem "vlad-git"
+# end

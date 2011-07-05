@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+  #Создание комментария
   def create
     @commentable = find_commentable
     @comment = @commentable.comments.build(params[:comment])
@@ -12,7 +13,7 @@ class CommentsController < ApplicationController
     end
   end
 
-  
+=begin 
   def show
     @comment = Comment.find(params[:id])
   end
@@ -20,7 +21,7 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
   end
-
+=end
 
   def edit
     @comment = Comment.find(params[:id])
@@ -32,6 +33,8 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to find_comment_main_parent(@comment.commentable), :notice => "Комментарий успешно удален."
   end
+
+
 
   private
   
@@ -62,5 +65,8 @@ class CommentsController < ApplicationController
       render :action => 'edit'
     end
   end
+
+
+
 
 end

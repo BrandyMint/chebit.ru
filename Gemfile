@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '~> 3.0.8'
 gem 'pg'
 #gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'sass'
 gem 'haml', '~> 3.1.2'
 gem "haml-rails"
 gem "rails_config"

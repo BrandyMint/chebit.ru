@@ -47,6 +47,25 @@ GIT
       oa-oauth (= 0.2.2)
       oa-openid (= 0.2.2)
 
+PATH
+  remote: ~/code/gems/vlad-extras/
+  specs:
+    vlad-extras (0.1.0)
+
+PATH
+  remote: ~/code/gems/vlad-git/
+  specs:
+    vlad-git (2.2.0)
+      vlad (>= 2.1.0)
+
+PATH
+  remote: ~/code/gems/vlad/
+  specs:
+    vlad (2.2.0.20110510)
+      open4 (~> 0.9.0)
+      rake (>= 0.8.0)
+      rake-remote_task (~> 2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -131,6 +150,7 @@ GEM
     oauth2 (0.3.0)
       faraday (~> 0.6.0)
       multi_json (~> 0.0.4)
+    open4 (0.9.6)
     orm_adapter (0.0.4)
     pg (0.11.0)
     polyglot (0.3.1)
@@ -160,6 +180,9 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.4)
     rake (0.9.2)
+    rake-remote_task (2.0.4)
+      open4 (~> 0.9.0)
+      rake (~> 0.8)
     rcov (0.9.9)
     rdoc (3.8)
     render_inheritable (1.0.0)
@@ -205,6 +228,8 @@ GEM
       render_inheritable
       will_paginate (~> 3.0.pre2)
     tzinfo (0.3.29)
+    vlad-unicorn (2.0.0)
+      vlad (~> 2.0)
     warden (1.0.3)
       rack (>= 1.0.0)
     will_paginate (3.0.pre2)
@@ -244,4 +269,8 @@ DEPENDENCIES
   state_machine
   stateful_link
   typus
+  vlad!
+  vlad-extras!
+  vlad-git!
+  vlad-unicorn
   wirble

@@ -28,7 +28,7 @@ namespace :vlad do
   # }
 
   desc "Full deployment cycle"
-  task "deploy" => %w[
+  task "deploy2" => %w[
       vlad:update
       vlad:bundle_install
       vlad:migrate

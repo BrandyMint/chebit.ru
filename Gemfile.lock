@@ -213,9 +213,6 @@ GEM
     sexp_processor (3.0.5)
     shoulda (2.11.3)
     simple_form (1.3.1)
-    sqlite3 (1.3.3)
-    sqlite3-ruby (1.3.3)
-      sqlite3 (>= 1.3.3)
     state_machine (0.10.4)
     stateful_link (0.0.8)
       rails (>= 3)
@@ -265,7 +262,6 @@ DEPENDENCIES
   russian
   shoulda
   simple_form
-  sqlite3-ruby
   state_machine
   stateful_link
   typus

@@ -75,7 +75,7 @@ class User < ActiveRecord::Base
   end
 
   #Является ли данный пользователь администратором
-  def is_admin
+  def is_admin?
     role=="admin"
   end
 

@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   def create
     @commentable = find_commentable
     @comment = @commentable.comments.build(params[:comment])
-    @comment.author_id=current_user 
+    @comment.author=current_user 
     if @comment.save
       flash[:notice] = "Комментарий успешно создан."
       redirect_to find_comment_main_parent @commentable
@@ -29,6 +29,11 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
+    if ! (current_user.is_admin? || current_user==@comment.author)
+      flash[:notice] = "Комментарий не может быть удален."
+      redirect_to find_comment_main_parent @comment      
+      return
+    end
     @comment.destroy
     redirect_to find_comment_main_parent(@comment.commentable), :notice => "Комментарий успешно удален."
   end

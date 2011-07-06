@@ -11,6 +11,9 @@ namespace :vlad do
 
   #set :local_link, 'danil@dapi.orionet.ru:/home/danil/code/chebit'
 
+  set :copy_files, [ 'config/database.yml', 'config/app_config.yml' ]
+  set :symlinks, [ 'config/database.yml', 'config/app_config.yml' ]
+
   # for rails
   set :shared_paths, {
     'log'    => 'log',
@@ -21,11 +24,6 @@ namespace :vlad do
     'config/settings' => 'config/settings',
     'config/settings.yml' => 'config/settings.yml'
   }
-
-  # set :copy_files, {
-  #   '/config/database.yml' => '/config/database.yml',
-  #   '/config/settings*'    => '/config/',
-  # }
 
   desc "Full deployment cycle"
   task "deploy2" => %w[

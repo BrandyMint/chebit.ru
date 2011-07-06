@@ -7,6 +7,9 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
+
+Conference.create!(:name=>'Conf1')
+
 Section.create!(
                 [
                  {

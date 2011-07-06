@@ -25,14 +25,17 @@
                   = comment.created_at(:forum_long_ago)
           .comment_content
             = comment.content
-          = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
+          .comment_menu
+            = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
   -if ! item.instance_of?(Comment)#Если не комментарий
-    Добавить комментарий
-    - form_for [item, Comment.new()] do |f|
-      = f.error_messages
-      %p
-        = f.label  'Сообщение'
-        %br/
-        = f.text_area :content
-        .actions
-        %button.cupid-green Готово 
+    .comment_new
+      %h3
+        Добавить комментарий
+      - form_for [item, Comment.new()] do |f|
+        = f.error_messages
+        %p
+          = f.label  'Сообщение'
+          %br/
+          = f.text_area :content, :rows => 5
+          .actions
+          %button.cupid-green Готово 

@@ -29,7 +29,6 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    debugger
     @comment.destroy
     redirect_to find_comment_main_parent(@comment.commentable), :notice => "Комментарий успешно удален."
   end

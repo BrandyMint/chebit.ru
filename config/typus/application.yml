@@ -64,6 +64,7 @@ User:
 Comment:
   fields:
     default: content 
+    form: content
   order_by: id
   application: chebit
   options:

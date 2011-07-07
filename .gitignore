@@ -41,3 +41,4 @@ db/schema.rb
 features/rcov/
 *~
 *.swp
+*.swo

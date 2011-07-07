@@ -1,7 +1,7 @@
 class AddMigrationToSections < ActiveRecord::Migration
   def self.up
-    add_column :sections, :position, :integer, :null => false
-    add_column :discourses, :position, :integer, :null => false
+    add_column :sections, :position, :integer, :null => false, :default => ''
+    add_column :discourses, :position, :integer, :null => false, :default => ''
   end
 
   def self.down

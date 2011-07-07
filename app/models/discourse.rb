@@ -2,6 +2,7 @@ class Discourse < ActiveRecord::Base
 
   # attr_protected :is_moderated
 
+  has_many :comments, :as => :commentable
   belongs_to :author, :class_name => "User"
   belongs_to :assigner, :class_name => "User"
   belongs_to :section

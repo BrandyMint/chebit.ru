@@ -1,7 +1,15 @@
-Chebit::Application.routes.draw do
+Chebit::Application.routes.draw do |map|
 
   resources :conferences, :only=>[:show]
-  resources :discourses
+  #Для создания и редактирования комментариев внутри дискуссий
+  map.resources :discourses do |item|
+    item.resources :comments, :only=>[:create]
+  end
+  #Для удаления комментариев
+  #Для добавления к комментариям комментариев
+  map.resources :comments, :only=>[:destroy] do |item|
+    item.resources :comments, :only=>[:create]
+  end
   resources :sections, :only=>[:show]
 
   devise_for :users
@@ -9,6 +17,8 @@ Chebit::Application.routes.draw do
     resources :users, :only => [:show, :index]
   end
 
+  #Для отображения комментариев после создания
+ # match '/discourses/:id/comments'=> redirect('/discourses/%{id}')
   # https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-edit-their-password-
 
   root :to => "welcome#index"

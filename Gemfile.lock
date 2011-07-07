@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/plataformatec/devise.git
-  revision: 90a5e2f9afc09133cf82012e581a93b1d26a1be6
-  specs:
-    devise (1.4.2)
-      bcrypt-ruby (~> 2.1.2)
-      orm_adapter (~> 0.0.3)
-      warden (~> 1.0.3)
-
-GIT
   remote: https://github.com/intridea/omniauth.git
   revision: eaac5a8470ddc933984770d1a9c25d256dbcd293
   specs:
@@ -44,6 +35,15 @@ GIT
       oa-more (= 0.3.0.rc1)
       oa-oauth (= 0.3.0.rc1)
       oa-openid (= 0.3.0.rc1)
+
+GIT
+  remote: https://github.com/plataformatec/devise.git
+  revision: 90a5e2f9afc09133cf82012e581a93b1d26a1be6
+  specs:
+    devise (1.4.2)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
 
 PATH
   remote: ~/code/gems/vlad-extras/
@@ -135,6 +135,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mocha (0.9.12)
     multi_json (1.0.3)
     multi_xml (0.2.2)
     multipart-post (1.1.2)
@@ -245,6 +246,7 @@ DEPENDENCIES
   hpricot
   img_gravatar
   jquery-rails (>= 0.2.6)
+  mocha
   omniauth!
   pg
   rails (~> 3.0.8)

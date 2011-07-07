@@ -35,11 +35,10 @@ class DiscoursesController < ApplicationController
    def new
      authenticate_user! if params[:me]=='assigner'
      @discourse = Discourse.new
-     respond_with @discourse
    end
-  # def edit
-  #   @discourse = Discourse.find(params[:id])
-  # end
+   def edit
+     @discourse = Discourse.find(params[:id])
+   end
 
    def create
      @discourse = Discourse.create(params[:discourse])

@@ -5,10 +5,11 @@ gem 'pg'
 #gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'sass', '~> 3.1'
 gem 'haml', '~> 3.1.2'
+
 gem "haml-rails"
 gem "rails_config"
 gem "stateful_link"
-gem "devise", :git => "git://github.com/plataformatec/devise.git"
+gem "devise", :git => "https://github.com/plataformatec/devise.git"
 gem "omniauth", :git => "https://github.com/intridea/omniauth.git"
 # gem "compass"
 gem "jquery-rails", ">= 0.2.6"
@@ -51,3 +52,4 @@ group :development, :test do
   gem 'vlad-unicorn'
 
 end
+gem "mocha", :group => :test

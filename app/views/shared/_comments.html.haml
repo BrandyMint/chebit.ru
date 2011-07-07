@@ -1,0 +1,42 @@
+#comments
+  -if ! item.instance_of?(Comment)#Если не комментарий
+    %h2.comments-header
+      комментарии (
+      %span.js-comments-count 
+      = item.comments.count 
+      )
+  - if item.comments.empty?
+    -if ! item.instance_of?(Comment)#Если не комментарий
+    Нет комментариев для показа.
+  - else
+    %ul.all_comments
+      - for comment in item.comments
+        %li.comment_holder.vote_holder{:onmouseover => "showdiv(this)", :onmouseout => "hidediv(this)"}
+          .msg-meta
+            .folding-dot-holder
+              .folding-dot
+            %ul.comment_user
+              %li
+                %div
+                  - if @discourse.assigner
+                    = link_to comment.author,comment.author
+              %li.date
+                %div
+                  = comment.created_at(:forum_long_ago)
+          .comment_content
+            = comment.content
+          .comment_menu
+            - if current_user.is_admin?|| current_user==comment.author
+              = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
+  -if ! item.instance_of?(Comment)#Если не комментарий
+    .comment_new
+      %h3
+        Добавить комментарий
+      - form_for [item, Comment.new()] do |f|
+        = f.error_messages
+        %p
+          = f.label  'Сообщение'
+          %br/
+          = f.text_area :content, :rows => 5
+          .actions
+          %button.cupid-green Готово 

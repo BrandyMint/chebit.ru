@@ -12,7 +12,7 @@ namespace :vlad do
   #set :local_link, 'danil@dapi.orionet.ru:/home/danil/code/chebit'
 
   set :copy_files, [ 'config/database.yml', 'config/app_config.yml' ]
-  set :symlinks, [ 'config/database.yml', 'config/app_config.yml' ]
+  set :symlinks, copy_files
 
   # for rails
   set :shared_paths, {

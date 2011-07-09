@@ -3,8 +3,8 @@ class CommentsController < ApplicationController
   #Создание комментария
   def create
     @commentable = find_commentable
+    params[:comment].merge! :author => current_user
     @comment = @commentable.comments.build(params[:comment])
-    @comment.author=current_user 
     if @comment.save
       flash[:notice] = "Комментарий успешно создан."
       redirect_to find_comment_main_parent @commentable
@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    if ! (current_user.is_admin? || current_user==@comment.author)
+    if ! can? :destroy, @comment
       flash[:notice] = "Комментарий не может быть удален."
       redirect_to find_comment_main_parent @comment      
       return
@@ -38,7 +38,16 @@ class CommentsController < ApplicationController
     redirect_to find_comment_main_parent(@comment.commentable), :notice => "Комментарий успешно удален."
   end
 
-
+=begin Пока не реализовано обновление комментариев 
+def update
+    @comment = Comment.find(params[:id])
+    if @comment.update_attributes(params[:comment])
+      redirect_to @comment, :notice  => "Successfully updated comment."
+    else
+      render :action => 'edit'
+    end
+  end
+=end
 
   private
   
@@ -61,15 +70,7 @@ class CommentsController < ApplicationController
     nil
   end
 
-  def update
-    @comment = Comment.find(params[:id])
-    if @comment.update_attributes(params[:comment])
-      redirect_to @comment, :notice  => "Successfully updated comment."
-    else
-      render :action => 'edit'
-    end
-  end
-
+  
 
 
 

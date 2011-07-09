@@ -8,8 +8,10 @@ class Ability
     # Неавторизованным ничего не разрешаем
     return false unless user
 
-    # Незнаю зачем это пригодится, приведено тут для примера
-    can :manage, :all if user.admin?
+    #Задаем права 
+     can :manage, :all if user.is_admin?   
+     can :read, :all if ! user.is_admin?
+     can :manage, Comment, :author => user
   end
   
 end

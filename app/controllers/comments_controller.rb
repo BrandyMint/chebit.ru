@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    if ! (current_user.is_admin? || current_user==@comment.author)
+    if ! can? :destroy, @comment
       flash[:notice] = "Комментарий не может быть удален."
       redirect_to find_comment_main_parent @comment      
       return

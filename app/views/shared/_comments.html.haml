@@ -26,7 +26,7 @@
           .comment_content
             = comment.content
           .comment_menu
-            - if current_user.is_admin?|| current_user==comment.author
+            - if can? :destroy, comment
               = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
   -if ! item.instance_of?(Comment)#Если не комментарий
     .comment_new

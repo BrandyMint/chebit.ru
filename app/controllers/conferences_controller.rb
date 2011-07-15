@@ -15,6 +15,8 @@ class ConferencesController < ApplicationController
   def show
     @conference = Conference.find(params[:id])
 
+    @discourse = Discourse.new #(:conference => @conference)
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @conference }

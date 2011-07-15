@@ -7,14 +7,14 @@
 // <li class="string optional" id="user_firm_input">
 //   <label for="user_firm">Firm</label>
 //    <input id="user_firm" maxlength="255" name="user[firm]" type="text" />
-//  </li> 
+//  </li>
 // <li class="boolean optional" id="user_price_confirm_input">
 //    <input name="user[price_confirm]" type="hidden" value="0" />
 //    <label for="user_price_confirm">
 //       <input id="user_price_confirm" name="user[price_confirm]" type="checkbox" value="1" />
 //       Price confirm
 //    </label>
-// </li> 
+// </li>
 
 $fs = 14px
 form.formtastic
@@ -26,7 +26,7 @@ form.formtastic
   input, select
     font-size: $fs
     padding: 2px 5px
-  
+
   fieldset.inputs
     +border-radius( 10px )
     background-color: #eee
@@ -37,7 +37,8 @@ form.formtastic
   fieldset.buttons
     border: 0px
     padding: 25px 30px
-  
+    margin-left: 120px
+
   //+stack-form(250px, 100px, 0px, "buttons-right", 51px)
   // +formtastic-errors-on-top
   abbr

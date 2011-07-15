@@ -1,3 +1,6 @@
 [submodule "app/stylesheets/success-sasses"]
 	path = app/stylesheets/success-sasses
         url = git://github.com/dapi/success-sasses.git
+[submodule "app/stylesheets/css3-buttons"]
+	path = app/stylesheets/css3-buttons
+	url = https://github.com/ubuwaits/css3-buttons.git

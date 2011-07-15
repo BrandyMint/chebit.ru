@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Discourse < ActiveRecord::Base
 
   # attr_protected :is_moderated
@@ -11,11 +12,15 @@ class Discourse < ActiveRecord::Base
 
   validates_presence_of :subject
 
-  default :is_moderated=>true
+  # default :is_moderated=>true
+
 
   acts_as_list :scope=>:conference_section_id
 
   default_scope order(:position)
+
+  # Темы которые никто не взял езе
+  scope :free, where(:assigner_id=>nil)
 
   before_save :set_author
 

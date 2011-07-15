@@ -1,6 +1,16 @@
 %p.conference_date= @conference.date.to_s(:human)
 %h1.conference_name= @conference.name
-%p.conference_desc= @conference.desc
+%p.conference_desc= @conference.desc.html_safe
 
 - @conference.conference_sections.each do |cs|
-  = render 'conference_sections/conference_section', :conference_section=>cs
+  - if cs.discourses.exists?
+    = render 'conference_sections/conference_section', :conference_section=>cs
+
+%h2 Темы, которые ищут докладчика:
+
+
+%ol.free_discourses
+  - Discourse.free.each do |discourse|
+    %li.free_discourse= discourse
+
+= render 'discourses/form'

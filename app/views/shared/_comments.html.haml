@@ -2,8 +2,8 @@
   -if ! item.instance_of?(Comment)#Если не комментарий
     %h2.comments-header
       комментарии (
-      %span.js-comments-count 
-      = item.comments.count 
+      %span.js-comments-count
+      = item.comments.count
       )
   - if item.comments.empty?
     -if ! item.instance_of?(Comment)#Если не комментарий
@@ -28,7 +28,7 @@
           .comment_menu
             - if can? :destroy, comment
               = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
-  -if ! item.instance_of?(Comment)#Если не комментарий
+  - if ! item.instance_of?(Comment)#Если не комментарий
     .comment_new
       %h3
         Добавить комментарий
@@ -39,4 +39,4 @@
           %br/
           = f.text_area :content, :rows => 5
           .actions
-          %button.cupid-green Готово 
+          %button.cupid-green Готово

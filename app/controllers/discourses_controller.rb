@@ -36,13 +36,14 @@ class DiscoursesController < ApplicationController
      authenticate_user! if params[:me]=='assigner'
      @discourse = Discourse.new
    end
+
    def edit
      @discourse = Discourse.find(params[:id])
    end
 
    def create
      @discourse = Discourse.create(params[:discourse])
-     respond_with @discourse
+     respond_with @discourse, :location => request.referer
    end
   #   respond_to do |format|
   #     if @discourse.save

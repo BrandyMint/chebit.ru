@@ -12,7 +12,7 @@ gem "rails_config"
 gem "stateful_link"
 gem "devise", :git => "https://github.com/plataformatec/devise.git"
 gem "omniauth", :git => "https://github.com/intridea/omniauth.git"
-# gem "compass"
+gem "compass"
 gem "jquery-rails", ">= 0.2.6"
 gem "state_machine"
 gem 'acts-as-taggable-on'

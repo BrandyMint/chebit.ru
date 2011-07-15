@@ -1,25 +1,22 @@
 /*
-Syntax error: Invalid CSS after "...or_3,$lightness": expected ")", was "=20,$hover=true)"
-        on line 11 of /Users/danil/code/chebit/app/stylesheets/success-sasses/mixins/sass_tools.sass
+Syntax error: Invalid CSS after "(": expected variable (e.g. $foo), was "!color_1,!color_2)"
+        on line 1 of /Users/danil/code/chebit/app/stylesheets/success-sasses/mixins/sass_tools.sass
 
-6: =h-grad($color_1,$color_2)
-7:   :background-color $color_1
-8:   :background -webkit-gradient(linear, left top, right top, from(#{$color_1}), to(#{$color_2}))
-9:   :background -moz-linear-gradient(center left, #{$color_1} 0%, #{$color_2} 100%)
-10: 
-11: =shiny-button($color_1,$color_2,$color_3,$lightness=20,$hover=true)
-12:   :background-color $color_2
-13:   :background -webkit-gradient(linear, left top, left bottom, color-stop(0, #{$color_1}), color-stop(0.17, #{$color_2}), color-stop(1, #{$color_3}) )
-14:   :background -moz-linear-gradient(top, #{$color_1} 0%, #{$color_2} 17%,  #{$color_3} 100%)
-15:   :text-align center
-16:   :text-decoration none
+1: =v-grad(!color_1,!color_2)
+2:   :background-color = !color_2
+3:   :background-image -webkit-gradient(linear, left top, left bottom, from(#{!color_1}), to(#{!color_2}))
+4:   :background-image -moz-linear-gradient(center top, #{!color_1} 0%, #{!color_2} 100%)
+5: 
+6: =h-grad(!color_1,!color_2)
 
 Backtrace:
-/Users/danil/code/chebit/app/stylesheets/success-sasses/mixins/sass_tools.sass:11
+/Users/danil/code/chebit/app/stylesheets/success-sasses/mixins/sass_tools.sass:1
 /Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/scss/parser.rb:898:in `expected'
 /Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/script/lexer.rb:193:in `expected!'
 /Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/script/parser.rb:448:in `assert_tok'
-/Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/script/parser.rb:328:in `defn_arglist!'
+/Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/script/parser.rb:317:in `defn_arglist!'
+/Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/script/parser.rb:314:in `loop'
+/Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/script/parser.rb:314:in `defn_arglist!'
 /Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/script/parser.rb:102:in `parse_mixin_definition_arglist'
 /Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/engine.rb:776:in `parse_mixin_definition'
 /Users/danil/.rvm/gems/ree-1.8.7-2011.03@planposter/gems/sass-3.1.4/lib/sass/../sass/engine.rb:546:in `parse_line'
@@ -97,4 +94,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...or_3,$lightness\": expected \")\", was \"=20,$hover=true)\"\A         on line 11 of /Users/danil/code/chebit/app/stylesheets/success-sasses/mixins/sass_tools.sass\A \A 6: =h-grad($color_1,$color_2)\A 7:   :background-color $color_1\A 8:   :background -webkit-gradient(linear, left top, right top, from(#{$color_1}), to(#{$color_2}))\A 9:   :background -moz-linear-gradient(center left, #{$color_1} 0%, #{$color_2} 100%)\A 10: \A 11: =shiny-button($color_1,$color_2,$color_3,$lightness=20,$hover=true)\A 12:   :background-color $color_2\A 13:   :background -webkit-gradient(linear, left top, left bottom, color-stop(0, #{$color_1}), color-stop(0.17, #{$color_2}), color-stop(1, #{$color_3}) )\A 14:   :background -moz-linear-gradient(top, #{$color_1} 0%, #{$color_2} 17%,  #{$color_3} 100%)\A 15:   :text-align center\A 16:   :text-decoration none"; }
+  content: "Syntax error: Invalid CSS after \"(\": expected variable (e.g. $foo), was \"!color_1,!color_2)\"\A         on line 1 of /Users/danil/code/chebit/app/stylesheets/success-sasses/mixins/sass_tools.sass\A \A 1: =v-grad(!color_1,!color_2)\A 2:   :background-color = !color_2\A 3:   :background-image -webkit-gradient(linear, left top, left bottom, from(#{!color_1}), to(#{!color_2}))\A 4:   :background-image -moz-linear-gradient(center top, #{!color_1} 0%, #{!color_2} 100%)\A 5: \A 6: =h-grad(!color_1,!color_2)"; }

@@ -36,7 +36,7 @@ namespace :vlad do
     ]
 
   namespace :db do
-    task :clone do
+    task :clone2 do
       run "ssh wwwdata@chebit.ru 'cd /home/wwwdata/chebit.ru/current/; pg_dump -U danil -c -O chebit_orionet' > ./tmp/production_dump.sql"
       sh 'cat ./tmp/production_dump.sql | psql chebit_development'
       Rake::Task["db:migrate"].invoke

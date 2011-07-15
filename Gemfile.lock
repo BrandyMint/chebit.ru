@@ -104,6 +104,11 @@ GEM
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     cancan (1.6.5)
+    chunky_png (1.2.0)
+    compass (0.11.4)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -117,6 +122,7 @@ GEM
       multipart-post (~> 1.1.0)
       rack (< 2, >= 1.1.0)
     fastercsv (1.5.4)
+    fssm (0.2.7)
     haml (3.1.2)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -239,6 +245,7 @@ DEPENDENCIES
   acts_as_list
   annotate
   cancan
+  compass
   devise!
   factory_girl_generator
   factory_girl_rails

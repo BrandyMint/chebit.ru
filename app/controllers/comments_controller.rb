@@ -1,16 +1,14 @@
-class CommentsController < ApplicationController
+class CommentsController < InheritedResources::Base
+  
+  belongs_to :discourse,:comment, :polymorphic => true
+
+  #Проверка аудентификации через devise
+  before_filter :authenticate_user!, :only=>[:create, :destroy]
 
   #Создание комментария
   def create
-    @commentable = find_commentable
     params[:comment].merge! :author => current_user
-    @comment = @commentable.comments.build(params[:comment])
-    if @comment.save
-      flash[:notice] = "Комментарий успешно создан."
-      redirect_to find_comment_main_parent @commentable
-    else
-      redirect_to find_comment_main_parent @commentable 
-    end
+    create!{find_comment_main_parent(@comment)}
   end
 
 =begin 
@@ -21,21 +19,14 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
   end
-=end
 
   def edit
     @comment = Comment.find(params[:id])
   end
 
+=end
   def destroy
-    @comment = Comment.find(params[:id])
-    if ! can? :destroy, @comment
-      flash[:notice] = "Комментарий не может быть удален."
-      redirect_to find_comment_main_parent @comment      
-      return
-    end
-    @comment.destroy
-    redirect_to find_comment_main_parent(@comment.commentable), :notice => "Комментарий успешно удален."
+    destroy!
   end
 
 =begin Пока не реализовано обновление комментариев 

@@ -7,7 +7,7 @@
       )
   - if item.comments.empty?
     -if ! item.instance_of?(Comment)#Если не комментарий
-    Нет комментариев для показа.
+      Нет комментариев для показа.
   - else
     %ul.all_comments
       - for comment in item.comments
@@ -28,15 +28,9 @@
           .comment_menu
             - if can? :destroy, comment
               = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
+          = render :partial => "shared/form_newcomment", :locals => {:item => comment}
+          = render :partial => "shared/comments", :locals => {:item => comment}
   -if ! item.instance_of?(Comment)#Если не комментарий
     .comment_new
       %h3
-        Добавить комментарий
-      - form_for [item, Comment.new()] do |f|
-        = f.error_messages
-        %p
-          = f.label  'Сообщение'
-          %br/
-          = f.text_area :content, :rows => 5
-          .actions
-          %button.cupid-green Готово 
+        = render :partial => "shared/form_newcomment", :locals => {:item => comment}

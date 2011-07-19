@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-gem "nifty-generators", :group => :development
 
 gem 'rails', '~> 3.0.6'
 gem 'sqlite3-ruby', :require => 'sqlite3'
@@ -30,7 +29,10 @@ gem "cancan"
 
 gem "russian", :git => "https://github.com/dima4p/russian.git"
 
+gem 'inherited_resources'
+
 group :development, :test do
+  gem "nifty-generators"
   gem "wirble"
   gem "ruby-debug"
   gem "rcov"

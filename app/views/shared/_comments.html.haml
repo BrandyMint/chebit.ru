@@ -1,3 +1,4 @@
+= javascript_include_tag 'comment'
 #comments
   -if ! item.instance_of?(Comment)#Если не комментарий
     %h2.comments-header
@@ -11,7 +12,7 @@
   - else
     %ul.all_comments
       - for comment in item.comments
-        %li.comment_holder.vote_holder{:onmouseover => "showdiv(this)", :onmouseout => "hidediv(this)"}
+        %li.comment_holder.vote_holder{:onmouseover => "showdiv(this,'folding-dot-holder')", :onmouseout => "hidediv(this,'folding-dot-holder')"}
           .msg-meta
             .folding-dot-holder
               .folding-dot
@@ -33,4 +34,5 @@
   -if ! item.instance_of?(Comment)#Если не комментарий
     .comment_new
       %h3
+        = link_to 'Добавить комментарий', :id => "add-comment"
         = render :partial => "shared/form_newcomment", :locals => {:item => comment}

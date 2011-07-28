@@ -1,4 +1,3 @@
-= javascript_include_tag 'comment'
 #comments
   -if ! item.instance_of?(Comment)#Если не комментарий
     %h2.comments-header
@@ -29,10 +28,14 @@
           .comment_menu
             - if can? :destroy, comment
               = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
+          .comment_new
+            %h5
+              = link_to 'Ответить','#', :class => 'linkaddcomment'
+              = render :partial => "shared/form_newcomment", :locals => {:item => comment}
           = render :partial => "shared/form_newcomment", :locals => {:item => comment}
           = render :partial => "shared/comments", :locals => {:item => comment}
   -if ! item.instance_of?(Comment)#Если не комментарий
     .comment_new
       %h3
-        = link_to 'Добавить комментарий', :id => "add-comment"
+        = link_to 'Добавить комментарий','#', :class => 'linkaddcomment' 
         = render :partial => "shared/form_newcomment", :locals => {:item => comment}

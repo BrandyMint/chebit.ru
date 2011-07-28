@@ -15,9 +15,7 @@ if(sender != ''){
  }
 }
 
-$('#add-comment').click(function(event){
-    alert('rfr');
-    event.preventDefault();
-    });
+
+
 
 

@@ -1,8 +1,7 @@
-#JS для реализации комментариев в проекте
-
-$('add-comment').click(function(event){
-    debugger
-    alert("Hooray!");
+$(document).ready(function(){
+  //JS для реализации комментариев в проекте
+  $('.linkaddcomment').click(function(event){
+    showdiv(this.parentNode,'add-comment')
     event.preventDefault();
     });
-debugger;
+    });

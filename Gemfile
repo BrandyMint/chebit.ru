@@ -26,6 +26,8 @@ gem "gritter_notices"
 
 
 #gem 'hoptoad_notifier'
+#
+gem "unicorn"
 
 gem "annotate"
 gem "cancan"

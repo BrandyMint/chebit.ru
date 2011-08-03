@@ -1,4 +1,4 @@
-# -*- coding: undecided -*-
+# -*- coding: utf-8 -*-
 class Section < ActiveRecord::Base
   has_many :discourses
   has_many :conference_sections

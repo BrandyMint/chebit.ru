@@ -1,5 +1,5 @@
 class ConferenceSection < ActiveRecord::Base
-  belongs_to :section
+  belongs_to :section, :class_name=>'::Section'
   belongs_to :conference
 
   has_many :discourses

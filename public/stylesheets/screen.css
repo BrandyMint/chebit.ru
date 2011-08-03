@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* @import "compass/css3/gradient" */
 /* line 3, ../../app/stylesheets/_nifty.sass */
 body {
@@ -1314,14 +1315,13 @@ span.hint.indent, small.hint.indent {
 #topper a {
   color: #999999;
 }
-/* line 24, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 #topper a:hover {
   color: red;
 }
 
 /* line 2, ../../app/stylesheets/_header.sass */
 #header {
-  border-bottom: 1px dashed #999999;
   margin-bottom: 0px;
   padding: 40px 80px 30px 80px;
 }
@@ -1389,6 +1389,58 @@ span.hint.indent, small.hint.indent {
   font-size: 12px;
 }
 
+/* line 2, ../../app/stylesheets/_mainmenu.sass */
+ul#mainmenu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  background-color: black;
+  padding: 8px 15px 8px 80px;
+}
+/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+ul#mainmenu li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+ul#mainmenu li:first-child, ul#mainmenu li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+ul#mainmenu li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+ul#mainmenu li.last {
+  padding-right: 0;
+}
+/* line 6, ../../app/stylesheets/_mainmenu.sass */
+ul#mainmenu li {
+  padding: 0px 25px 0px 0px;
+}
+/* line 8, ../../app/stylesheets/_mainmenu.sass */
+ul#mainmenu li a {
+  text-decoration: none;
+  color: #dddddd;
+}
+/* line 4, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+ul#mainmenu li a:hover {
+  text-decoration: underline;
+}
+/* line 11, ../../app/stylesheets/_mainmenu.sass */
+ul#mainmenu li:hover, ul#mainmenu li.current {
+  color: white;
+  text-shadow: white 2px 2px 2px;
+}
+
 /* line 1, ../../app/stylesheets/_content.sass */
 #content {
   padding: 25px 80px 10px 80px;
@@ -1428,7 +1480,7 @@ span.hint.indent, small.hint.indent {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 60, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #footer ul.partners li {
   list-style-image: none;
   list-style-type: none;
@@ -1439,15 +1491,15 @@ span.hint.indent, small.hint.indent {
   padding-left: 4px;
   padding-right: 4px;
 }
-/* line 48, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 48, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #footer ul.partners li:first-child, #footer ul.partners li.first {
   padding-left: 0;
 }
-/* line 49, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 49, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #footer ul.partners li:last-child {
   padding-right: 0;
 }
-/* line 50, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 50, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #footer ul.partners li.last {
   padding-right: 0;
 }
@@ -1475,7 +1527,7 @@ span.hint.indent, small.hint.indent {
 #bottom a {
   color: #777777;
 }
-/* line 24, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 #bottom a:hover {
   color: red;
 }
@@ -1561,17 +1613,17 @@ table.show_table th {
   color: gray;
 }
 
-/* line 31, ../../app/stylesheets/screen.sass */
+/* line 35, ../../app/stylesheets/screen.sass */
 .users {
   padding-top: 20px;
   padding-bottom: 50px;
 }
-/* line 34, ../../app/stylesheets/screen.sass */
+/* line 38, ../../app/stylesheets/screen.sass */
 .users h2.left {
   padding-top: 0;
   margin-top: 0;
 }
-/* line 37, ../../app/stylesheets/screen.sass */
+/* line 41, ../../app/stylesheets/screen.sass */
 .users h2.left span {
   color: gray;
 }
@@ -1638,7 +1690,7 @@ ol.section li.discourse {
 .assigner a {
   color: gray;
 }
-/* line 24, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .assigner a:hover {
   color: red;
 }
@@ -1655,7 +1707,7 @@ ol.section li.discourse {
   color: gray;
 }
 
-/* line 42, ../../app/stylesheets/screen.sass */
+/* line 46, ../../app/stylesheets/screen.sass */
 .leftside {
   float: left;
   width: 400px;
@@ -1781,7 +1833,7 @@ ul.tag_cloud li.css4 {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 60, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #comments ul.comment_user li {
   list-style-image: none;
   list-style-type: none;
@@ -1792,15 +1844,15 @@ ul.tag_cloud li.css4 {
   padding-left: 4px;
   padding-right: 4px;
 }
-/* line 48, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 48, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #comments ul.comment_user li:first-child, #comments ul.comment_user li.first {
   padding-left: 0;
 }
-/* line 49, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 49, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #comments ul.comment_user li:last-child {
   padding-right: 0;
 }
-/* line 50, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 50, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #comments ul.comment_user li.last {
   padding-right: 0;
 }
@@ -1866,64 +1918,64 @@ ul.tag_cloud li.css4 {
   color: #717171;
 }
 
-/* line 56, ../../app/stylesheets/screen.sass */
+/* line 60, ../../app/stylesheets/screen.sass */
 h1 {
   padding-bottom: 30px;
 }
 
-/* line 58, ../../app/stylesheets/screen.sass */
+/* line 62, ../../app/stylesheets/screen.sass */
 .flashes {
   padding-top: 20px;
 }
 
-/* line 61, ../../app/stylesheets/screen.sass */
+/* line 65, ../../app/stylesheets/screen.sass */
 a {
   color: #4b7399;
 }
-/* line 24, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
   color: red;
 }
-/* line 63, ../../app/stylesheets/screen.sass */
+/* line 67, ../../app/stylesheets/screen.sass */
 a.back {
   padding-top: 10px;
 }
-/* line 66, ../../app/stylesheets/screen.sass */
+/* line 70, ../../app/stylesheets/screen.sass */
 a.lucid {
   color: red;
 }
-/* line 24, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a.lucid:hover {
   color: red;
 }
 
-/* line 70, ../../app/stylesheets/screen.sass */
+/* line 74, ../../app/stylesheets/screen.sass */
 h2 {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* line 73, ../../app/stylesheets/screen.sass */
+/* line 77, ../../app/stylesheets/screen.sass */
 h2 span {
   color: #cccccc;
 }
 
-/* line 76, ../../app/stylesheets/screen.sass */
+/* line 80, ../../app/stylesheets/screen.sass */
 .left {
   float: left;
 }
 
-/* line 79, ../../app/stylesheets/screen.sass */
+/* line 83, ../../app/stylesheets/screen.sass */
 .right {
   float: right;
 }
 
-/* line 82, ../../app/stylesheets/screen.sass */
+/* line 86, ../../app/stylesheets/screen.sass */
 .likes {
   padding-top: 40px;
   padding-bottom: 20px;
 }
 
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 90, ../../app/stylesheets/screen.sass */
 .ad {
   margin-top: 40px;
   padding: 10px 20px 10px 20px;
@@ -1938,15 +1990,15 @@ h2 span {
   background-color: #eeeeee;
 }
 
-/* line 95, ../../app/stylesheets/screen.sass */
+/* line 99, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 98, ../../app/stylesheets/screen.sass */
+/* line 102, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 100, ../../app/stylesheets/screen.sass */
+/* line 104, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -1956,7 +2008,7 @@ ul#login {
   list-style: none inside;
   float: right;
 }
-/* line 60, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 ul#login li {
   list-style-image: none;
   list-style-type: none;
@@ -1967,26 +2019,26 @@ ul#login li {
   padding-left: 4px;
   padding-right: 4px;
 }
-/* line 48, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 48, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 ul#login li:first-child, ul#login li.first {
   padding-left: 0;
 }
-/* line 49, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 49, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 ul#login li:last-child {
   padding-right: 0;
 }
-/* line 50, ../../../../.rvm/gems/ree-1.8.7-2011.03@planposter/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 50, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 ul#login li.last {
   padding-right: 0;
 }
-/* line 104, ../../app/stylesheets/screen.sass */
+/* line 108, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 109, ../../app/stylesheets/screen.sass */
+/* line 113, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }

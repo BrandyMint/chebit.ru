@@ -1,4 +1,7 @@
-%p.conference_date= @conference.date.to_s(:human)
+%p.conference_date
+  - if @conference.is_passed?
+    passed at
+  = @conference.date.to_s(:human)
 %h1.conference_name= @conference.name
 %p.conference_desc= @conference.desc.html_safe
 
@@ -6,11 +9,11 @@
   - if cs.discourses.exists?
     = render 'conference_sections/conference_section', :conference_section=>cs
 
-%h2 Темы, которые ищут докладчика:
+- unless @conference.is_passed?
+  %h2 Темы, которые ищут докладчика:
 
+  %ol.free_discourses
+    - Discourse.free.each do |discourse|
+      %li.free_discourse= discourse
 
-%ol.free_discourses
-  - Discourse.free.each do |discourse|
-    %li.free_discourse= discourse
-
-= render 'discourses/form'
+  = render 'discourses/form'

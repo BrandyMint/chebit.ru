@@ -1,20 +1,4 @@
 ru:
-  date:
-    formats:
-      default: %d.%m.%Y
-      human: %d %b %Y
-      short: %m
-  time:
-    formats:
-      standart: %Y-%m-%d %H:%M
-      # default: %a %d %b %Y, %H:%M
-      default: %d %b %Y, %H:%M
-      full: %a %d %b %Y, %H:%M:%S %z
-      short: %d %b %Y, %H:%M
-      forum_short: %d.%m.%Y
-      forum_today: Сегодня в %H:%M
-      forum_yesterday: Вчера в %H:%M
-      forum_long_ago: %d.%m.%Y в %H:%M
   attributes:
     subject: Тема
     text: Подробнее
@@ -32,7 +16,7 @@ ru:
     firm: 'Компания'
     website: 'Веб-сайт'
     tag_list: 'Технологии'
-    discourse_state: Хотите сделать свой доклад?
+    discourse_state: 'Хотите сделать свой доклад?'
     discourse_subject: Если да, но на какую тему
     price_confirm: Согласны сделать взнос в 100-200 руб. на питание в течени дня?
     note: Хотите добавить о себе еще что-нибудь?

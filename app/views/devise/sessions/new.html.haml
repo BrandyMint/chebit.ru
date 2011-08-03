@@ -6,7 +6,7 @@
   %fieldset.inputs
     = f.input :email
     = f.input :password
-    = f.input :remember_me, :as => :boolean, :checked=>true
+    = f.input :remember_me, :as => :hidden, :checked=>true, :value=>'checked'
     // = f.buttons do
     // = f.button :submit
   %fieldset.buttons

@@ -1425,20 +1425,23 @@ ul#mainmenu li.last {
 /* line 6, ../../app/stylesheets/_mainmenu.sass */
 ul#mainmenu li {
   padding: 0px 25px 0px 0px;
+  color: white;
+  color: #86a6c4;
+  text-shadow: white 2px 2px 2px;
 }
-/* line 8, ../../app/stylesheets/_mainmenu.sass */
+/* line 11, ../../app/stylesheets/_mainmenu.sass */
 ul#mainmenu li a {
   text-decoration: none;
   color: #dddddd;
+  text-shadow: none;
 }
 /* line 4, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
 ul#mainmenu li a:hover {
   text-decoration: underline;
 }
-/* line 11, ../../app/stylesheets/_mainmenu.sass */
-ul#mainmenu li:hover, ul#mainmenu li.current {
+/* line 16, ../../app/stylesheets/_mainmenu.sass */
+ul#mainmenu li a:hover {
   color: white;
-  text-shadow: white 2px 2px 2px;
 }
 
 /* line 1, ../../app/stylesheets/_content.sass */

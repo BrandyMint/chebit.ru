@@ -5,11 +5,15 @@ ul#mainmenu
   padding: 8px 15px 8px $padding_width
   li
     padding: 0px 25px 0px 0px
+    color: white
+    color: lighten($primary_color,20)
+    +single-text-shadow(white,2px,2px,2px)
     a
       +hover-link
       +link-colors(#ddd)
-    &:hover, &.current
-      color: white
-      +single-text-shadow(white,2px,2px,2px)
+      +single-text-shadow(none)
+
+      &:hover
+        color: white
 
 

@@ -29,10 +29,10 @@
         = render "layouts/header"
 
       %ul#mainmenu
-        %li= link_to "CHEBIT'11-02 (25 августа 2011)", conference_path(2)
-        %li= link_to "прошедший CHEBIT'11-01", conference_path(1)
-        %li= link_to "Форум", "https://groups.google.com/forum/#!forum/chebit"
-        %li= link_to "Участники", users_path
+        %li= link_to_unless_current "CHEBIT'11-02 (25 августа 2011)", conference_path(2)
+        %li= link_to_unless_current "прошедший CHEBIT'11-01", conference_path(1)
+        %li= link_to_unless_current "Форум", "https://groups.google.com/forum/#!forum/chebit"
+        %li= link_to_unless_current "Участники", users_path
       #content
         - if show_title?
           %h2= yield(:title)

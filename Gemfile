@@ -21,6 +21,10 @@ gem "active_record_defaults"
 gem "rfc-822"
 gem "img_gravatar"
 
+#gem "copycopter_client"
+
+
+
 #gem 'hoptoad_notifier'
 
 gem "annotate"

@@ -9,9 +9,7 @@ namespace :vlad do
   set :repository, 'git@github.com:dapi/chebit.ru.git'
   set :web_command, "sudo apache2ctl"
 
-  #set :local_link, 'danil@dapi.orionet.ru:/home/danil/code/chebit'
-
-  set :copy_files, [ 'config/database.yml', 'config/app_config.yml' ]
+  set :copy_files, [ 'config/database.yml' ]
   set :symlinks, copy_files
 
   # for rails

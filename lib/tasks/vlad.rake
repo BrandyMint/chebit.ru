@@ -1,1 +1,3 @@
-Vlad.load(:app=>'passenger', :scm => "git") if defined? Vlad
+if defined? Vlad
+  Vlad.load(:app=>'unicorn_rails', :scm => "git")
+end

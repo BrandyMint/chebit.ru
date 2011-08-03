@@ -7,7 +7,7 @@ gem 'sass', '~> 3.1'
 gem 'haml', '~> 3.1.2'
 
 gem "haml-rails"
-gem "rails_config"
+gem 'rails_settings', '~> 0.1.1' # path => '/Users/danil/code/gems/rails_settings'
 gem "stateful_link"
 gem "devise", :git => "https://github.com/plataformatec/devise.git"
 gem "omniauth", :git => "https://github.com/intridea/omniauth.git"
@@ -54,11 +54,10 @@ group :development, :test do
    gem "hpricot"
    gem "ruby_parser"
    gem "mocha"
-end
 
-group :deploy do
-  gem 'vlad', :path => '~/code/gems/vlad/' #, :git=>'git://github.com/dapi/vlad.git' # '~> 2.2.0',
-  gem 'vlad-extras', :path => '~/code/gems/vlad-extras/'
-  gem 'vlad-git', :path => '~/code/gems/vlad-git/'
+  gem 'vlad', :git=>'git://github.com/dapi/vlad.git' #  , :path => '~/code/gems/vlad/' '~> 2.2.0',
+  gem 'vlad-extras', :git =>'git://github.com/dapi/vlad-extras.git'
+  gem 'vlad-git', :git=>'git://github.com/dapi/vlad-git.git' #, :path => '~/code/gems/vlad-git/'
   gem 'vlad-unicorn'
+
 end

@@ -27,22 +27,24 @@ gem "typus"
 gem "acts_as_list"
 gem "cancan"
 
-gem "russian", :git => "https://github.com/dima4p/russian.git"
+# gem "russian", :git => "https://github.com/dima4p/russian.git"
+gem "russian"
 
 gem 'inherited_resources'
 
 group :development, :test do
   gem "nifty-generators"
   gem "wirble"
-  gem "ruby-debug"
-  gem "rcov"
-  gem "rspec"
-  gem "rspec-rails"
-  gem "shoulda"
-  gem "factory_girl_rails"
-  gem "factory_girl_generator"
-  gem "hpricot"
-  gem "ruby_parser"
+   gem 'ruby-debug19', :require => 'ruby-debug'
+   gem "rcov"
+   gem "rspec"
+   gem "rspec-rails"
+   gem "shoulda"
+   gem "factory_girl_rails"
+   gem "factory_girl_generator"
+   gem "hpricot"
+   gem "ruby_parser"
+   gem "mocha"
 end
 
 group :deploy do
@@ -50,4 +52,3 @@ group :deploy do
   gem 'vlad-helpers', :git => 'https://github.com/dapi/vlad-helpers.git'
   gem "vlad-git"
 end
-gem "mocha", :group => :test

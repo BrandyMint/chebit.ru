@@ -1,0 +1,124 @@
+
+h1. Mixins
+
+h2. mixins/sass_tools
+
+*+dl_horizontal($dt_width, $dd_width)*
+Definition lists where the dt's and dd's are floated next to each other. Perfect for a quick and readable attribute breakdown.
+
+*+h_grad($color_1, $color_2)*
+A simple horizontal CSS3 gradient where you don't need to define color stops, just two colors that you want to blend
+
+*+v_grad($color_1, $color_2)*
+Same as above but a vertical gradient
+
+*+letterpress($color)*
+Gives you that nice embossed effect on your fonts with pure CSS. Default color is white but you can pass any color as an argument
+
+*+linkify*
+Perfect for overriding links with block level styles (think buttons) so that they look and act like plain text links again
+
+*+nudge($distance, $direction)*
+Uses relative positioning to move elements in any desired direction (ie: nudge(2px,"left"))
+
+*+opaque(90)*
+Similar to compass' opacity mixin except tailored to my preference for using integers as opposed to floats
+
+*+size($width)*
+If you supply one argument it will take that length and apply it to both width and height for a perfect square. Two arguments (width,height) gets you a rectangle.
+
+There are also misc classes in the source that speak for themselves (.float-left, .clear, etc)
+
+h2. mixins/gradient-bg
+
+*+gradient-bg(#777)*
+
+Create a simple top to bottom linear gradient with a background-color backup
+The first argument, $color will be output as background-color: $color
+
+This yields a gradient that is 5% brighter on the top and 5% darker on the bottom 
+
+*+gradient-bg(#777)*
+
+This yeilds a gradient where the bright and dark colors are shifted 10% from the original color.
+If you don't specify a third argument it will assign this value for the darkness too, keeping the gradient even.
+
+    +gradient-bg(#777, 10)
+
+You can also pass a invert the gradient (dark color on top) by passing a negative number for $top
+
+    +gradient-bg(#777, -10)
+
+This yeilds a gradient where the top is bright but the bottom is the same as the $color provided
+
+    +gradient-bg(#777, 8, 0)
+
+
+h1. forms
+
+h2. simple_form/simple_form
+
+h2. formtastic/formtastic
+
+  +stack-form(full-width, input-width, submit-button-align)
+
+Example:
+
+form.formtastic
+  +stack-form(300px,"full","right")
+
+--------------------------------------------------------
+FLOATED FORMS
+Column layout with labels left of the inputs
+Comes in 2 flavors for text alignment of the labels
+--------------------------------------------------------
+
+Arguments:
+
+  +float-form-left(total-width, label-width, input-width, label-padding-x, submit-align)
+
+Examples:
+
+  form.lefty
+    +float-form-left(800px,500px,200px,6px,"buttons-left")
+
+  form.righty
+    +float-form-right(800px,500px,200px,6px,"buttons-left")
+
+h2. buttons/*
+
+todo
+
+"on-line buttons generator":http://www.performable.com/buttons/
+
+h2. other/*
+
+
+h1. Instructions and examples
+
+http://nex-3.com/posts/89-powerful-color-manipulation-with-sass
+
+
+
+h1. Sources
+
+
+h2. Imported:
+
+mixins/gradient-bg: "gist.github.com/590559":https://gist.github.com/590559
+"sass_tools":https://github.com/activestylus/sass_tools
+"formtastic":http://www.github.com/active-stylus/formtastic-sass
+
+h2. Future:
+
+http://wiseheartdesign.com/articles/2010/10/19/multi-line-buttons-with-compass-sass-and-css3/
+http://brandonmathis.com/blog/2010/09/21/fast-color-theming-with-compass-and-sass/
+http://brandonmathis.com/projects/fancy-buttons/
+https://github.com/kuroir/sass-tools
+https://github.com/mikesten/SASS-Tools
+
+
+
+h2. History:
+
+"compass-colors":https://github.com/chriseppstein/compass-colors

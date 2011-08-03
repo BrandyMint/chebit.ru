@@ -74,9 +74,10 @@ class User < ActiveRecord::Base
     self
   end
 
-  #Является ли данный пользователь администратором
-  def is_admin?
-    role=="admin"
+  #совпадает ли настоящая роль пользователя с предлагаемой base_role 
+  #role - хранится в БД и имеет вид, н-р "admin"
+  def role?(base_role)
+    base_role==role
   end
 
   protected

@@ -1,4 +1,4 @@
-#comments
+.comments
   -if ! item.instance_of?(Comment)#Если не комментарий
     %h2.comments-header
       комментарии (
@@ -7,11 +7,11 @@
       )
   - if item.comments.empty?
     -if ! item.instance_of?(Comment)#Если не комментарий
-    Нет комментариев для показа.
+      Нет комментариев для показа.
   - else
     %ul.all_comments
       - for comment in item.comments
-        %li.comment_holder.vote_holder{:onmouseover => "showdiv(this)", :onmouseout => "hidediv(this)"}
+        %li.comment_holder.vote_holder{:onmouseover => "showdiv(this,'folding-dot-holder')", :onmouseout => "hidediv(this,'folding-dot-holder')"}
           .msg-meta
             .folding-dot-holder
               .folding-dot

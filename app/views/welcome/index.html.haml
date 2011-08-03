@@ -4,21 +4,8 @@
   %p
     = link_to "Итоги CHEBIT'11-01 (9.04.2011)", conference_path(Conference.find(1))
 
--# chebit'11-1 http://forum.na-svyazi.ru/?showtopic=826028&hl=ruby&st=30
-  %p
-  %div
-    .left
-      = link_to users_path do
-        Участники (#{User.all.count})..
-    .right= render 'shared/likes'
-    .clear
-  %ul
-    %li 10.04.2011 <a href="http://atner.livejournal.com/115518.html">Этнер Егоров Лица конференции chebit. По горячим следам</a>
 
-.clear
-
-
-= render 'shared/google_group'
+-# = render 'shared/google_group'
 
 = render 'shared/twitter_widget'
 %br/

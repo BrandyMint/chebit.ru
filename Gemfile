@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-
 gem 'rails', '~> 3.0.8'
 gem 'pg'
 
@@ -38,25 +37,27 @@ gem "cancan"
 
 # gem "russian", :git => "https://github.com/dima4p/russian.git"
 gem "russian", :git => "https://github.com/yaroslav/russian.git"
-# gem "russian"
+
+gem 'inherited_resources'
 
 group :development, :test do
+  gem "nifty-generators"
   gem "wirble"
-  gem 'ruby-debug19', :require => 'ruby-debug'
-  gem "rcov"
-  gem "rspec"
-  gem "rspec-rails"
-  gem "shoulda"
-  gem "factory_girl_rails"
-  gem "factory_girl_generator"
-  gem "hpricot"
-  gem "ruby_parser"
+   gem 'ruby-debug19', :require => 'ruby-debug'
+   gem "rcov"
+   gem "rspec"
+   gem "rspec-rails"
+   gem "shoulda"
+   gem "factory_girl_rails"
+   gem "factory_girl_generator"
+   gem "hpricot"
+   gem "ruby_parser"
+   gem "mocha"
+end
 
-  gem 'wirble'
+group :deploy do
   gem 'vlad', :path => '~/code/gems/vlad/' #, :git=>'git://github.com/dapi/vlad.git' # '~> 2.2.0',
   gem 'vlad-extras', :path => '~/code/gems/vlad-extras/'
   gem 'vlad-git', :path => '~/code/gems/vlad-git/'
   gem 'vlad-unicorn'
-
 end
-gem "mocha", :group => :test

@@ -1,0 +1,42 @@
+$select_disabled_bg : #e4e4e4
+$selected           : #000000
+$select_hover       : #00f
+$select_disabled    : #777
+$selected_bg        : #b0d0ff
+//----------------------------------------------------
+// Skinned Selects
+//----------------------------------------------------
+html body
+  div
+    .right-selectable-container
+      border-color: $input_border
+      padding: 5px 0px
+      width: 100%
+      font-size: 13px
+      min-width: 20px
+      div.right-selectable-handle
+        border: none
+        background: transparent
+        text-indent: -9999px
+  ul.right-selectable.right-selectable-single
+    li
+      padding-top: 4px
+      padding-bottom: 4px
+      width: auto
+      &:hover
+        background: $select_hover
+      &.right-selectable-disabled
+        background: $select_disabled
+        &:hover
+          background: #e4e4e4
+      &.right-selectable-selected
+        height: 17px
+        background: $selected
+        border-color: $selected - 30
+        &:hover
+          background: $selected + 20
+
+.long
+  ul.right-selectable.right-selectable-single
+    height: 250px
+    overflow-y: scroll

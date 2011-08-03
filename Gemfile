@@ -37,6 +37,7 @@ gem "cancan"
 
 # gem "russian", :git => "https://github.com/dima4p/russian.git"
 gem "russian", :git => "https://github.com/yaroslav/russian.git"
+# gem 'russian'
 
 gem 'inherited_resources'
 

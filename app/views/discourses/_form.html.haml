@@ -1,12 +1,13 @@
-%h2 А я хочу услышать доклад
-= simple_form_for( @discourse ) do |f|
-  = hidden_field_tag :me, params[:me]
-  = f.input :subject, :label=>'На тему'
-  -# = f.association :section, :collection => Section.show.all, :label=>'В секции'
-  = f.input :text, :input_html => { :cols=> 55, :rows=>5 }
+.hide
+  %h2 А я хочу услышать доклад
+  = simple_form_for( @discourse ) do |f|
+    = hidden_field_tag :me, params[:me]
+    = f.input :subject, :label=>'На тему'
+    -# = f.association :section, :collection => Section.show.all, :label=>'В секции'
+    = f.input :text, :input_html => { :cols=> 55, :rows=>5 }
 
-  -# = f.button :submit, :class=>'cupid-green'
-  .actions
-    %button.cupid-green Готово
+    -# = f.button :submit, :class=>'cupid-green'
+    .actions
+      %button.cupid-green Готово
 
-%br
+  %br

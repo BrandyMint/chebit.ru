@@ -68,6 +68,17 @@ GIT
       warden (~> 1.0.3)
 
 GIT
+  remote: https://github.com/typus/typus.git
+  revision: 4ce814b8ee1e1f3bca7d400fa7787ccc35ad5a96
+  specs:
+    typus (3.0.11.rc5)
+      bcrypt-ruby
+      fastercsv (~> 1.5)
+      rails (~> 3.0.8)
+      render_inheritable
+      will_paginate (~> 3.0.pre2)
+
+GIT
   remote: https://github.com/yaroslav/russian.git
   revision: 57af7fee22f9c324ac6313064c36e582d58ba8df
   specs:
@@ -259,12 +270,6 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    typus (3.0.11)
-      bcrypt-ruby
-      fastercsv (~> 1.5)
-      rails (~> 3.0.8)
-      render_inheritable
-      will_paginate (~> 3.0.pre2)
     tzinfo (0.3.29)
     unicorn (4.0.1)
       kgio (~> 2.4)
@@ -274,7 +279,7 @@ GEM
       vlad (~> 2.0)
     warden (1.0.5)
       rack (>= 1.0)
-    will_paginate (3.0.pre4)
+    will_paginate (3.0.0)
     wirble (0.1.3)
 
 PLATFORMS
@@ -315,7 +320,7 @@ DEPENDENCIES
   simple_form
   state_machine
   stateful_link
-  typus
+  typus!
   unicorn
   vlad!
   vlad-extras!

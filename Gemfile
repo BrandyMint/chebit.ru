@@ -31,7 +31,8 @@ gem "unicorn"
 
 gem "annotate"
 gem "cancan"
-gem "typus"
+# gem "typus"
+gem 'typus', :git => 'https://github.com/typus/typus.git'
 
 #https://github.com/swanandp/acts_as_list
 gem "acts_as_list"

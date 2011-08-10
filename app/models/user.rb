@@ -11,10 +11,10 @@ class User < ActiveRecord::Base
                    :tel, :firm,
                    :occupation, :website, :note, :twitter,
                    :discourse_state, :discourse_subject, :price_confirm, :tag_list )
-  
+
 
   defaults :price_confirm => true
-  
+
   validates_presence_of :full_name
   # validates_presence_of :login
   # validates_uniqueness_of :login
@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
   acts_as_taggable_on :tags
 
   def to_s
-    full_name
+    firm? ? "#{full_name} (#{firm})" : full_name
   end
 
   def anti_email
@@ -54,12 +54,12 @@ class User < ActiveRecord::Base
     "<a href=\"#{website}\">#{website}</a>".html_safe
   end
 
-  def update_with_password(params={}) 
-    if params[:password].blank? 
-      params.delete(:password) 
-      params.delete(:password_confirmation) if params[:password_confirmation].blank? 
-    end 
-    update_attributes(params) 
+  def update_with_password(params={})
+    if params[:password].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation) if params[:password_confirmation].blank?
+    end
+    update_attributes(params)
   end
 
   def notify_admin
@@ -74,14 +74,14 @@ class User < ActiveRecord::Base
     self
   end
 
-  #совпадает ли настоящая роль пользователя с предлагаемой base_role 
+  #совпадает ли настоящая роль пользователя с предлагаемой base_role
   #role - хранится в БД и имеет вид, н-р "admin"
   def role?(base_role)
     base_role==role
   end
 
   protected
-  
+
   # def password_required?
   #   !persisted? || password.present? || password_confirmation.present?
   # end

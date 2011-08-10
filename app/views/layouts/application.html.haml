@@ -28,7 +28,7 @@
       #header
         = render "layouts/header"
 
-      %ul#mainmenu
+      %ul#mainmenu.hide
         %li= link_to_unless_current "CHEBIT'11-02 (25 августа 2011)", conference_path(2)
         %li= link_to_unless_current "прошедший CHEBIT'11-01", conference_path(1)
         %li= link_to_unless_current "Форум", "https://groups.google.com/forum/#!forum/chebit"

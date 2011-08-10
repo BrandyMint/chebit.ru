@@ -1,7 +1,9 @@
 @import blueprint
 
 //Recommended Blueprint configuration with scoping and semantic layout:
-body.bp
+body
   +blueprint-print(true)
 
-#topper, #header, #footer, #bottom, .noprint {display: none;}
+// .hide is defined in blueprint
+#topper, #header, #footer, #bottom
+  display: none

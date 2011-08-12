@@ -1,0 +1,9 @@
+%h2 Добавить вакансию
+= simple_form_for( @vacancy ) do |f|
+  = f.input :title, :label=>'Заголовок'
+  = f.input :text, :input_html => { :cols=> 55, :rows=>5 }
+
+  .actions
+    %button.cupid-green Добавить
+
+%br

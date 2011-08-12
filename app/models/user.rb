@@ -25,6 +25,7 @@ class User < ActiveRecord::Base
 
   has_many :assigned_discourses, :class_name => Discourse.name, :foreign_key => :assigner_id
   has_many :authored_discourses, :class_name => Discourse.name, :foreign_key => :author_id
+  has_many :vacancies, :dependent => :destroy
 
   default_scope order(:id)
 

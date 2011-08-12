@@ -16,6 +16,8 @@ Chebit::Application.routes.draw do
   devise_scope :user do
     resources :users, :only => [:show, :index]
   end
+  
+  resources :vacancies
 
   #Для отображения комментариев после создания
  # match '/discourses/:id/comments'=> redirect('/discourses/%{id}')

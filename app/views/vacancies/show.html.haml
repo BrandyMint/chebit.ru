@@ -1,0 +1,9 @@
+- if @vacancy.nil?
+  Not found.
+- else 
+  = @vacancy.title
+  %br  
+  = @vacancy.text
+  %br
+  - if (current_user == @vacancy.user)
+    = link_to "delete", @vacancy, :method => :delete, :confirm => "You sure?", :title => @vacancy.title

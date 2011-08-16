@@ -1,10 +1,11 @@
-%h1 Вакансии
-- unless @vacancies.empty? 
-  = render @vacancies 
+.vacancies
+  %h1 
+    Вакансии
+    %span (#{@vacancies.count})
+  - unless @vacancies.empty? 
+    = render @vacancies 
   = will_paginate @vacancies 
+  %br
 
-%br
-
-- if !current_user.nil? 
-  = link_to "Добавить вакансию", new_vacancy_path
-
+  - if !current_user.nil? 
+    = link_to "Добавить вакансию", new_vacancy_path

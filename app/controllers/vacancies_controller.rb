@@ -1,22 +1,37 @@
 class VacanciesController < ApplicationController
   before_filter :authenticate, :except => [:index, :show]
-  before_filter :authorized_user, :only => [:destroy]
+  before_filter :authorized_user, :only => [:destroy, :edit, :update]
   
   def new
     @vacancy = Vacancy.new
   end
   
   def index
-    @vacancies = Vacancy.paginate(:page => params[:page], :per_page => 20)
+    @vacancies = Vacancy.where("active_until >= ?", Time.now).paginate(:page => params[:page], :per_page => 10, :order => 'id DESC')
   end
 
   def show
     @vacancy = Vacancy.find_by_id(params[:id]) 
   end
   
+  def edit
+  end
+  
+  def update
+    if @vacancy.update_attributes(params[:vacancy])
+      flash[:success] = "Vacancy edited!"
+      redirect_to vacancies_path
+    else
+      flash[:error] = "Vacancy not edited!"
+      render 'edit'
+    end
+  end
+  
   def create
     @vacancy  = current_user.vacancies.build(params[:vacancy])
-    @vacancy[:active_until] = 1.month.ago
+    if @vacancy.active_until.nil?
+      @vacancy.active_until = 1.month.since
+    end
     if @vacancy.save
       flash[:success] = "Vacancy created!"
       redirect_to vacancies_path

@@ -1,5 +1,5 @@
 .vacancies
-  %h2 Добавить вакансию
+  %h2 Редактировать вакансию
   = simple_form_for( @vacancy ) do |f|
     = f.input :title, :input_html => { :maxlength => 100 }, :label=>'Заголовок'
     = f.input :text, :as => :text, :input_html => { :cols=> 55, :rows=>5 }
@@ -7,5 +7,4 @@
 
     .actions
       .vbuttons
-        %button.cupid-green Добавить
-
+        %button.cupid-blue Отредактировать

@@ -158,6 +158,9 @@ GEM
       haml (~> 3.0)
       railties (~> 3.0)
     has_scope (0.5.1)
+    hoptoad_notifier (2.4.11)
+      activesupport
+      builder
     hpricot (0.8.4)
     i18n (0.5.0)
     img_gravatar (0.2.1)
@@ -298,6 +301,7 @@ DEPENDENCIES
   gritter_notices
   haml (~> 3.1.2)
   haml-rails
+  hoptoad_notifier
   hpricot
   img_gravatar
   inherited_resources

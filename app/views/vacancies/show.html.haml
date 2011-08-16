@@ -1,9 +1,16 @@
-- if @vacancy.nil?
-  Not found.
-- else 
-  = @vacancy.title
-  %br  
-  = @vacancy.text
-  %br
-  - if (current_user == @vacancy.user)
-    = link_to "delete", @vacancy, :method => :delete, :confirm => "You sure?", :title => @vacancy.title
+.vacancies
+  - if @vacancy.nil?
+    Ошибка! Нет такой вакансии.
+  - else
+    .vname 
+      %b 
+        = @vacancy.title
+    .vtext  
+      = @vacancy.text
+      
+    - if (current_user == @vacancy.user)
+      = link_to "Редактировать", edit_vacancy_path
+      = link_to "Удалить", @vacancy, :method => :delete, :confirm => "Уверены?", :title => @vacancy.title
+  
+  .backlink
+    = link_to 'Назад', vacancies_path

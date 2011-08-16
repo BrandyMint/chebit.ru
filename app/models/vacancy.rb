@@ -1,5 +1,5 @@
 class Vacancy < ActiveRecord::Base
-  attr_accessible :title, :text
+  attr_accessible :title, :text, :active_until
   
   belongs_to :user
   

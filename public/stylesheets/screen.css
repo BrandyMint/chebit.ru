@@ -2062,3 +2062,36 @@ ul#login li {
 /* .g-tags */
 /*   padding-top: 40px */
 /*   color: gray */
+
+/* === Vacancy styles === */
+.vacancies {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.vacancies .vname {
+  padding-bottom: 5px;	
+}
+.vacancies .vtext {
+  padding-bottom: 5px;	
+}
+.vacancies .t-create {
+  font-size: 11px;
+  font-style: italic;
+  color: gray;
+}
+#vacancy_active_until_3i {
+  width: 70px;
+}
+#vacancy_active_until_2i {
+  width: 120px;
+}
+#vacancy_active_until_1i {
+  width: 70px;
+}
+.backlink {
+  padding: 20px 0px;
+}
+.vbuttons {
+  margin-left: 210px; 
+}
+/* === End of Vacancy styles === */

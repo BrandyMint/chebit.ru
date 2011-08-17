@@ -6,7 +6,7 @@
       %b 
         = @vacancy.title
     .vtext  
-      = @vacancy.text
+      = wrap(simple_format(@vacancy.text))
       
     - if (current_user == @vacancy.user)
       = link_to "Редактировать", edit_vacancy_path

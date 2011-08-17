@@ -9,6 +9,7 @@
 
 
 Conference.create!(:name=>'Conf1')
+Conference.create!(:name=>'Conf2')
 
 Section.create!(
                 [

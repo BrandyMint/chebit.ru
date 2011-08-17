@@ -1523,10 +1523,11 @@ ul#mainmenu li a:hover {
   font-size: 12px;
   width: 900px;
   margin: 0px auto;
-  text-align: right;
   color: #666666;
+  /* p */
+  /*   text-align: right */
 }
-/* line 7, ../../app/stylesheets/_bottom.sass */
+/* line 6, ../../app/stylesheets/_bottom.sass */
 #bottom a {
   color: #777777;
 }
@@ -1617,16 +1618,21 @@ table.show_table th {
 }
 
 /* line 35, ../../app/stylesheets/screen.sass */
+#liveinternet {
+  padding-top: 20px;
+}
+
+/* line 38, ../../app/stylesheets/screen.sass */
 .users {
   padding-top: 20px;
   padding-bottom: 50px;
 }
-/* line 38, ../../app/stylesheets/screen.sass */
+/* line 41, ../../app/stylesheets/screen.sass */
 .users h2.left {
   padding-top: 0;
   margin-top: 0;
 }
-/* line 41, ../../app/stylesheets/screen.sass */
+/* line 44, ../../app/stylesheets/screen.sass */
 .users h2.left span {
   color: gray;
 }
@@ -1710,7 +1716,7 @@ ol.section li.discourse {
   color: gray;
 }
 
-/* line 46, ../../app/stylesheets/screen.sass */
+/* line 49, ../../app/stylesheets/screen.sass */
 .leftside {
   float: left;
   width: 400px;
@@ -1926,17 +1932,17 @@ ul.tag_cloud li.css4 {
   display: none;
 }
 
-/* line 60, ../../app/stylesheets/screen.sass */
+/* line 63, ../../app/stylesheets/screen.sass */
 h1 {
   padding-bottom: 30px;
 }
 
-/* line 62, ../../app/stylesheets/screen.sass */
+/* line 65, ../../app/stylesheets/screen.sass */
 .flashes {
   padding-top: 20px;
 }
 
-/* line 65, ../../app/stylesheets/screen.sass */
+/* line 68, ../../app/stylesheets/screen.sass */
 a {
   color: #4b7399;
 }
@@ -1944,11 +1950,11 @@ a {
 a:hover {
   color: red;
 }
-/* line 67, ../../app/stylesheets/screen.sass */
+/* line 70, ../../app/stylesheets/screen.sass */
 a.back {
   padding-top: 10px;
 }
-/* line 70, ../../app/stylesheets/screen.sass */
+/* line 73, ../../app/stylesheets/screen.sass */
 a.lucid {
   color: red;
 }
@@ -1957,33 +1963,33 @@ a.lucid:hover {
   color: red;
 }
 
-/* line 74, ../../app/stylesheets/screen.sass */
+/* line 77, ../../app/stylesheets/screen.sass */
 h2 {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* line 77, ../../app/stylesheets/screen.sass */
+/* line 80, ../../app/stylesheets/screen.sass */
 h2 span {
   color: #cccccc;
 }
 
-/* line 80, ../../app/stylesheets/screen.sass */
+/* line 83, ../../app/stylesheets/screen.sass */
 .left {
   float: left;
 }
 
-/* line 83, ../../app/stylesheets/screen.sass */
+/* line 86, ../../app/stylesheets/screen.sass */
 .right {
   float: right;
 }
 
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 89, ../../app/stylesheets/screen.sass */
 .likes {
   padding-top: 40px;
   padding-bottom: 20px;
 }
 
-/* line 90, ../../app/stylesheets/screen.sass */
+/* line 93, ../../app/stylesheets/screen.sass */
 .ad {
   margin-top: 40px;
   padding: 10px 20px 10px 20px;
@@ -1998,15 +2004,15 @@ h2 span {
   background-color: #eeeeee;
 }
 
-/* line 99, ../../app/stylesheets/screen.sass */
+/* line 102, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 102, ../../app/stylesheets/screen.sass */
+/* line 105, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 104, ../../app/stylesheets/screen.sass */
+/* line 107, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -2039,14 +2045,14 @@ ul#login li:last-child {
 ul#login li.last {
   padding-right: 0;
 }
-/* line 108, ../../app/stylesheets/screen.sass */
+/* line 111, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 113, ../../app/stylesheets/screen.sass */
+/* line 116, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }
@@ -2062,36 +2068,3 @@ ul#login li {
 /* .g-tags */
 /*   padding-top: 40px */
 /*   color: gray */
-
-/* === Vacancy styles === */
-.vacancies {
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-.vacancies .vname {
-  padding-bottom: 5px;	
-}
-.vacancies .vtext {
-  padding-bottom: 5px;	
-}
-.vacancies .t-create {
-  font-size: 11px;
-  font-style: italic;
-  color: gray;
-}
-#vacancy_active_until_3i {
-  width: 70px;
-}
-#vacancy_active_until_2i {
-  width: 120px;
-}
-#vacancy_active_until_1i {
-  width: 70px;
-}
-.backlink {
-  padding: 20px 0px;
-}
-.vbuttons {
-  margin-left: 210px; 
-}
-/* === End of Vacancy styles === */

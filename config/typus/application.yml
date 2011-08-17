@@ -4,8 +4,8 @@
 
 Conference:
   fields:
-    default: name, date, is_passed
-    form: name, date, is_passed, desc
+    default: name, date, registration_at, start_at, finish_at, is_passed
+    form: name, date, registration_at, start_at, break_at, break_length, finish_at, is_passed, desc
   order_by: -date
   application: chebit
   relationships: sections
@@ -28,8 +28,8 @@ ConferenceSection:
 Discourse:
   fields:
     #default: subject, position #, text, author, assigner, is_moderated
-    default: conference_section, subject, section, assigner, is_moderated, position
-    form: subject, conference_section, section, text, kind, author, assigner, position, is_moderated
+    default: conference_section, subject, section, assigner, time_length, is_moderated, position
+    form: subject, conference_section, section, text, kind, author, assigner, time_length, position, is_moderated
     options:
       selectors: kind
   order_by: conference_section_id, section_id, position
@@ -63,7 +63,7 @@ User:
 
 Comment:
   fields:
-    default: content 
+    default: content
     form: content
   order_by: id
   application: chebit

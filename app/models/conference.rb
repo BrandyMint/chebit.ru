@@ -6,4 +6,9 @@ class Conference < ActiveRecord::Base
   def to_s
     name
   end
+
+  def calculate_finish_time
+    total_minutes = (discourses.all.map(&:time_length).reduce(:+) + self.break_length)*60
+    update_attribute :finish_at, self.start_at + total_minutes
+  end
 end

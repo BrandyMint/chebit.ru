@@ -8,8 +8,8 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 
-Conference.create!(:name=>'Conf1')
-Conference.create!(:name=>'Conf2')
+Conference.create!(:name=>'Conf1', :date=>Date.today)
+Conference.create!(:name=>'Conf2', :date=>Date.today)
 
 Section.create!(
                 [

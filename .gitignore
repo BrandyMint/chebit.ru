@@ -1,5 +1,4 @@
 vendor/bundle
-public/stylesheets/*
 rerun*
 coverage*
 capybara*
@@ -21,7 +20,6 @@ nbproject
 .emacs*
 TAGS
 dump
-public/stylesheets/compiled
 .DS_Store
 config/database.yml
 GPATH

@@ -5,5 +5,8 @@
     = f.label :email
     %br/
     = f.email_field :email
-  %p= f.submit "Send me reset password instructions"
+  %fieldset.buttons
+    -# = f.button :submit
+    %center
+      %button.thoughtbot Send me reset password instructions
 = render :partial => "devise/shared/links"

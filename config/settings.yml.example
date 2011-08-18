@@ -5,6 +5,9 @@ global:
     from: notifier@chebit.ru
     to: danil@pismenny.ru
     return_path: danil@pismenny.ru
+  typus:
+    username: admin
+    password: password
 
 development:
   mail:

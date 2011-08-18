@@ -35,7 +35,7 @@ Discourse:
   order_by: conference_section_id, section_id, position
   relationships:
   filters: conference_section, section
-  search:
+  search: subject, text
   application: chebit
   options:
     per_page: 50
@@ -59,16 +59,18 @@ Registration:
   relationships: conference, user
   application: chebit
   options:
-    action_after_save: index
+    action_after_save: create
 
 User:
   fields:
-    default: full_name, email, last_sign_in_at, invest_money, firm, website, occupation, tel
+    default: full_name, email, firm, occupation, tel
     form: full_name, email, firm, website, occupation, note, tel, twitter, invest_money, tag_list
   order_by: created_at
-  # relationships: assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
+  relationships: registrations #assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
   filters: created_at
   search: full_name, email, firm
+  options:
+    per_page: 50
   application: chebit
 
 Comment:

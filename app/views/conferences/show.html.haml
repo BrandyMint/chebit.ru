@@ -13,17 +13,23 @@
     Место проведения:
     %b= @conference.place
     (#{@conference.address})
+  %p.right
+    %a.multi-line-button{:href=>"#"}
+      %span.title Зарегистрироваться
+      %span.subtitle= "Осталось #{90-@conference.registrations.count} мест3"
 
 
 - @conference.conference_sections.each do |cs|
   - if cs.discourses.exists?
     = render 'conference_sections/conference_section', :conference_section=>cs
 
-- unless @conference.is_passed?
-  %h2 Темы, которые ищут докладчика:
+-# - unless @conference.is_passed?
+-#   %h2 Темы, которые ищут докладчика:
 
-  %ol.free_discourses
-    - Discourse.free.each do |discourse|
-      %li.free_discourse= discourse
+-#   %ol.free_discourses
+-#     - Discourse.free.each do |discourse|
+-#       %li.free_discourse= discourse
 
-  = render 'discourses/form'
+-#   = render 'discourses/form'
+
+= render :partial => "shared/comments", :locals => {:item => @conference}

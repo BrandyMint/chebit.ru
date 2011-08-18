@@ -33,6 +33,4 @@
 -# = link_to 'Back', discourses_path
 
 = go_back root_path
--content_for(:head) do
-  = javascript_include_tag 'comment'#Скрипты для комментариев
 = render :partial => "shared/comments", :locals => {:item => @discourse}

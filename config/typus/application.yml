@@ -52,8 +52,9 @@ Section:
     action_after_save: index
 
 Registration:
-  fields: conference, user
-  form: conference, user
+  fields:
+    default: conference, user
+    form: conference, user
   order_by: conference_id
   relationships: conference, user
   application: chebit

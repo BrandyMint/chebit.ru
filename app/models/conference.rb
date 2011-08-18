@@ -1,4 +1,5 @@
 class Conference < ActiveRecord::Base
+
   has_many :conference_sections
   has_many :sections, :through=>:conference_sections, :order=>:position
   has_many :discourses, :through=>:conference_sections
@@ -8,6 +9,10 @@ class Conference < ActiveRecord::Base
 
   def to_s
     name
+  end
+
+  def is_user_registered?(user)
+    registrations.exists? :user_id=>user.id
   end
 
   def calculate_finish_time

@@ -17,8 +17,8 @@ Typus.setup do |config|
   config.authentication = :http_basic
 
   # Define username and password for +:http_basic+ authentication
-  config.username = Settings.typus.username
-  config.password = Settings.typus.password
+  config.username = Settings.typus['username']
+  config.password = Settings.typus['password']
 
   # Pagination options:
   # These options are passed to `will_paginate`. You can see the available

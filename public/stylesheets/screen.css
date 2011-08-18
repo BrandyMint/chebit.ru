@@ -1637,23 +1637,7 @@ table.show_table th {
   color: gray;
 }
 
-/* line 1, ../../app/stylesheets/_discourses.sass */
-p.conference_date {
-  font-size: 18px;
-  font-weight: bold;
-  color: #cccccc;
-  padding-bottom: 0;
-  float: right;
-}
-
-/* line 8, ../../app/stylesheets/_discourses.sass */
-h1.conference_name {
-  font-size: 24px;
-  color: #999999;
-  padding-bottom: 0;
-}
-
-/* line 13, ../../app/stylesheets/_discourses.sass */
+/* line 2, ../../app/stylesheets/_discourses.sass */
 h2.section_name {
   padding: 0;
   margin: 25px 0 0 0;
@@ -1661,27 +1645,21 @@ h2.section_name {
   font-size: 18px;
 }
 
-/* line 19, ../../app/stylesheets/_discourses.sass */
+/* line 8, ../../app/stylesheets/_discourses.sass */
 p.discourse-description {
   font-size: 11px;
 }
 
-/* line 22, ../../app/stylesheets/_discourses.sass */
-.conference_desc {
-  font-style: italic;
-  color: gray;
-}
-
-/* line 26, ../../app/stylesheets/_discourses.sass */
+/* line 11, ../../app/stylesheets/_discourses.sass */
 ol.section {
   padding-left: 20px;
 }
-/* line 28, ../../app/stylesheets/_discourses.sass */
+/* line 13, ../../app/stylesheets/_discourses.sass */
 ol.section li.discourse {
   padding: 5px 0 5px 0;
 }
 
-/* line 32, ../../app/stylesheets/_discourses.sass */
+/* line 17, ../../app/stylesheets/_discourses.sass */
 .wait_assigner {
   padding-top: 3px;
   font-style: italic;
@@ -1689,13 +1667,13 @@ ol.section li.discourse {
   font-size: 11px;
 }
 
-/* line 38, ../../app/stylesheets/_discourses.sass */
+/* line 23, ../../app/stylesheets/_discourses.sass */
 .assigner {
   padding-top: 3px;
   font-size: 11px;
   color: gray;
 }
-/* line 42, ../../app/stylesheets/_discourses.sass */
+/* line 27, ../../app/stylesheets/_discourses.sass */
 .assigner a {
   color: gray;
 }
@@ -1704,11 +1682,11 @@ ol.section li.discourse {
   color: red;
 }
 
-/* line 47, ../../app/stylesheets/_discourses.sass */
+/* line 32, ../../app/stylesheets/_discourses.sass */
 .new_discourses .block {
   width: 300px;
 }
-/* line 49, ../../app/stylesheets/_discourses.sass */
+/* line 34, ../../app/stylesheets/_discourses.sass */
 .new_discourses .desc {
   padding-top: 10px;
   font-size: 12px;
@@ -1716,7 +1694,29 @@ ol.section li.discourse {
   color: gray;
 }
 
-/* line 49, ../../app/stylesheets/screen.sass */
+/* line 1, ../../app/stylesheets/_conferences.sass */
+p.conference_date {
+  font-size: 18px;
+  font-weight: bold;
+  color: #cccccc;
+  padding-bottom: 0;
+  float: right;
+}
+
+/* line 8, ../../app/stylesheets/_conferences.sass */
+h1.conference_name {
+  font-size: 24px;
+  color: #999999;
+  padding-bottom: 0;
+}
+
+/* line 13, ../../app/stylesheets/_conferences.sass */
+.conference_desc {
+  font-style: italic;
+  color: gray;
+}
+
+/* line 50, ../../app/stylesheets/screen.sass */
 .leftside {
   float: left;
   width: 400px;
@@ -1932,17 +1932,17 @@ ul.tag_cloud li.css4 {
   display: none;
 }
 
-/* line 63, ../../app/stylesheets/screen.sass */
+/* line 64, ../../app/stylesheets/screen.sass */
 h1 {
   padding-bottom: 30px;
 }
 
-/* line 65, ../../app/stylesheets/screen.sass */
+/* line 66, ../../app/stylesheets/screen.sass */
 .flashes {
   padding-top: 20px;
 }
 
-/* line 68, ../../app/stylesheets/screen.sass */
+/* line 69, ../../app/stylesheets/screen.sass */
 a {
   color: #4b7399;
 }
@@ -1950,11 +1950,11 @@ a {
 a:hover {
   color: red;
 }
-/* line 70, ../../app/stylesheets/screen.sass */
+/* line 71, ../../app/stylesheets/screen.sass */
 a.back {
   padding-top: 10px;
 }
-/* line 73, ../../app/stylesheets/screen.sass */
+/* line 74, ../../app/stylesheets/screen.sass */
 a.lucid {
   color: red;
 }
@@ -1963,33 +1963,33 @@ a.lucid:hover {
   color: red;
 }
 
-/* line 77, ../../app/stylesheets/screen.sass */
+/* line 78, ../../app/stylesheets/screen.sass */
 h2 {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* line 80, ../../app/stylesheets/screen.sass */
+/* line 81, ../../app/stylesheets/screen.sass */
 h2 span {
   color: #cccccc;
 }
 
-/* line 83, ../../app/stylesheets/screen.sass */
+/* line 84, ../../app/stylesheets/screen.sass */
 .left {
   float: left;
 }
 
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 87, ../../app/stylesheets/screen.sass */
 .right {
   float: right;
 }
 
-/* line 89, ../../app/stylesheets/screen.sass */
+/* line 90, ../../app/stylesheets/screen.sass */
 .likes {
   padding-top: 40px;
   padding-bottom: 20px;
 }
 
-/* line 93, ../../app/stylesheets/screen.sass */
+/* line 94, ../../app/stylesheets/screen.sass */
 .ad {
   margin-top: 40px;
   padding: 10px 20px 10px 20px;
@@ -2004,15 +2004,15 @@ h2 span {
   background-color: #eeeeee;
 }
 
-/* line 102, ../../app/stylesheets/screen.sass */
+/* line 103, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 105, ../../app/stylesheets/screen.sass */
+/* line 106, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 107, ../../app/stylesheets/screen.sass */
+/* line 108, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -2045,14 +2045,14 @@ ul#login li:last-child {
 ul#login li.last {
   padding-right: 0;
 }
-/* line 111, ../../app/stylesheets/screen.sass */
+/* line 112, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 116, ../../app/stylesheets/screen.sass */
+/* line 117, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }

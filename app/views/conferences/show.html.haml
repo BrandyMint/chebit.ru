@@ -3,7 +3,17 @@
     passed at
   = @conference.date.to_s(:human)
 %h1.conference_name= @conference.name
-%p.conference_desc= @conference.desc.html_safe
+.conference_desc
+  %p= @conference.desc.html_safe
+  %p
+    Регистрация участников с #{@conference.registration_at.to_s(:time)} до #{@conference.start_at.to_s(:time)}.
+    Перерыв в #{@conference.break_at.to_s(:time)} на #{@conference.break_length} минут.
+    Окончание в #{@conference.finish_at.to_s(:time)}
+  %p
+    Место проведения:
+    %b= @conference.place
+    (#{@conference.address})
+
 
 - @conference.conference_sections.each do |cs|
   - if cs.discourses.exists?

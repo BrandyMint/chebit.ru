@@ -5,10 +5,10 @@
 Conference:
   fields:
     default: name, date, registration_at, start_at, finish_at, is_passed
-    form: name, date, registration_at, start_at, break_at, break_length, finish_at, is_passed, desc
+    form: name, date, place, registration_at, start_at, break_at, break_length, finish_at, is_passed, desc
   order_by: -date
   application: chebit
-  relationships: sections
+  relationships: sections, registrations
   actions:
     show: show
   options:
@@ -47,6 +47,15 @@ Section:
     form: name, desc, show
   order_by: id
   relationships: conference_sections
+  application: chebit
+  options:
+    action_after_save: index
+
+Registration:
+  fields: conference, user
+  form: conference, user
+  order_by: conference_id
+  relationships: conference, user
   application: chebit
   options:
     action_after_save: index

@@ -6,6 +6,7 @@ class RegistrationsController < ApplicationController
 
   #Создание комментария
   def create
+    flash[:notice] = 'Поздравляю, вы записаны на конференцию!'
     conference = Conference.find(params[:conference_id])
     current_user.registrations.create!(:conference=>conference)
     redirect_to conference

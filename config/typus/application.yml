@@ -5,7 +5,7 @@
 Conference:
   fields:
     default: name, date, registration_at, start_at, finish_at, is_passed
-    form: name, date, place, registration_at, start_at, break_at, break_length, finish_at, is_passed, desc
+    form: name, date, place, address, registration_at, start_at, break_at, break_length, finish_at, is_passed, desc
   order_by: -date
   application: chebit
   relationships: conference_sections, registrations
@@ -68,7 +68,7 @@ User:
   order_by: created_at
   # relationships: assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
   filters: created_at
-  search:
+  search: full_name, email, firm
   application: chebit
 
 Comment:

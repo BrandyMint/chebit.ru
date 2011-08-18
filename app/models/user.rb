@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   has_many :vacancies, :dependent => :destroy
   has_many :registrations
 
-  default_scope order(:id)
+  default_scope order(:full_name)
 
 
   state_machine :discourse_state, :initial => :maybe do

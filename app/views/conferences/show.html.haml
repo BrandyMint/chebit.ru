@@ -16,23 +16,7 @@
   %p
     Количество мест ограничено, поэтому просим записаться на участие в конференции заранее.
   %p.right
-    - if current_user and @conference.is_user_registered? current_user
-      .multi-line.depressed
-        %span.title Вы записаны!
-        %span.subtitle= "Свободно мест: #{90-@conference.registrations.count}"
-
-    - else
-      = link_to conference_registrations_path(@conference), :class=>'multi-line-button', :method=>:post do
-        %span.title Записаться..
-        %span.subtitle= "Свободно мест: #{90-@conference.registrations.count}"
-      - unless current_user
-        %div
-          Для записи на конференцию необходимо сначала
-          = link_to 'войти', new_session_path('user')
-          или
-          = link_to 'зарегистрироваться', new_registration_path('user')
-          на сайте.
-
+    = render 'conferences/register'
 
 - @conference.conference_sections.each do |cs|
   - if cs.discourses.exists?

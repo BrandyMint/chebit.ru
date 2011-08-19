@@ -1,0 +1,7 @@
+%h2 Участники конференции #{@conference.name}
+%p.right
+  = render 'conferences/register'
+.clear
+%br
+= render :partial=>'users/user', :collection => @registered_users
+.clear

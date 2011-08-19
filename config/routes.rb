@@ -3,7 +3,7 @@ Chebit::Application.routes.draw do
 
   resources :conferences, :only=>[:show] do
     resources :comments, :only=>[:create]
-    resources :registrations, :only=>[:create]
+    resources :registrations, :only=>[:create, :index]
 
   end
   #Для создания и редактирования комментариев внутри дискуссий

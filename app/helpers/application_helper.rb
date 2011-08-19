@@ -1,5 +1,24 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
+
+  def comments(commentable)
+    render "comments/comments", :commentable=>commentable
+  end
+
+  def show_tag(tag)
+    link_to(tag, users_path(:tags=>tag)).html_safe
+  end
+
+  def show_tags(tags)
+    content_tag :ul, :class=>:tags do
+      tags.map do |tag|
+        content_tag :li, :class=>:tag do
+          show_tag tag
+        end
+      end.join(', ').html_safe
+    end
+  end
+
   def show_table( record, fields)
     klass = record.class.name.underscore
     content_tag :table, :class=>"show_table #{klass}" do

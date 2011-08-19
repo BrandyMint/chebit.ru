@@ -12,4 +12,4 @@
       - if user.authored_discourses.exists?
         Доклады: #{user.authored_discourses.count}
     .tags
-      = user.tag_list
+      = show_tags user.tag_list

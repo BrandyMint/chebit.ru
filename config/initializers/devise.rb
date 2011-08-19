@@ -54,7 +54,6 @@ Devise.setup do |config|
   config.stretches = 10
 
   # Setup a pepper to generate the encrypted password.
-  debugger
   config.pepper = Settings.pepper
 
   # ==> Configuration for :confirmable

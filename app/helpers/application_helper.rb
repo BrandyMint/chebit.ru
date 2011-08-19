@@ -5,6 +5,10 @@ module ApplicationHelper
     render "comments/comments", :commentable=>commentable
   end
 
+  def show_user(user)
+    img_gravatar( user.email, :size => 20, :class=>'avatar' ).html_safe + content_tag(:span, user.full_name, :class=>'b-user_mini-name')
+  end
+
   def show_tag(tag)
     link_to(tag, users_path(:tags=>tag)).html_safe
   end

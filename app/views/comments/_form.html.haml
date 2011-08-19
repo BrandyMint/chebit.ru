@@ -1,0 +1,7 @@
+.comment_new
+  %h3
+    Добавить комментарий:
+  - form_for [commentable, Comment.new()] do |f|
+    = f.text_area :content, :rows => 3, :cols=>80
+    .actions
+      %button.cupid-green Отправить..

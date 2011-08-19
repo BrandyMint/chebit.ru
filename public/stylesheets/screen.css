@@ -2274,125 +2274,110 @@ ul.tag_cloud li.css4 {
 }
 
 /* line 1, ../../app/stylesheets/_comments.sass */
-.comments {
-  padding-top: 30px;
-  padding-left: 30px;
+ul#comments {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 /* line 4, ../../app/stylesheets/_comments.sass */
-.comments h2.comments-header {
-  margin: 0;
-  padding: 0;
-  padding-left: 23px;
-  letter-spacing: -1px;
+ul#comments h2.comments-header {
   color: #afa56a;
-  background: white url(/images/comments.gif) 0 60% no-repeat;
+  font-size: 120%;
 }
-/* line 13, ../../app/stylesheets/_comments.sass */
-.comments ul.all_comments {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-/* line 17, ../../app/stylesheets/_comments.sass */
-.comments ul.comment_user {
-  margin-top: 0px;
-  background: white;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 60, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-.comments ul.comment_user li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0px;
+/* line 8, ../../app/stylesheets/_comments.sass */
+ul#comments li.comment {
+  padding: 0px 0px 20px 0px;
   white-space: nowrap;
-  display: inline;
-  float: left;
-  padding-left: 4px;
-  padding-right: 4px;
+  list-style-type: none;
 }
-/* line 48, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-.comments ul.comment_user li:first-child, .comments ul.comment_user li.first {
-  padding-left: 0;
+/* line 12, ../../app/stylesheets/_comments.sass */
+ul#comments li.comment .b-user_mini-name {
+  padding-left: 7px;
 }
-/* line 49, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-.comments ul.comment_user li:last-child {
-  padding-right: 0;
+/* line 14, ../../app/stylesheets/_comments.sass */
+ul#comments li.comment .comment-details {
+  font-size: 12px;
+  font-family: Serif;
+  height: 22px;
+  line-height: 22px;
+  color: #999999;
+  padding-bottom: 5px;
 }
-/* line 50, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-.comments ul.comment_user li.last {
-  padding-right: 0;
+/* line 21, ../../app/stylesheets/_comments.sass */
+ul#comments li.comment .comment-details * {
+  vertical-align: middle;
 }
-/* line 22, ../../app/stylesheets/_comments.sass */
-.comments ul.comment_user li {
-  padding-top: 0px;
-}
-/* line 24, ../../app/stylesheets/_comments.sass */
-.comments .comment_content {
-  margin: 0px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-/* line 29, ../../app/stylesheets/_comments.sass */
-.comments .msg-meta {
-  position: relative;
-}
-/* line 31, ../../app/stylesheets/_comments.sass */
-.comments .msg-meta .folding-dot-holder {
-  z-index: 0;
-  display: none;
-  position: absolute;
-  top: -4px;
-  left: 0px;
-  width: 1px;
-  height: 1px;
-}
-/* line 40, ../../app/stylesheets/_comments.sass */
-.comments .msg-meta .folding-dot {
-  z-index: 0;
-  width: 500px;
-  left: -20px;
-  top: -4px;
-  height: 5px;
-  background: red;
-  right: 0px;
-  top: 11px;
-  position: absolute;
-  background: url(/images/bg-folding-dot-light.png);
-}
-/* line 51, ../../app/stylesheets/_comments.sass */
-.comments .comment_holder {
-  float: left;
-  width: 100%;
-}
-/* line 54, ../../app/stylesheets/_comments.sass */
-.comments .comment_menu {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-/* line 57, ../../app/stylesheets/_comments.sass */
-.comments .comment_menu a {
-  color: #717171;
-  text-decoration: none;
-}
-/* line 60, ../../app/stylesheets/_comments.sass */
-.comments .comment_menu a:hover {
-  color: #717171;
-  text-decoration: underline;
-}
-/* line 63, ../../app/stylesheets/_comments.sass */
-.comments .comment_menu a:visited {
-  color: #717171;
-}
-/* line 65, ../../app/stylesheets/_comments.sass */
-.comments .add-comment {
-  display: none;
+/* line 23, ../../app/stylesheets/_comments.sass */
+ul#comments li.comment .comment-content {
+  padding-left: 27px;
+  font-style: italic;
 }
 
+/* .comments */
+/*   padding-top: 30px */
+/*   padding-left: 30px */
+/*   h2.comments-header */
+/*     margin: 0 */
+/*     padding: 0 */
+/*     padding-left: 23px */
+/*     font:normal 1.67em/105% Verdana,sans-serif */
+/*     letter-spacing: -1px */
+/*     color: #afa56a */
+/*     background: #fff url(/images/comments.gif) 0 60% no-repeat */
+/*   #Стиль для общего списка комментариев */
+/*   ul.all_comments */
+/*     margin: 0 */
+/*     padding: 0 */
+/*     list-style-type: none */
+/*   ul.comment_user */
+/*     margin-top: 0px */
+/*     background: white */
+/*     position: relative */
+/*     +horizontal-list */
+/*     li */
+/*       padding-top: 0px */
+/*   .comment_content */
+/*     clear:left */
+/*     margin: 0px */
+/*     margin-top: 10px */
+/*     margin-bottom: 10px */
+/*   .msg-meta */
+/*     position: relative */
+/*     .folding-dot-holder */
+/*       z-index: 0 */
+/*       display: none */
+/*       position: absolute */
+/*       top: -4px */
+/*       left: 0px */
+/*       width: 1px */
+/*       height: 1px */
+/*     #Для реализации точки, которая указывает на комментарий */
+/*     .folding-dot */
+/*       z-index: 0 */
+/*       width: 500px */
+/*       left: -20px */
+/*       top: -4px */
+/*       height: 5px */
+/*       background: red */
+/*       right: 0px */
+/*       top: 11px */
+/*       position: absolute */
+/*       background: url(/images/bg-folding-dot-light.png) */
+/*   .comment_holder */
+/*     float: left */
+/*     width: 100% */
+/*   .comment_menu */
+/*     margin-top: 10px */
+/*     margin-bottom: 10px */
+/*     a */
+/*       color: #717171 */
+/*       text-decoration: none */
+/*     a:hover */
+/*       color: #717171 */
+/*       text-decoration: underline */
+/*     a:visited */
+/*       color: #717171 */
+/*   .add-comment */
+/*     display: none */
 /* line 88, ../../app/stylesheets/screen.sass */
 h1 {
   padding-bottom: 30px;

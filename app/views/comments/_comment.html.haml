@@ -1,0 +1,6 @@
+%li.comment
+  .comment-details
+    = show_user comment.author
+    ,
+    %span.comment-time= distance_of_time_in_words(comment.created_at, Time.now)
+  .comment-content= comment.content

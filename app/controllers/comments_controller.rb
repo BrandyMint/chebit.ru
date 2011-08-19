@@ -9,12 +9,12 @@ class CommentsController < ApplicationController
   #Создание комментария
   def create
     commentable.comments.create!(:author=>current_user, :content=>params[:comment][:content])
-    redirect_to request.referer
+    redirect_to polymorphic_path(commentable, :anchor=>:comments)
   end
 
   def destroy
     current_user.comments.find(params[:id]).destroy
-    redirect_to request.referer
+    redirect_to polymorphic_path(commentable, :anchor=>:comments)
   end
 
   private

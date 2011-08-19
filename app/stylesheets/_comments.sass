@@ -1,66 +1,92 @@
-.comments 
-  padding-top: 30px
-  padding-left: 30px
+ul#comments
+  padding-top: 0px
+  padding-bottom: 0px
   h2.comments-header
-    margin: 0
-    padding: 0
-    padding-left: 23px
-    font:normal 1.67em/105% Verdana,sans-serif
-    letter-spacing: -1px
     color: #afa56a
-    background: #fff url(/images/comments.gif) 0 60% no-repeat
-  #Стиль для общего списка комментариев
-  ul.all_comments
-    margin: 0
-    padding: 0
+    font-size: 120%
+
+  li.comment
+    padding: 0px 0px 20px 0px
+    white-space: nowrap
     list-style-type: none
-  ul.comment_user
-    margin-top: 0px
-    background: white 
-    position: relative
-    +horizontal-list
-    li
-      padding-top: 0px
-  .comment_content
-    clear:left
-    margin: 0px
-    margin-top: 10px
-    margin-bottom: 10px
-  .msg-meta
-    position: relative
-    .folding-dot-holder
-      z-index: 0 
-      display: none
-      position: absolute
-      top: -4px
-      left: 0px
-      width: 1px
-      height: 1px
-    #Для реализации точки, которая указывает на комментарий
-    .folding-dot
-      z-index: 0 
-      width: 500px
-      left: -20px
-      top: -4px
-      height: 5px
-      background: red
-      right: 0px
-      top: 11px
-      position: absolute
-      background: url(/images/bg-folding-dot-light.png)
-  .comment_holder
-    float: left
-    width: 100%
-  .comment_menu
-    margin-top: 10px
-    margin-bottom: 10px
-    a
-      color: #717171
-      text-decoration: none
-    a:hover
-      color: #717171
-      text-decoration: underline
-    a:visited
-      color: #717171
-  .add-comment
-    display: none
+    .b-user_mini-name
+      padding-left: 7px
+    .comment-details
+      font-size: 12px
+      font-family: Serif
+      height: 22px
+      line-height: 22px
+      color: #999
+      padding-bottom: 5px
+      *
+        vertical-align: middle
+    .comment-content
+      padding-left: 27px
+      font-style: italic
+
+/* .comments
+/*   padding-top: 30px
+/*   padding-left: 30px
+/*   h2.comments-header
+/*     margin: 0
+/*     padding: 0
+/*     padding-left: 23px
+/*     font:normal 1.67em/105% Verdana,sans-serif
+/*     letter-spacing: -1px
+/*     color: #afa56a
+/*     background: #fff url(/images/comments.gif) 0 60% no-repeat
+/*   #Стиль для общего списка комментариев
+/*   ul.all_comments
+/*     margin: 0
+/*     padding: 0
+/*     list-style-type: none
+/*   ul.comment_user
+/*     margin-top: 0px
+/*     background: white
+/*     position: relative
+/*     +horizontal-list
+/*     li
+/*       padding-top: 0px
+/*   .comment_content
+/*     clear:left
+/*     margin: 0px
+/*     margin-top: 10px
+/*     margin-bottom: 10px
+/*   .msg-meta
+/*     position: relative
+/*     .folding-dot-holder
+/*       z-index: 0
+/*       display: none
+/*       position: absolute
+/*       top: -4px
+/*       left: 0px
+/*       width: 1px
+/*       height: 1px
+/*     #Для реализации точки, которая указывает на комментарий
+/*     .folding-dot
+/*       z-index: 0
+/*       width: 500px
+/*       left: -20px
+/*       top: -4px
+/*       height: 5px
+/*       background: red
+/*       right: 0px
+/*       top: 11px
+/*       position: absolute
+/*       background: url(/images/bg-folding-dot-light.png)
+/*   .comment_holder
+/*     float: left
+/*     width: 100%
+/*   .comment_menu
+/*     margin-top: 10px
+/*     margin-bottom: 10px
+/*     a
+/*       color: #717171
+/*       text-decoration: none
+/*     a:hover
+/*       color: #717171
+/*       text-decoration: underline
+/*     a:visited
+/*       color: #717171
+/*   .add-comment
+/*     display: none

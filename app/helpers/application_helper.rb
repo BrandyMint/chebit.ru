@@ -6,7 +6,8 @@ module ApplicationHelper
   end
 
   def show_user(user)
-    img_gravatar( user.email, :size => 20, :class=>'avatar' ).html_safe + content_tag(:span, user.full_name, :class=>'b-user_mini-name')
+    image_tag( user.gravatar_url(:size=>20), :size=>'20x20', :class=>:avatar).html_safe +
+      content_tag(:span, user.full_name, :class=>'b-user_mini-name')
   end
 
   def show_tag(tag)

@@ -145,6 +145,7 @@ GEM
       rack (< 2, >= 1.1.0)
     fastercsv (1.5.4)
     fssm (0.2.7)
+    gravtastic (3.2.6)
     gritter (0.6.1)
     gritter_notices (0.3.4)
       actionpack (~> 3.0)
@@ -298,6 +299,7 @@ DEPENDENCIES
   devise!
   factory_girl_generator
   factory_girl_rails
+  gravtastic
   gritter_notices
   haml (~> 3.1.2)
   haml-rails

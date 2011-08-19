@@ -2285,30 +2285,39 @@ ul#comments h2.comments-header {
 }
 /* line 8, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment {
-  padding: 0px 0px 20px 0px;
+  padding: 0px 0px 30px 0px;
   white-space: nowrap;
   list-style-type: none;
 }
 /* line 12, ../../app/stylesheets/_comments.sass */
+ul#comments li.comment .avatar {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 14, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .b-user_mini-name {
   padding-left: 7px;
 }
-/* line 14, ../../app/stylesheets/_comments.sass */
+/* line 16, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .comment-details {
   font-size: 12px;
   font-family: Serif;
-  height: 22px;
-  line-height: 22px;
+  height: 20px;
+  line-height: 20px;
   color: #999999;
-  padding-bottom: 5px;
+  padding-bottom: 7px;
 }
-/* line 21, ../../app/stylesheets/_comments.sass */
+/* line 23, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .comment-details * {
   vertical-align: middle;
 }
-/* line 23, ../../app/stylesheets/_comments.sass */
+/* line 25, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .comment-content {
-  padding-left: 27px;
+  /* padding-left: 27px */
   font-style: italic;
 }
 

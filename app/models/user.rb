@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
                    :occupation, :website, :note, :twitter,
                    :discourse_state, :discourse_subject, :price_confirm, :tag_list )
 
+  include Gravtastic
+  gravtastic
 
   defaults :price_confirm => true
 

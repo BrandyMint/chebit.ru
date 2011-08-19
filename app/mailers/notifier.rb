@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default( Settings.mail)
+  default Settings.mail.symbolize_keys
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:

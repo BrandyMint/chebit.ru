@@ -16,7 +16,7 @@
     = f.input :firm
     = f.input :website, :as => :url
     = f.input :tag_list
-    
+
   - unless resource.new_record?
     %fieldset.inputs
       %legend Дополнительно
@@ -27,6 +27,9 @@
   -#   = f.input :price_confirm, :as => :select, :collection => {'Да' => true, 'Нет, только на халяву!' => false}
     -#= f.input :note
   -# = f.buttons do
+  %fieldset
+    Чтобы загрузить аватарку воспользуйтесь сервисом
+    = link_to 'gravatar.com', 'http://gravatar.com'
   %fieldset.buttons
     -# = f.button :submit
     %center

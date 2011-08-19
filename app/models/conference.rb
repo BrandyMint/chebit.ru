@@ -15,6 +15,11 @@ class Conference < ActiveRecord::Base
     registrations.exists? :user_id=>user.id
   end
 
+  def not_registered_users
+    registered_users = registrations.map &:user
+    User.all.reject { |u| registered_users.include? u }
+  end
+
   def vacancies
     hall_capacity-registrations.count
   end

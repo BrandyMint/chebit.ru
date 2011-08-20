@@ -2060,16 +2060,17 @@ a.multi-line-button.orange:active, a.multi-line-button.orange.depressed {
 /* line 63, ../../app/stylesheets/screen.sass */
 a.admin {
   font-family: sans;
+  padding: 0 1px 0px 2px;
   color: red;
   text-decoration: none;
 }
-/* line 67, ../../app/stylesheets/screen.sass */
+/* line 68, ../../app/stylesheets/screen.sass */
 a.admin:hover {
   color: white;
   background-color: red;
 }
 
-/* line 72, ../../app/stylesheets/screen.sass */
+/* line 73, ../../app/stylesheets/screen.sass */
 img.avatar {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -2081,36 +2082,36 @@ img.avatar {
   vertical-align: middle;
 }
 
-/* line 78, ../../app/stylesheets/screen.sass */
+/* line 79, ../../app/stylesheets/screen.sass */
 a.userpic {
   text-decoration: none;
   color: #999999;
 }
-/* line 80, ../../app/stylesheets/screen.sass */
+/* line 81, ../../app/stylesheets/screen.sass */
 a.userpic span.username {
   border-bottom: 1px dotted #999999;
 }
-/* line 82, ../../app/stylesheets/screen.sass */
+/* line 83, ../../app/stylesheets/screen.sass */
 a.userpic span.username:hover {
   border-color: red;
 }
 
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 87, ../../app/stylesheets/screen.sass */
 #liveinternet {
   padding-top: 17px;
 }
 
-/* line 89, ../../app/stylesheets/screen.sass */
+/* line 90, ../../app/stylesheets/screen.sass */
 .users {
   padding-top: 20px;
   padding-bottom: 50px;
 }
-/* line 92, ../../app/stylesheets/screen.sass */
+/* line 93, ../../app/stylesheets/screen.sass */
 .users h2.left {
   padding-top: 0;
   margin-top: 0;
 }
-/* line 95, ../../app/stylesheets/screen.sass */
+/* line 96, ../../app/stylesheets/screen.sass */
 .users h2.left span {
   color: gray;
 }
@@ -2194,7 +2195,7 @@ h1.conference_name {
   color: gray;
 }
 
-/* line 101, ../../app/stylesheets/screen.sass */
+/* line 102, ../../app/stylesheets/screen.sass */
 .leftside {
   float: left;
   width: 400px;
@@ -2429,17 +2430,17 @@ a.j-comment-answer:hover {
 /*       color: #717171 */
 /*   .add-comment */
 /*     display: none */
-/* line 114, ../../app/stylesheets/screen.sass */
+/* line 115, ../../app/stylesheets/screen.sass */
 h1 {
   padding-bottom: 30px;
 }
 
-/* line 116, ../../app/stylesheets/screen.sass */
+/* line 117, ../../app/stylesheets/screen.sass */
 .flashes {
   padding-top: 20px;
 }
 
-/* line 119, ../../app/stylesheets/screen.sass */
+/* line 120, ../../app/stylesheets/screen.sass */
 a {
   color: #4b7399;
 }
@@ -2447,11 +2448,11 @@ a {
 a:hover {
   color: red;
 }
-/* line 121, ../../app/stylesheets/screen.sass */
+/* line 122, ../../app/stylesheets/screen.sass */
 a.back {
   padding-top: 10px;
 }
-/* line 124, ../../app/stylesheets/screen.sass */
+/* line 125, ../../app/stylesheets/screen.sass */
 a.lucid {
   color: red;
 }
@@ -2460,38 +2461,38 @@ a.lucid:hover {
   color: red;
 }
 
-/* line 129, ../../app/stylesheets/screen.sass */
+/* line 130, ../../app/stylesheets/screen.sass */
 .subtitle a {
   color: white;
 }
 
-/* line 132, ../../app/stylesheets/screen.sass */
+/* line 133, ../../app/stylesheets/screen.sass */
 h2 {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* line 135, ../../app/stylesheets/screen.sass */
+/* line 136, ../../app/stylesheets/screen.sass */
 h2 span {
   color: #cccccc;
 }
 
-/* line 138, ../../app/stylesheets/screen.sass */
+/* line 139, ../../app/stylesheets/screen.sass */
 .left {
   float: left;
 }
 
-/* line 141, ../../app/stylesheets/screen.sass */
+/* line 142, ../../app/stylesheets/screen.sass */
 .right {
   float: right;
 }
 
-/* line 144, ../../app/stylesheets/screen.sass */
+/* line 145, ../../app/stylesheets/screen.sass */
 .likes {
   padding-top: 40px;
   padding-bottom: 20px;
 }
 
-/* line 148, ../../app/stylesheets/screen.sass */
+/* line 149, ../../app/stylesheets/screen.sass */
 .ad {
   margin-top: 40px;
   padding: 10px 20px 10px 20px;
@@ -2506,15 +2507,15 @@ h2 span {
   background-color: #eeeeee;
 }
 
-/* line 157, ../../app/stylesheets/screen.sass */
+/* line 158, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 160, ../../app/stylesheets/screen.sass */
+/* line 161, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 162, ../../app/stylesheets/screen.sass */
+/* line 163, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -2547,14 +2548,14 @@ ul#login li:last-child {
 ul#login li.last {
   padding-right: 0;
 }
-/* line 166, ../../app/stylesheets/screen.sass */
+/* line 167, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 171, ../../app/stylesheets/screen.sass */
+/* line 172, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }

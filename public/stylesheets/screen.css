@@ -2058,6 +2058,18 @@ a.multi-line-button.orange:active, a.multi-line-button.orange.depressed {
 }
 
 /* line 63, ../../app/stylesheets/screen.sass */
+a.admin {
+  font-family: sans;
+  color: red;
+  text-decoration: none;
+}
+/* line 67, ../../app/stylesheets/screen.sass */
+a.admin:hover {
+  color: white;
+  background-color: red;
+}
+
+/* line 72, ../../app/stylesheets/screen.sass */
 img.avatar {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -2069,36 +2081,36 @@ img.avatar {
   vertical-align: middle;
 }
 
-/* line 69, ../../app/stylesheets/screen.sass */
+/* line 78, ../../app/stylesheets/screen.sass */
 a.userpic {
   text-decoration: none;
   color: #999999;
 }
-/* line 71, ../../app/stylesheets/screen.sass */
+/* line 80, ../../app/stylesheets/screen.sass */
 a.userpic span.username {
   border-bottom: 1px dotted #999999;
 }
-/* line 73, ../../app/stylesheets/screen.sass */
+/* line 82, ../../app/stylesheets/screen.sass */
 a.userpic span.username:hover {
   border-color: red;
 }
 
-/* line 77, ../../app/stylesheets/screen.sass */
+/* line 86, ../../app/stylesheets/screen.sass */
 #liveinternet {
   padding-top: 17px;
 }
 
-/* line 80, ../../app/stylesheets/screen.sass */
+/* line 89, ../../app/stylesheets/screen.sass */
 .users {
   padding-top: 20px;
   padding-bottom: 50px;
 }
-/* line 83, ../../app/stylesheets/screen.sass */
+/* line 92, ../../app/stylesheets/screen.sass */
 .users h2.left {
   padding-top: 0;
   margin-top: 0;
 }
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 95, ../../app/stylesheets/screen.sass */
 .users h2.left span {
   color: gray;
 }
@@ -2182,7 +2194,7 @@ h1.conference_name {
   color: gray;
 }
 
-/* line 92, ../../app/stylesheets/screen.sass */
+/* line 101, ../../app/stylesheets/screen.sass */
 .leftside {
   float: left;
   width: 400px;
@@ -2309,7 +2321,7 @@ ul#comments h2.comments-header {
   color: #afa56a;
   font-size: 120%;
 }
-/* line 8, ../../app/stylesheets/_comments.sass */
+/* line 7, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment {
   margin-bottom: 30px;
   /* padding: 10px 10px */
@@ -2317,7 +2329,7 @@ ul#comments li.comment {
   /* +border-radius(5px) */
   list-style-type: none;
 }
-/* line 16, ../../app/stylesheets/_comments.sass */
+/* line 15, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .comment-details {
   /* margin-left: 10px */
   font-size: 12px;
@@ -2327,7 +2339,7 @@ ul#comments li.comment .comment-details {
   color: #999999;
   padding-bottom: 7px;
 }
-/* line 24, ../../app/stylesheets/_comments.sass */
+/* line 23, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .comment-content {
   margin: 2px 0;
   /* padding-left: 27px */
@@ -2335,14 +2347,18 @@ ul#comments li.comment .comment-content {
   font-size: 12px;
   color: #666666;
 }
+/* line 30, ../../app/stylesheets/_comments.sass */
+ul#comments li.comment .comment-actions1 {
+  margin-left: 10px;
+}
 
-/* line 32, ../../app/stylesheets/_comments.sass */
+/* line 33, ../../app/stylesheets/_comments.sass */
 a.j-comment-answer {
   font-size: 11px;
   text-decoration: none;
   border-bottom: 1px dashed #4b7399;
 }
-/* line 36, ../../app/stylesheets/_comments.sass */
+/* line 37, ../../app/stylesheets/_comments.sass */
 a.j-comment-answer:hover {
   border-color: red;
 }
@@ -2413,17 +2429,17 @@ a.j-comment-answer:hover {
 /*       color: #717171 */
 /*   .add-comment */
 /*     display: none */
-/* line 105, ../../app/stylesheets/screen.sass */
+/* line 114, ../../app/stylesheets/screen.sass */
 h1 {
   padding-bottom: 30px;
 }
 
-/* line 107, ../../app/stylesheets/screen.sass */
+/* line 116, ../../app/stylesheets/screen.sass */
 .flashes {
   padding-top: 20px;
 }
 
-/* line 110, ../../app/stylesheets/screen.sass */
+/* line 119, ../../app/stylesheets/screen.sass */
 a {
   color: #4b7399;
 }
@@ -2431,11 +2447,11 @@ a {
 a:hover {
   color: red;
 }
-/* line 112, ../../app/stylesheets/screen.sass */
+/* line 121, ../../app/stylesheets/screen.sass */
 a.back {
   padding-top: 10px;
 }
-/* line 115, ../../app/stylesheets/screen.sass */
+/* line 124, ../../app/stylesheets/screen.sass */
 a.lucid {
   color: red;
 }
@@ -2444,38 +2460,38 @@ a.lucid:hover {
   color: red;
 }
 
-/* line 120, ../../app/stylesheets/screen.sass */
+/* line 129, ../../app/stylesheets/screen.sass */
 .subtitle a {
   color: white;
 }
 
-/* line 123, ../../app/stylesheets/screen.sass */
+/* line 132, ../../app/stylesheets/screen.sass */
 h2 {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* line 126, ../../app/stylesheets/screen.sass */
+/* line 135, ../../app/stylesheets/screen.sass */
 h2 span {
   color: #cccccc;
 }
 
-/* line 129, ../../app/stylesheets/screen.sass */
+/* line 138, ../../app/stylesheets/screen.sass */
 .left {
   float: left;
 }
 
-/* line 132, ../../app/stylesheets/screen.sass */
+/* line 141, ../../app/stylesheets/screen.sass */
 .right {
   float: right;
 }
 
-/* line 135, ../../app/stylesheets/screen.sass */
+/* line 144, ../../app/stylesheets/screen.sass */
 .likes {
   padding-top: 40px;
   padding-bottom: 20px;
 }
 
-/* line 139, ../../app/stylesheets/screen.sass */
+/* line 148, ../../app/stylesheets/screen.sass */
 .ad {
   margin-top: 40px;
   padding: 10px 20px 10px 20px;
@@ -2490,15 +2506,15 @@ h2 span {
   background-color: #eeeeee;
 }
 
-/* line 148, ../../app/stylesheets/screen.sass */
+/* line 157, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 151, ../../app/stylesheets/screen.sass */
+/* line 160, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 153, ../../app/stylesheets/screen.sass */
+/* line 162, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -2531,14 +2547,14 @@ ul#login li:last-child {
 ul#login li.last {
   padding-right: 0;
 }
-/* line 157, ../../app/stylesheets/screen.sass */
+/* line 166, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 162, ../../app/stylesheets/screen.sass */
+/* line 171, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }

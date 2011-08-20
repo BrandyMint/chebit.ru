@@ -3,6 +3,10 @@
     = show_user comment.author
     ,
     %span.comment-time= distance_of_time_in_words(comment.created_at, Time.now)
+    %span.comment-actions1
+    - if can? :destroy, comment
+      = link_to 'x', comment, :confirm => 'Удалить комментарий уверен?', :method => :delete, :class=>:admin, :title=>'Удалить комментарий'
+
   .comment-content= comment.content
   -# .comment-actions
   -#   = link_to 'ответить', '#', :class=>'j-comment-answer'

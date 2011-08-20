@@ -8,22 +8,26 @@ class CommentsController < ApplicationController
 
   #Создание комментария
   def create
-    commentable.comments.create!(:author=>current_user, :content=>params[:comment][:content])
-    redirect_to polymorphic_path(commentable, :anchor=>:comments)
+    find_commentable.comments.create!(:author=>current_user, :content=>params[:comment][:content])
+    redirect_to polymorphic_path(find_commentable, :anchor=>:comments)
   end
 
   def destroy
+    commentable = find_commentable
     current_user.comments.find(params[:id]).destroy
     redirect_to polymorphic_path(commentable, :anchor=>:comments)
   end
 
   private
 
-  def commentable
+  def find_commentable
     if params[:conference_id]
       Conference.find(params[:conference_id])
     elsif params[:discourse_id]
       Discourse.find(params[:discourse_id])
+    elsif params[:id]
+      @comment = Comment.find(params[:id])
+      return @comment.commentable
     else
       raise 'не указан commentable'
     end

@@ -1,9 +1,13 @@
 %p#notice= notice
 
 .b-discourse
-  %p.right
+  %p
+    Конференция:
+    %span
+      = link_to @discourse.conference
+  %p
     Секция
-    %span  &laquo;#{@discourse.section}&raquo;
+    %span &laquo;#{@discourse.section}&raquo;
   .clear
 
   %h1 Доклад &laquo;#{@discourse}&raquo;
@@ -28,6 +32,10 @@
           на сайт или
           = link_to 'зарегистрируйтесь', new_user_registration_path
           , чтобы взять этот доклад на себя
+    %p
+      Продолжительность:
+      = @discourse.time_length
+      мин.
   %p.text
     = @discourse.text.html_safe
 -# = link_to 'Edit', edit_discourse_path(@discourse)

@@ -4,6 +4,8 @@ class Discourse < ActiveRecord::Base
   # attr_protected :is_moderated
 
   has_many :comments, :as => :commentable
+  attr_readonly :comments_count
+
   has_many :presenters
   has_many :assigners, :through=>:presenters, :source=>:user
 

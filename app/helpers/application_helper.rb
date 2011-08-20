@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
 
-  def comments(commentable)
-    render "comments/comments", :commentable=>commentable
-  end
-
   def show_user(user, show_firm=false, show_avatar=true)
     link_to user, :class=>'userpic' do
       username = user.full_name

@@ -2135,10 +2135,10 @@ ol.section {
 }
 /* line 13, ../../app/stylesheets/_discourses.sass */
 ol.section li.discourse {
-  padding: 5px 0 5px 0;
+  padding: 5px 0 7px 0;
 }
 
-/* line 17, ../../app/stylesheets/_discourses.sass */
+/* line 16, ../../app/stylesheets/_discourses.sass */
 .wait_assigner {
   padding-top: 3px;
   font-style: italic;
@@ -2146,26 +2146,32 @@ ol.section li.discourse {
   font-size: 11px;
 }
 
-/* line 23, ../../app/stylesheets/_discourses.sass */
-.assigner {
-  padding-top: 3px;
+/* line 22, ../../app/stylesheets/_discourses.sass */
+.discourse-assigners {
+  padding-top: 6px;
   font-size: 11px;
   color: gray;
 }
-/* line 27, ../../app/stylesheets/_discourses.sass */
-.assigner a {
+/* line 26, ../../app/stylesheets/_discourses.sass */
+.discourse-assigners a {
   color: gray;
 }
 /* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-.assigner a:hover {
+.discourse-assigners a:hover {
   color: red;
 }
 
-/* line 32, ../../app/stylesheets/_discourses.sass */
+/* line 28, ../../app/stylesheets/_discourses.sass */
+.discourse-actions {
+  padding-top: 7px;
+  font-size: 11px;
+}
+
+/* line 34, ../../app/stylesheets/_discourses.sass */
 .new_discourses .block {
   width: 300px;
 }
-/* line 34, ../../app/stylesheets/_discourses.sass */
+/* line 36, ../../app/stylesheets/_discourses.sass */
 .new_discourses .desc {
   padding-top: 10px;
   font-size: 12px;
@@ -2313,16 +2319,21 @@ ul.tag_cloud li.css4 {
 }
 
 /* line 1, ../../app/stylesheets/_comments.sass */
+a.comments-link {
+  color: #666666;
+}
+
+/* line 3, ../../app/stylesheets/_comments.sass */
 ul#comments {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-/* line 4, ../../app/stylesheets/_comments.sass */
+/* line 6, ../../app/stylesheets/_comments.sass */
 ul#comments h2.comments-header {
   color: #afa56a;
   font-size: 120%;
 }
-/* line 7, ../../app/stylesheets/_comments.sass */
+/* line 9, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment {
   margin-bottom: 30px;
   /* padding: 10px 10px */
@@ -2330,7 +2341,7 @@ ul#comments li.comment {
   /* +border-radius(5px) */
   list-style-type: none;
 }
-/* line 15, ../../app/stylesheets/_comments.sass */
+/* line 17, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .comment-details {
   /* margin-left: 10px */
   font-size: 12px;
@@ -2340,7 +2351,7 @@ ul#comments li.comment .comment-details {
   color: #999999;
   padding-bottom: 7px;
 }
-/* line 23, ../../app/stylesheets/_comments.sass */
+/* line 25, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .comment-content {
   margin: 2px 0;
   /* padding-left: 27px */
@@ -2348,18 +2359,18 @@ ul#comments li.comment .comment-content {
   font-size: 12px;
   color: #666666;
 }
-/* line 30, ../../app/stylesheets/_comments.sass */
+/* line 32, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .comment-actions1 {
   margin-left: 10px;
 }
 
-/* line 33, ../../app/stylesheets/_comments.sass */
+/* line 35, ../../app/stylesheets/_comments.sass */
 a.j-comment-answer {
   font-size: 11px;
   text-decoration: none;
   border-bottom: 1px dashed #4b7399;
 }
-/* line 37, ../../app/stylesheets/_comments.sass */
+/* line 39, ../../app/stylesheets/_comments.sass */
 a.j-comment-answer:hover {
   border-color: red;
 }

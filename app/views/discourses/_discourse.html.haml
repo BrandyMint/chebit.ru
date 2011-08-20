@@ -1,13 +1,15 @@
 - if discourse.kind=='discourse'
   = link_to "&laquo;#{discourse}&raquo;".html_safe, discourse
-  - if discourse.assigners.exists?
-    .assigner
+  .discourse-assigners
+    - if discourse.assigners.exists?
       - discourse.assigners.each_with_index do |a, index|
         = index>0 ? ', ' : ''
         = show_user(a, true, false)
       , #{discourse.time_length} мин.
-  - else
-    .wait_assigner ищет докладчика
+    - else
+      ищет докладчика
+  .discourse-actions
+    = link_to_comments(discourse)
 - else
   = link_to discourse, discourse
 

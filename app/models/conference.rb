@@ -12,6 +12,7 @@ class Conference < ActiveRecord::Base
   end
 
   def is_user_registered?(user)
+    return false unless user
     registrations.exists? :user_id=>user.id
   end
 

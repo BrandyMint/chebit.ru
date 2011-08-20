@@ -1,22 +1,31 @@
-- if current_user and @conference.is_user_registered? current_user
+%p= link_to 'Зарегистрированные участники', conference_registrations_path(@conference)
+
+- if @conference.is_user_registered? current_user
   .multi-line.depressed
     %span.title Вы записаны!
     %span.subtitle
       Свободно мест:
       = @conference.vacancies
-      (#{link_to 'участники', conference_registrations_path(@conference)})
+  %p
+    Пожалуйста, в случае, если вы не сможете подойти - сообщите нам, чтобы мы осовободили место для других.
 
-- else
-  = link_to conference_registrations_path(@conference), :class=>'multi-line-button', :method=>:post do
-    %span.title Записаться..
+- elsif @conference.vacancies>0
+  = link_to conference_registrations_path(@conference), :class=>'multi-line-button', :method=>:post, :confirm=>'Записать вас в качестве участника конференции и забранировать место?' do
+    %span.title Записаться
     %span.subtitle
       Свободно мест:
       = @conference.vacancies
-      (#{link_to 'участники', conference_registrations_path(@conference)})
-  - unless current_user
-    %div
+- else
+  %p
+    %b
+      Регистрация закрыта, мест больше нет!
+
+- unless current_user
+  %p
+    - if @conference.vacancies>0
       Для записи на конференцию необходимо сначала
       = link_to 'войти', new_session_path('user')
       или
       = link_to 'зарегистрироваться', new_registration_path('user')
       на сайте.
+

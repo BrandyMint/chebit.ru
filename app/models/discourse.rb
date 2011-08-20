@@ -4,7 +4,12 @@ class Discourse < ActiveRecord::Base
   # attr_protected :is_moderated
 
   has_many :comments, :as => :commentable
+  has_many :presenters
+  has_many :presenters_users, :through=>:presenters, :source=>:user
+
   belongs_to :author, :class_name => "User"
+
+  # TODO: remove
   belongs_to :assigner, :class_name => "User"
   belongs_to :section
   belongs_to :conference_section
@@ -32,6 +37,10 @@ class Discourse < ActiveRecord::Base
 
   def to_s
     subject
+  end
+
+  def to_label
+    to_s
   end
 
 end

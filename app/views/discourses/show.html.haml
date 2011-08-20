@@ -14,7 +14,9 @@
   %p
     Докладчик:
     - if @discourse.assigners.exists?
-      = @discourse.assigners.each { |a| link_to a, a }.join(', ')
+      - @discourse.assigners.each_with_index do |a, index|
+        = index>0 ? ', ' : ''
+        = show_user(a, true)
     - else
       %i
         в поисках.

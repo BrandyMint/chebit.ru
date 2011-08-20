@@ -11,7 +11,7 @@ module ApplicationHelper
       username += " (#{user.firm})" if show_firm and user.firm?
       ((show_avatar ? user.gravatar : '')+
         content_tag( :span, username, :class=>'username')).html_safe
-    end
+    end.html_safe
   end
 
   def show_tag(tag)

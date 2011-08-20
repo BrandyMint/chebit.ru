@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   # after_create :notify_admin
 
   has_many :presenters
-  has_many :discourses, :class_name => Discourse.name, :through=>:presenters
+  has_many :assigned_discourses, :source=>:discourse, :through=>:presenters
   has_many :authored_discourses, :class_name => Discourse.name, :foreign_key => :author_id
   has_many :vacancies, :dependent => :destroy
   has_many :registrations

@@ -5,7 +5,7 @@ class Discourse < ActiveRecord::Base
 
   has_many :comments, :as => :commentable
   has_many :presenters
-  has_many :presenters_users, :through=>:presenters, :source=>:user
+  has_many :assigners, :through=>:presenters, :source=>:user
 
   belongs_to :author, :class_name => "User"
 

@@ -32,7 +32,7 @@ Discourse:
     options:
       selectors: kind
   order_by: conference_section_id, section_id, position
-  relationships: presenters_users
+  relationships: assigners
   filters: conference_section, section
   search: subject, text
   application: chebit
@@ -65,7 +65,7 @@ User:
     default: full_name, email, firm, occupation, tel
     form: full_name, email, password, firm, website, occupation, note, tel, twitter, invest_money, tag_list
   order_by: full_name
-  relationships: registrations, discourses #assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
+  relationships: registrations, assigned_discourses #assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
   filters: created_at
   search: full_name, email, firm
   options:

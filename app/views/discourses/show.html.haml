@@ -13,8 +13,8 @@
       %span= @discourse.author
   %p
     Докладчик:
-    - if @discourse.assigner
-      = link_to @discourse.assigner, @discourse.assigner
+    - if @discourse.assigners.exists?
+      = @discourse.assigners.each { |a| link_to a, a }.join(', ')
     - else
       %i
         в поисках.

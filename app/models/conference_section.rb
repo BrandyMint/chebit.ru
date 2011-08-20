@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 class ConferenceSection < ActiveRecord::Base
-  belongs_to :section, :class_name=>'::Section'
+  belongs_to :section  # с этим не работает Typus, :class_name=>'::Section'
   belongs_to :conference
 
   has_many :discourses

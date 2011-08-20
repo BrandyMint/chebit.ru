@@ -18,7 +18,6 @@ Conference:
 ConferenceSection:
   fields:
     default: conference, section, position
-  relationships: conference, section
   order_by: -conference_id, position
   options:
     action_after_save: index

@@ -4,6 +4,9 @@ $padding_width: 80px
 $padding_bottom: 40px
 $padding_top: $padding_bottom
 
+$link_color: #4b7399
+
+
 @import "compass/css3/border-radius"
 /* @import "compass/css3/gradient"
 @import "compass/css3/box-shadow"
@@ -36,6 +39,7 @@ $padding_top: $padding_bottom
 @import b-user-show
 @import multi-line-button
 
+
 a.multi-line-button
   +multi-line-button(#60a3d8)
   &:hover
@@ -55,6 +59,20 @@ a.multi-line-button
     +color-multi-line-button(#bf4040)
   &.orange
     +color-multi-line-button(#d98026)
+
+img.avatar
+  +border-radius(3px)
+  margin-right: 7px
+  vertical-align: middle
+
+
+a.userpic
+  text-decoration: none
+  span.username
+    border-bottom: 1px dotted #999
+    &:hover
+      border-color: red
+  +link-colors(#999)
 
 #liveinternet
   padding-top: 17px
@@ -83,7 +101,6 @@ a.multi-line-button
 @import welcome
 @import comments
 
-$link_color: #4b7399
 
 h1
   padding-bottom: 30px

@@ -2,8 +2,8 @@
   = link_to "&laquo;#{discourse}&raquo;".html_safe, discourse
   - if discourse.assigner
     .assigner
-      доклад,
-      = link_to discourse.assigner, discourse.assigner
+      = show_user discourse.assigner, true, false
+      -# = link_to discourse.assigner, discourse.assigner
       ,
       #{discourse.time_length} мин.
   - else

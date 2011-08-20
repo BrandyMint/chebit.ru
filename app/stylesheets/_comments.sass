@@ -6,25 +6,35 @@ ul#comments
     font-size: 120%
 
   li.comment
-    padding: 0px 0px 30px 0px
-    white-space: nowrap
+    // padding: 0px 0px 30px 0px
+    margin-bottom: 30px
+    /* padding: 10px 10px
+    /* background-color: #eee
+    /* +border-radius(5px)
+    // white-space: nowrap
     list-style-type: none
-    .avatar
-      +border-radius(3px)
-    .b-user_mini-name
-      padding-left: 7px
     .comment-details
+      /* margin-left: 10px
       font-size: 12px
       font-family: Serif
       height: 20px
       line-height: 20px
       color: #999
       padding-bottom: 7px
-      *
-        vertical-align: middle
     .comment-content
+      margin: 2px 0
       /* padding-left: 27px
+      //margin-left: 23px
       font-style: italic
+      font-size: 12px
+      color: #666
+    .comment-actions
+a.j-comment-answer
+  font-size: 11px
+  text-decoration: none
+  border-bottom: 1px dashed $link_color
+  &:hover
+    border-color: red
 
 /* .comments
 /*   padding-top: 30px

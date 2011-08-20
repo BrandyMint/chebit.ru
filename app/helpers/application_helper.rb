@@ -5,9 +5,13 @@ module ApplicationHelper
     render "comments/comments", :commentable=>commentable
   end
 
-  def show_user(user)
-    image_tag( user.gravatar_url(:size=>20), :size=>'20x20', :class=>:avatar).html_safe +
-      content_tag(:span, user.full_name, :class=>'b-user_mini-name')
+  def show_user(user, show_firm=false, show_avatar=true)
+    link_to user, :class=>'userpic' do
+      username = user.full_name
+      username += " (#{user.firm})" if show_firm and user.firm?
+      ((show_avatar ? user.gravatar : '')+
+        content_tag( :span, username, :class=>'username')).html_safe
+    end
   end
 
   def show_tag(tag)

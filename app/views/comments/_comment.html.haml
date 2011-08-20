@@ -4,3 +4,5 @@
     ,
     %span.comment-time= distance_of_time_in_words(comment.created_at, Time.now)
   .comment-content= comment.content
+  -# .comment-actions
+  -#   = link_to 'ответить', '#', :class=>'j-comment-answer'

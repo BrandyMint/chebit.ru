@@ -57,6 +57,13 @@ class User < ActiveRecord::Base
     "<a href=\"#{website}\">#{website}</a>".html_safe
   end
 
+  include ActionView::Helpers::AssetTagHelper
+  include ActionView::Helpers::TagHelper
+
+  def gravatar
+    image_tag gravatar_url(:size=>20), :size=>'20x20', :class=>:avatar
+  end
+
   def update_with_password(params={})
     if params[:password].blank?
       params.delete(:password)

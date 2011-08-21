@@ -30,6 +30,7 @@ class Discourse < ActiveRecord::Base
   scope :free, where(:assigner_id=>nil)
 
   before_save :set_author
+  before_save :update_conferences_finish_at
 
   KIND=%w(discourse seminar other)
 
@@ -43,6 +44,17 @@ class Discourse < ActiveRecord::Base
 
   def to_label
     to_s
+  end
+
+  private
+
+  def conference_was
+    ConferenceSection.find(conference_section_id_was).try :conference
+  end
+
+  def update_conferences_finish_at
+    conference_was.update_finish_time if conference_section_id_changed? and conference_was.present?
+    conference.update_finish_time if conference.present?
   end
 
 end
@@ -64,4 +76,3 @@ end
 #  position     :integer         not null
 #  kind         :string(255)     default("discourse"), not null
 #
-

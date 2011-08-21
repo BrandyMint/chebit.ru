@@ -28,8 +28,8 @@ class Conference < ActiveRecord::Base
     hall_capacity-registrations.count
   end
 
-  def calculate_finish_time
-    total_minutes = (discourses.all.map(&:time_length).reduce(:+) + self.break_length)*60
+  def update_finish_time
+    total_minutes = (discourses.where(:is_moderated=>true).map(&:time_length).reduce(:+) + self.break_length)*60
     update_attribute :finish_at, self.start_at + total_minutes
   end
 end

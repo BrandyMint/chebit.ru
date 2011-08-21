@@ -2349,7 +2349,7 @@ ul#comments li.comment .comment-details {
   height: 20px;
   line-height: 20px;
   color: #999999;
-  padding-bottom: 7px;
+  padding-bottom: 4px;
 }
 /* line 25, ../../app/stylesheets/_comments.sass */
 ul#comments li.comment .comment-content {

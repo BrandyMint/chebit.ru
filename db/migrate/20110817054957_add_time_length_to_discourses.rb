@@ -19,7 +19,7 @@ class AddTimeLengthToDiscourses < ActiveRecord::Migration
     # TODO должно высчитываться автоматомс учетом перерыва на обед и длительности докладов
     add_column :conferences, :finish_at, :time
 
-    Conference.all.map &:calculate_finish_time
+    Conference.all.map &:update_finish_time
   end
 
   def self.down

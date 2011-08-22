@@ -91,7 +91,7 @@ class User < ActiveRecord::Base
   #совпадает ли настоящая роль пользователя с предлагаемой base_role
   #role - хранится в БД и имеет вид, н-р "admin"
   def role?(base_role)
-    base_role.to_sym==role.to_sym
+    base_role.to_sym==role.try :to_sym
   end
 
   protected

@@ -15,8 +15,9 @@
     (#{@conference.address})
   %p.hide
     Количество мест ограничено, поэтому просим записаться на участие в конференции заранее.
-  %p.right.hide
-    = render 'conferences/register'
+  .hide
+    .right
+      = render 'conferences/register'
 
 - @conference.conference_sections.each do |cs|
   - if cs.discourses.exists?

@@ -9,7 +9,6 @@ class Conference < ActiveRecord::Base
   attr_readonly :comments_count
 
 
-
   def to_s
     name
   end

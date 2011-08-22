@@ -43,6 +43,8 @@ class User < ActiveRecord::Base
   acts_as_taggable
   acts_as_taggable_on :tags
 
+  ROLE = [nil, :admin]
+
   def to_s
     firm? ? "#{full_name} (#{firm})" : full_name
   end
@@ -89,7 +91,7 @@ class User < ActiveRecord::Base
   #совпадает ли настоящая роль пользователя с предлагаемой base_role
   #role - хранится в БД и имеет вид, н-р "admin"
   def role?(base_role)
-    base_role==role
+    base_role.to_sym==role.to_sym
   end
 
   protected

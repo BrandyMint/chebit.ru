@@ -62,8 +62,12 @@ Registration:
 
 User:
   fields:
-    default: full_name, email, firm, occupation, tel
-    form: full_name, email, password, firm, website, occupation, note, tel, twitter, invest_money, tag_list
+    default: full_name, email, firm, occupation, role, tel
+    form: full_name, email, password, firm, website, occupation, note, role, tel, twitter, tag_list
+    options:
+      selectors: role
+      read_only: role
+
   order_by: full_name
   relationships: registrations, assigned_discourses #assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
   filters: created_at

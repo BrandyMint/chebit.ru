@@ -4,7 +4,7 @@
   = @conference.date.to_s(:human)
 %h1.conference_name= @conference.name
 .conference_desc
-  %p= @conference.desc.html_safe
+  %p= simple_format @conference.desc
   %p
     Регистрация участников с #{@conference.registration_at.to_s(:time)} до #{@conference.start_at.to_s(:time)}.
     Перерыв в #{@conference.break_at.to_s(:time)} на #{@conference.break_length} минут.

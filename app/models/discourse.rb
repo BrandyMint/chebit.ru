@@ -49,6 +49,7 @@ class Discourse < ActiveRecord::Base
   private
 
   def conference_was
+    return false unless conference_section_id_was
     ConferenceSection.find(conference_section_id_was).try :conference
   end
 

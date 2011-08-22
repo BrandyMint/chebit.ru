@@ -76,3 +76,9 @@ body .hide {
 #topper, #header, #footer, #bottom {
   display: none;
 }
+
+/* line 11, ../../app/stylesheets/print.sass */
+a.userpic {
+  text-decoration: none;
+  color: #999999;
+}

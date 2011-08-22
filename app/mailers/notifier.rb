@@ -10,4 +10,9 @@ class Notifier < ActionMailer::Base
     @user = user
     mail
   end
+
+  def new_comment(comment)
+    @comment = comment
+    mail
+  end
 end

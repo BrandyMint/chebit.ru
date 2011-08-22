@@ -24,3 +24,5 @@ ru:
   notifier:
     notify_admin_about_newbie:
       subject: "[CHEBiT] Новичек"
+    new_comment:
+      subject: "[CHEBiT] Новый комментарий"

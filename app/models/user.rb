@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
 
   # validates_format_of :email, :with => RFC822::EMAIL
 
-  # after_create :notify_admin
+  after_create :notify_admin
 
   has_many :presenters
   has_many :assigned_discourses, :source=>:discourse, :through=>:presenters

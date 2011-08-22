@@ -6,4 +6,13 @@ class Comment < ActiveRecord::Base
   belongs_to :commentable, :polymorphic => true, :counter_cache=>true
   belongs_to :author, :class_name => "User"
   has_many :comments, :as => :commentable
+
+  after_create :notify_subscribers
+
+  private
+
+  def notify_subscribers
+    Notifier.new_comment(self).deliver!
+  end
+
 end

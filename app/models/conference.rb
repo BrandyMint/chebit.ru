@@ -24,7 +24,8 @@ class Conference < ActiveRecord::Base
   end
 
   def vacancies
-    hall_capacity-registrations.count
+    c = hall_capacity-registrations.count
+    c>0 ? c : 0
   end
 
   def update_finish_time

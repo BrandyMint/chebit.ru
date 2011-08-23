@@ -2070,7 +2070,12 @@ a.admin:hover {
   background-color: red;
 }
 
-/* line 73, ../../app/stylesheets/screen.sass */
+/* line 72, ../../app/stylesheets/screen.sass */
+.red {
+  color: red;
+}
+
+/* line 75, ../../app/stylesheets/screen.sass */
 img.avatar {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -2082,36 +2087,36 @@ img.avatar {
   vertical-align: middle;
 }
 
-/* line 79, ../../app/stylesheets/screen.sass */
+/* line 81, ../../app/stylesheets/screen.sass */
 a.userpic {
   text-decoration: none;
   color: #999999;
 }
-/* line 81, ../../app/stylesheets/screen.sass */
+/* line 83, ../../app/stylesheets/screen.sass */
 a.userpic span.username {
   border-bottom: 1px dotted #999999;
 }
-/* line 83, ../../app/stylesheets/screen.sass */
+/* line 85, ../../app/stylesheets/screen.sass */
 a.userpic span.username:hover {
   border-color: red;
 }
 
-/* line 87, ../../app/stylesheets/screen.sass */
+/* line 89, ../../app/stylesheets/screen.sass */
 #liveinternet {
   padding-top: 17px;
 }
 
-/* line 90, ../../app/stylesheets/screen.sass */
+/* line 92, ../../app/stylesheets/screen.sass */
 .users {
   padding-top: 20px;
   padding-bottom: 50px;
 }
-/* line 93, ../../app/stylesheets/screen.sass */
+/* line 95, ../../app/stylesheets/screen.sass */
 .users h2.left {
   padding-top: 0;
   margin-top: 0;
 }
-/* line 96, ../../app/stylesheets/screen.sass */
+/* line 98, ../../app/stylesheets/screen.sass */
 .users h2.left span {
   color: gray;
 }
@@ -2201,7 +2206,7 @@ h1.conference_name {
   color: gray;
 }
 
-/* line 102, ../../app/stylesheets/screen.sass */
+/* line 104, ../../app/stylesheets/screen.sass */
 .leftside {
   float: left;
   width: 400px;
@@ -2441,17 +2446,17 @@ a.j-comment-answer:hover {
 /*       color: #717171 */
 /*   .add-comment */
 /*     display: none */
-/* line 115, ../../app/stylesheets/screen.sass */
+/* line 117, ../../app/stylesheets/screen.sass */
 h1 {
   padding-bottom: 30px;
 }
 
-/* line 117, ../../app/stylesheets/screen.sass */
+/* line 119, ../../app/stylesheets/screen.sass */
 .flashes {
   padding-top: 20px;
 }
 
-/* line 120, ../../app/stylesheets/screen.sass */
+/* line 122, ../../app/stylesheets/screen.sass */
 a {
   color: #4b7399;
 }
@@ -2459,11 +2464,11 @@ a {
 a:hover {
   color: red;
 }
-/* line 122, ../../app/stylesheets/screen.sass */
+/* line 124, ../../app/stylesheets/screen.sass */
 a.back {
   padding-top: 10px;
 }
-/* line 125, ../../app/stylesheets/screen.sass */
+/* line 127, ../../app/stylesheets/screen.sass */
 a.lucid {
   color: red;
 }
@@ -2472,38 +2477,38 @@ a.lucid:hover {
   color: red;
 }
 
-/* line 130, ../../app/stylesheets/screen.sass */
+/* line 132, ../../app/stylesheets/screen.sass */
 .subtitle a {
   color: white;
 }
 
-/* line 133, ../../app/stylesheets/screen.sass */
+/* line 135, ../../app/stylesheets/screen.sass */
 h2 {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-/* line 136, ../../app/stylesheets/screen.sass */
+/* line 138, ../../app/stylesheets/screen.sass */
 h2 span {
   color: #cccccc;
 }
 
-/* line 139, ../../app/stylesheets/screen.sass */
+/* line 141, ../../app/stylesheets/screen.sass */
 .left {
   float: left;
 }
 
-/* line 142, ../../app/stylesheets/screen.sass */
+/* line 144, ../../app/stylesheets/screen.sass */
 .right {
   float: right;
 }
 
-/* line 145, ../../app/stylesheets/screen.sass */
+/* line 147, ../../app/stylesheets/screen.sass */
 .likes {
   padding-top: 40px;
   padding-bottom: 20px;
 }
 
-/* line 149, ../../app/stylesheets/screen.sass */
+/* line 151, ../../app/stylesheets/screen.sass */
 .ad {
   margin-top: 40px;
   padding: 10px 20px 10px 20px;
@@ -2518,15 +2523,15 @@ h2 span {
   background-color: #eeeeee;
 }
 
-/* line 158, ../../app/stylesheets/screen.sass */
+/* line 160, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 161, ../../app/stylesheets/screen.sass */
+/* line 163, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 163, ../../app/stylesheets/screen.sass */
+/* line 165, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -2559,14 +2564,14 @@ ul#login li:last-child {
 ul#login li.last {
   padding-right: 0;
 }
-/* line 167, ../../app/stylesheets/screen.sass */
+/* line 169, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 172, ../../app/stylesheets/screen.sass */
+/* line 174, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }

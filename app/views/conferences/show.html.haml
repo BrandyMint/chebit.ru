@@ -13,15 +13,16 @@
     Место проведения:
     %b= @conference.place
     (#{@conference.address})
-  %p.hide
-    - if @conference.vacancies>0
-      Количество мест ограничено, поэтому просим записаться на участие в конференции заранее.
-    - else
-      .red
-        Приносим свои изменения, но мест больше нет.
-  .hide
-    .right
-      = render 'conferences/register'
+  - unless @conference.is_passed
+    .hide
+      %p
+        - if @conference.vacancies>0
+          Количество мест ограничено, поэтому просим записаться на участие в конференции заранее.
+        - else
+          .red
+            Приносим свои изменения, но мест больше нет.
+      .right
+        = render 'conferences/register'
 
 - @conference.conference_sections.each do |cs|
   - if cs.discourses.exists?

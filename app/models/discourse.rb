@@ -26,6 +26,8 @@ class Discourse < ActiveRecord::Base
 
   default_scope order(:position)
 
+  scope :moderated, where(:is_moderated=>true)
+
   # Темы которые никто не взял езе
   scope :free, where(:assigner_id=>nil)
 

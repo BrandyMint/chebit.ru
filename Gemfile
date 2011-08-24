@@ -50,6 +50,7 @@ gem 'inherited_resources'
 
 group :development, :test do
   gem "nifty-generators"
+  gem 'pry'  # Use as binding.pry
   gem "wirble"
    gem 'ruby-debug19', :require => 'ruby-debug'
    gem "rcov"

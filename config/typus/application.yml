@@ -63,7 +63,7 @@ Registration:
 User:
   fields:
     default: full_name, email, firm, occupation, role, tel
-    form: full_name, email, password, firm, website, occupation, note, role, tel, twitter, tag_list
+    form: full_name, email, firm, website, occupation, note, role, tel, twitter, tag_list
     options:
       selectors: role
       read_only: role

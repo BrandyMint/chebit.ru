@@ -1,7 +1,15 @@
-.comment_new
-  %h3
-    Добавить комментарий:
-  = form_for [commentable, Comment.new()] do |f|
-    = f.text_area :content, :rows => 3, :cols=>80
-    .actions
-      %button.cupid-green Отправить..
+- if commentable.is_a? Comment
+  .comment-answer-link= link_to 'ответить', '#', :class=>'j-comment-answer', :id=>'comment_answer_link_'+commentable_id(commentable), 'data-commentable'=>commentable_id(commentable)
+  %div.subcomment_new.comment_new{:id=>'new_comment_form_'+commentable_id(commentable)}
+    = form_for [commentable, Comment.new()] do |f|
+      = f.text_area :content, :rows => 3, :cols=>80
+      .actions
+        %button.cupid-green Отправить..
+
+- else
+  %div.comment_new{:id=>'new_comment_form_'+commentable_id(commentable)}
+    %h3 Добавить комментарий:
+    = form_for [commentable, Comment.new()] do |f|
+      = f.text_area :content, :rows => 3, :cols=>80
+      .actions
+        %button.cupid-green Отправить..

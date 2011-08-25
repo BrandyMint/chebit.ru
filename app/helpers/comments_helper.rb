@@ -8,4 +8,8 @@ module CommentsHelper
   def comments(commentable)
     render "comments/comments", :commentable=>commentable
   end
+
+  def commentable_id(commentable)
+    "#{commentable.class.to_s.underscore}-#{commentable.id}"
+  end
 end

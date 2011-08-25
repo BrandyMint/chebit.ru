@@ -1426,20 +1426,17 @@ ul#mainmenu li.last {
 ul#mainmenu li {
   padding: 0px 25px 0px 0px;
   color: white;
-  color: #86a6c4;
-  text-shadow: white 2px 2px 2px;
 }
-/* line 11, ../../app/stylesheets/_mainmenu.sass */
+/* line 9, ../../app/stylesheets/_mainmenu.sass */
 ul#mainmenu li a {
   text-decoration: none;
-  color: #dddddd;
-  text-shadow: none;
+  color: #666666;
 }
 /* line 4, ../../../../.rvm/gems/ruby-1.9.2-p290@global/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
 ul#mainmenu li a:hover {
   text-decoration: underline;
 }
-/* line 16, ../../app/stylesheets/_mainmenu.sass */
+/* line 12, ../../app/stylesheets/_mainmenu.sass */
 ul#mainmenu li a:hover {
   color: white;
 }
@@ -2329,25 +2326,32 @@ a.comments-link {
 }
 
 /* line 3, ../../app/stylesheets/_comments.sass */
-ul#comments {
+ul.subcomments {
+  margin-left: 20px;
+}
+
+/* line 5, ../../app/stylesheets/_comments.sass */
+.subcomment_new {
+  display: none;
+}
+
+/* line 7, ../../app/stylesheets/_comments.sass */
+ul.comments {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-/* line 6, ../../app/stylesheets/_comments.sass */
-ul#comments h2.comments-header {
+/* line 10, ../../app/stylesheets/_comments.sass */
+ul.comments h2.comments-header {
   color: #afa56a;
   font-size: 120%;
 }
-/* line 9, ../../app/stylesheets/_comments.sass */
-ul#comments li.comment {
-  margin-bottom: 30px;
-  /* padding: 10px 10px */
-  /* background-color: #eee */
-  /* +border-radius(5px) */
+/* line 13, ../../app/stylesheets/_comments.sass */
+ul.comments li.comment {
+  margin-top: 15px;
   list-style-type: none;
 }
-/* line 17, ../../app/stylesheets/_comments.sass */
-ul#comments li.comment .comment-details {
+/* line 16, ../../app/stylesheets/_comments.sass */
+ul.comments li.comment .comment-details {
   /* margin-left: 10px */
   font-size: 12px;
   font-family: Serif;
@@ -2356,26 +2360,26 @@ ul#comments li.comment .comment-details {
   color: #999999;
   padding-bottom: 0px;
 }
-/* line 25, ../../app/stylesheets/_comments.sass */
-ul#comments li.comment .comment-content {
+/* line 24, ../../app/stylesheets/_comments.sass */
+ul.comments li.comment .comment-content {
   margin: 2px 0;
   /* padding-left: 27px */
   font-style: italic;
   font-size: 12px;
   color: #666666;
 }
-/* line 32, ../../app/stylesheets/_comments.sass */
-ul#comments li.comment .comment-actions1 {
+/* line 31, ../../app/stylesheets/_comments.sass */
+ul.comments li.comment .comment-actions {
   margin-left: 10px;
 }
 
-/* line 35, ../../app/stylesheets/_comments.sass */
+/* line 34, ../../app/stylesheets/_comments.sass */
 a.j-comment-answer {
   font-size: 11px;
   text-decoration: none;
   border-bottom: 1px dashed #4b7399;
 }
-/* line 39, ../../app/stylesheets/_comments.sass */
+/* line 38, ../../app/stylesheets/_comments.sass */
 a.j-comment-answer:hover {
   border-color: red;
 }

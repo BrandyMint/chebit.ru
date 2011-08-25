@@ -10,13 +10,14 @@ class CommentsController < ApplicationController
   def create
     comment = commentable.comments.create!(:author=>current_user, :content=>params[:comment][:content])
     redirect_to polymorphic_path(comment.resource, :anchor=>"comment_#{comment.id}")
-    # redirect_to request.referer || polymorphic_path(find_commentable, :anchor=>:comments)
   end
 
   def destroy
-    c = find_commentable
-    current_user.comments.find(params[:id]).destroy
-    redirect_to request.referer || polymorphic_path(c, :anchor=>:comments)
+    comment = Comment.find(params[:id])
+    c = comment.commentable
+    r = comment.resource
+    comment.destroy if can? :destroy, comment
+    redirect_to polymorphic_path(r, :anchor=>c.is_a?(Comment) ? "comment_#{c.id}" : "comments")
   end
 
   private

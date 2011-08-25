@@ -16,6 +16,21 @@
 
 $(function() {
     
+    $('.j-rating-link').live('ajax:success', function(evt, data, status, xhr){
+              $(this).parent().replaceWith(data);
+            });
+
+    $('.rating-icon').hover(
+        function () {
+          $(this).attr('src','/images/good_s.gif');
+        }, 
+        function () {
+          $(this).attr('src','/images/good.gif');
+        }
+      );
+      // .live("ajax:beforeSend", function(evt, xhr, settings){
+      //         $(this).replaceWith('<img src="/images/spinner.gif" width=16 height=16>');
+      //       });
     $('.j-comment-answer').
       click(function(event){
               t = $(this);

@@ -27,10 +27,11 @@ ConferenceSection:
 Discourse:
   fields:
     #default: subject, position #, text, author, assigner, is_moderated
-    default: conference_section, subject, section, presenters, time_length, is_moderated, position
-    form: subject, conference_section, section, text, kind, author, time_length, position, is_moderated
+    default: conference_section, subject, section, presenters, time_length, can_be_rated, ratings_count, is_moderated, position
+    form: subject, conference_section, section, text, kind, author, time_length, position, is_moderated, can_be_rated
     options:
       selectors: kind
+      read_only: ratings_count
   order_by: conference_section_id, section_id, position
   relationships: assigners
   filters: conference_section, section

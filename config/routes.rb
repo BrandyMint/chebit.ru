@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 Chebit::Application.routes.draw do
 
+  get "discourse_rating/create"
+
   resources :conferences, :only=>[:show] do
     resources :comments, :only=>[:create]
     resources :registrations, :only=>[:create, :index]
@@ -9,6 +11,7 @@ Chebit::Application.routes.draw do
   #Для создания и редактирования комментариев внутри дискуссий
   resources :discourses do
     resources :comments, :only=>[:create]
+    resources :ratings, :only=>[:create], :controller=>:discourse_ratings
   end
   #Для удаления комментариев
   #Для добавления к комментариям комментариев

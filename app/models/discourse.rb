@@ -2,10 +2,10 @@
 class Discourse < ActiveRecord::Base
 
   # attr_protected :is_moderated
-
-  has_many :comments, :as => :commentable
   attr_readonly :comments_count
 
+  has_many :comments, :as => :commentable
+  has_many :ratings, :class_name=>'DiscourseRating'
   has_many :presenters
   has_many :assigners, :through=>:presenters, :source=>:user
 
@@ -46,6 +46,12 @@ class Discourse < ActiveRecord::Base
 
   def to_label
     to_s
+  end
+
+
+  def is_rated_by_user?(user)
+    return false unless user
+    ratings.exists?(:user_id=>user.id)
   end
 
   private

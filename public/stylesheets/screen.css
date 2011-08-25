@@ -2148,13 +2148,24 @@ ol.section li.discourse {
   font-size: 11px;
 }
 
-/* line 22, ../../app/stylesheets/_discourses.sass */
+/* line 23, ../../app/stylesheets/_discourses.sass */
+.discourse-rating {
+  padding-left: 15px;
+}
+
+/* line 25, ../../app/stylesheets/_discourses.sass */
+.discourse-rating-numeric {
+  color: #aaaaaa;
+  font-size: 11px;
+}
+
+/* line 29, ../../app/stylesheets/_discourses.sass */
 .discourse-assigners {
   padding-top: 6px;
   font-size: 11px;
   color: gray;
 }
-/* line 26, ../../app/stylesheets/_discourses.sass */
+/* line 33, ../../app/stylesheets/_discourses.sass */
 .discourse-assigners a {
   color: gray;
 }
@@ -2163,17 +2174,17 @@ ol.section li.discourse {
   color: red;
 }
 
-/* line 28, ../../app/stylesheets/_discourses.sass */
+/* line 35, ../../app/stylesheets/_discourses.sass */
 .discourse-actions {
   padding-top: 7px;
   font-size: 11px;
 }
 
-/* line 34, ../../app/stylesheets/_discourses.sass */
+/* line 41, ../../app/stylesheets/_discourses.sass */
 .new_discourses .block {
   width: 300px;
 }
-/* line 36, ../../app/stylesheets/_discourses.sass */
+/* line 43, ../../app/stylesheets/_discourses.sass */
 .new_discourses .desc {
   padding-top: 10px;
   font-size: 12px;

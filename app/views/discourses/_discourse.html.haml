@@ -1,18 +1,21 @@
 - if discourse.kind=='discourse'
   = link_to "&laquo;#{discourse}&raquo;".html_safe, discourse
+  = render 'discourses/rating', :discourse=>discourse if discourse.can_be_rated
+
+
   .discourse-assigners
     - if discourse.assigners.exists?
       - discourse.assigners.each_with_index do |a, index|
         = index>0 ? ', ' : ''
         = show_user(a, true, false)
       , #{discourse.time_length} мин.
+
     - else
       ищет докладчика
   .discourse-actions.hide
     = link_to_comments(discourse)
 - else
   = link_to discourse, discourse
-
 - if discourse.conference and discourse.conference.is_passed
   %p.discourse-description
     = discourse.text.html_safe

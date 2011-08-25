@@ -25,6 +25,7 @@ class User < ActiveRecord::Base
 
   after_create :notify_admin
 
+  has_many :discourse_ratings
   has_many :presenters
   has_many :assigned_discourses, :source=>:discourse, :through=>:presenters
   has_many :authored_discourses, :class_name => Discourse.name, :foreign_key => :author_id

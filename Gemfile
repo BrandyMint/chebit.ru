@@ -20,6 +20,8 @@ gem "simple_form"
 gem "active_record_defaults"
 gem "rfc-822"
 
+gem "fastercsv"
+
 # TODO От этого избавиться
 gem "img_gravatar"
 gem 'gravtastic'

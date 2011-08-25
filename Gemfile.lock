@@ -308,6 +308,7 @@ DEPENDENCIES
   devise!
   factory_girl_generator
   factory_girl_rails
+  fastercsv
   gravtastic
   gritter_notices
   haml (~> 3.1.2)

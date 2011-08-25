@@ -57,6 +57,8 @@ Registration:
   order_by: conference_id
   relationships: conference, user
   application: chebit
+  actions:
+    index: export
   options:
     action_after_save: create
 

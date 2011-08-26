@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 
   defaults :price_confirm => true
 
-  validates_presence_of :full_name
+  validates_presence_of :full_name, :email, :password, :password_confirmation
   # validates_presence_of :login
   # validates_uniqueness_of :login
 

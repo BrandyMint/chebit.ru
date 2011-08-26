@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 class Discourse < ActiveRecord::Base
 
-  # attr_protected :is_moderated
-  attr_readonly :comments_count
+  be_commentable
 
-  has_many :comments, :as => :commentable
   has_many :ratings, :class_name=>'DiscourseRating'
   has_many :presenters
   has_many :assigners, :through=>:presenters, :source=>:user

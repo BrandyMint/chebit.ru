@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 module CommentsHelper
   def link_to_comments(commentable)
-    title = commentable.comments_count>0 ? "Обсуждение (#{commentable.comments.count}).." : 'Обсуждение..'
+    title = commentable.all_comments_count>0 ? "Обсуждение (#{commentable.all_comments_count}).." : 'Обсуждение..'
     link_to title, polymorphic_path(commentable, :anchor=>'comments'), :class=>'comments-link'
   end
 

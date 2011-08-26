@@ -1,13 +1,11 @@
 class Conference < ActiveRecord::Base
 
+  be_commentable
+
   has_many :conference_sections
   has_many :sections, :through=>:conference_sections, :order=>:position
   has_many :discourses, :through=>:conference_sections
   has_many :registrations
-
-  has_many :comments, :as => :commentable
-  attr_readonly :comments_count
-
 
   def to_s
     name

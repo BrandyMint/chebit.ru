@@ -1,10 +1,12 @@
 class Comment < ActiveRecord::Base
+  be_commentable
+
   attr_accessible :content, :commentable_id, :commentable_type, :author, :resource_id
 
-  belongs_to :commentable, :polymorphic => true, :counter_cache=>true
-  belongs_to :resource, :polymorphic => true, :counter_cache=>:subcomments_count
+  belongs_to :commentable, :polymorphic => true, :counter_cache=>:comments_count, :dependent => :destroy
+  belongs_to :resource, :polymorphic => true, :counter_cache=>:all_comments_count, :dependent => :destroy
+
   belongs_to :author, :class_name => "User"
-  has_many :comments, :as => :commentable
 
   default_scope  order('id')
 
@@ -29,3 +31,4 @@ class Comment < ActiveRecord::Base
   end
 
 end
+

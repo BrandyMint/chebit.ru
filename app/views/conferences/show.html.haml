@@ -24,9 +24,13 @@
       .right
         = render 'conferences/register'
 
+.hide.right{:style=>'width:300px; padding-left: 20px'}
+  = render 'shared/twitter_widget'
+
 - @conference.conference_sections.each do |cs|
   - if cs.discourses.exists?
     = render 'conference_sections/conference_section', :conference_section=>cs
+
 
 -# - unless @conference.is_passed?
 -#   %h2 Темы, которые ищут докладчика:

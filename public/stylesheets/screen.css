@@ -2357,11 +2357,15 @@ ul.comments h2.comments-header {
   font-size: 120%;
 }
 /* line 13, ../../app/stylesheets/_comments.sass */
+ul.comments h2.comments-header #comments-total-counter {
+  color: #afa56a;
+}
+/* line 15, ../../app/stylesheets/_comments.sass */
 ul.comments li.comment {
   margin-top: 15px;
   list-style-type: none;
 }
-/* line 16, ../../app/stylesheets/_comments.sass */
+/* line 18, ../../app/stylesheets/_comments.sass */
 ul.comments li.comment .comment-details {
   /* margin-left: 10px */
   font-size: 12px;
@@ -2371,7 +2375,7 @@ ul.comments li.comment .comment-details {
   color: #999999;
   padding-bottom: 0px;
 }
-/* line 24, ../../app/stylesheets/_comments.sass */
+/* line 26, ../../app/stylesheets/_comments.sass */
 ul.comments li.comment .comment-content {
   margin: 2px 0;
   /* padding-left: 27px */
@@ -2379,18 +2383,18 @@ ul.comments li.comment .comment-content {
   font-size: 12px;
   color: #666666;
 }
-/* line 31, ../../app/stylesheets/_comments.sass */
+/* line 33, ../../app/stylesheets/_comments.sass */
 ul.comments li.comment .comment-actions {
   margin-left: 10px;
 }
 
-/* line 34, ../../app/stylesheets/_comments.sass */
+/* line 36, ../../app/stylesheets/_comments.sass */
 a.j-comment-answer {
   font-size: 11px;
   text-decoration: none;
   border-bottom: 1px dashed #4b7399;
 }
-/* line 38, ../../app/stylesheets/_comments.sass */
+/* line 40, ../../app/stylesheets/_comments.sass */
 a.j-comment-answer:hover {
   border-color: red;
 }

@@ -21,14 +21,21 @@ $(function() {
       .live('ajax:success', function(evt, data, status, xhr){
               t = $(this);
               commentable = t.data('commentable');
+
               t.clearForm();
+
               b = t.find('button'); // input[type=submit]
               b.removeAttr('disabled');
               (t.parent().attr('id')!='comments') && t.hide('fast');
+
               a = $("#comment_answer_link-"+commentable);
               a.text(a.data('hidden-text') || 'ответить');
+
               b = $("#comments_of-" + commentable);
               b.append(data);
+
+              counter = $('#comments-total-counter');
+              counter.text((parseInt(counter.text())+1).toString());
             })
       .live('ajax:beforeSend', function(evt, data, status, xhr){
               t = $(this);

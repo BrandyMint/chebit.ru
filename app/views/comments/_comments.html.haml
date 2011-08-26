@@ -5,6 +5,7 @@
 - else
   #comments
     %ul.comments{:id=>"comments_of-"+commentable_id(commentable)}
-      %h2.comments-header Комментарии (#{commentable.comments_count})
+      %h2.comments-header
+        Комментарии (<span id='comments-total-counter'>#{commentable.all_comments_count}</span>)
       = render commentable.comments
     = render 'comments/form', :commentable=>commentable if current_user

@@ -4,7 +4,8 @@
   = @conference.date.to_s(:human)
 %h1.conference_name= @conference.name
 .conference_desc
-  %p= simple_format @conference.subject
+  %p
+    %b= simple_format @conference.subject
   %p= simple_format @conference.desc
   %p
     Регистрация участников с #{@conference.registration_at.to_s(:time)} до #{@conference.start_at.to_s(:time)}.

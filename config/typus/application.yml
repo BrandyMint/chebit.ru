@@ -5,7 +5,7 @@
 Conference:
   fields:
     default: name, date, registration_at, start_at, finish_at, is_passed
-    form: name, date, place, address, registration_at, start_at, break_at, break_length, finish_at, is_passed, desc
+    form: name, subject, date, place, address, registration_at, start_at, break_at, break_length, finish_at, is_passed, desc
   order_by: -date
   application: chebit
   relationships: conference_sections, registrations
@@ -53,10 +53,11 @@ Section:
 
 Registration:
   fields:
-    default: conference, user
+    default: conference, user, firm
     form: conference, user
   order_by: conference_id
   relationships: conference, user
+  export: csv, xml
   application: chebit
   actions:
     index: export
@@ -70,7 +71,7 @@ User:
     options:
       selectors: role
       read_only: role
-
+  export: csv, xml
   order_by: full_name
   relationships: registrations, assigned_discourses #assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
   filters: created_at

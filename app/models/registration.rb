@@ -4,4 +4,6 @@ class Registration < ActiveRecord::Base
 
   validates_presence_of :user_id, :conference_id
   validates_uniqueness_of :user_id, :scope=>:conference_id
+
+  delegate :firm, :to=>:user
 end

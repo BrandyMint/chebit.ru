@@ -5,12 +5,16 @@ h2.section_name
   color: #333
   font-size: 18px
 
+$discourse-padding: 20px
+
 p.discourse-description
+  padding-left: $discourse-padding
   font-size: 11px
 
 ol.section
-  padding-left: 20px
+  padding-left: 0px
   li.discourse
+    list-style: none
     padding: 5px 0 7px 0
 
 .wait_assigner
@@ -27,12 +31,14 @@ ol.section
   font-size: 11px
 
 .discourse-assigners
+  padding-left: $discourse-padding
   padding-top: 6px
   font-size: 11px
   color: gray
   a
     +link-colors(gray, red)
 .discourse-actions
+  padding-left: $discourse-padding
   padding-top: 7px
   font-size: 11px
 

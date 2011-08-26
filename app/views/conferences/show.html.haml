@@ -29,10 +29,16 @@
 .hide.right{:style=>'width:300px; padding-left: 20px'}
   = render 'shared/twitter_widget'
 
+- @time_length = 0
+- is_break_showed = false
 - @conference.conference_sections.each do |cs|
+  - if @time_length >= @conference.minutes_to_break and not is_break_showed
+    %h2.section_name #{human_time_of_discourse(@conference)}. Перерыв #{@conference.break_length} мин.
+    - is_break_showed = true
+    - @time_length += @conference.break_length
+
   - if cs.discourses.exists?
     = render 'conference_sections/conference_section', :conference_section=>cs
-
 
 -# - unless @conference.is_passed?
 -#   %h2 Темы, которые ищут докладчика:

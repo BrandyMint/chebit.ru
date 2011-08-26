@@ -21,4 +21,8 @@ class ConferenceSection < ActiveRecord::Base
   def to_label
     to_s
   end
+
+  def time_length
+    @time_length||=discourses.map(&:time_length).reduce(:+)
+  end
 end

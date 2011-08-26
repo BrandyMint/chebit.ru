@@ -3,3 +3,5 @@
   - conference_section.discourses.moderated.each do |d|
     %li.discourse
       = render 'discourses/discourse', :discourse=>d
+      - @time_length += d.time_length
+

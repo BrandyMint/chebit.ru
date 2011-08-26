@@ -11,6 +11,10 @@ class Conference < ActiveRecord::Base
     name
   end
 
+  def minutes_to_break
+    (break_at - start_at)/60
+  end
+
   def is_user_registered?(user)
     return false unless user
     registrations.exists? :user_id=>user.id

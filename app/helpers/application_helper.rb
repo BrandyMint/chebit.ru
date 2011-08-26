@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
+  def human_time_of_discourse(conference)
+    (conference.start_at + @time_length*60).strftime('%H:%M')
+  end
 
   def show_user(user, show_firm=false, show_avatar=true)
     link_to user, :class=>'userpic' do

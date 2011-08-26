@@ -2126,21 +2126,23 @@ h2.section_name {
   font-size: 18px;
 }
 
-/* line 8, ../../app/stylesheets/_discourses.sass */
+/* line 10, ../../app/stylesheets/_discourses.sass */
 p.discourse-description {
+  padding-left: 20px;
   font-size: 11px;
 }
 
-/* line 11, ../../app/stylesheets/_discourses.sass */
+/* line 14, ../../app/stylesheets/_discourses.sass */
 ol.section {
-  padding-left: 20px;
+  padding-left: 0px;
 }
-/* line 13, ../../app/stylesheets/_discourses.sass */
+/* line 16, ../../app/stylesheets/_discourses.sass */
 ol.section li.discourse {
+  list-style: none;
   padding: 5px 0 7px 0;
 }
 
-/* line 16, ../../app/stylesheets/_discourses.sass */
+/* line 20, ../../app/stylesheets/_discourses.sass */
 .wait_assigner {
   padding-top: 3px;
   font-style: italic;
@@ -2148,24 +2150,25 @@ ol.section li.discourse {
   font-size: 11px;
 }
 
-/* line 23, ../../app/stylesheets/_discourses.sass */
+/* line 27, ../../app/stylesheets/_discourses.sass */
 .discourse-rating {
   padding-left: 15px;
 }
 
-/* line 25, ../../app/stylesheets/_discourses.sass */
+/* line 29, ../../app/stylesheets/_discourses.sass */
 .discourse-rating-numeric {
   color: #aaaaaa;
   font-size: 11px;
 }
 
-/* line 29, ../../app/stylesheets/_discourses.sass */
+/* line 33, ../../app/stylesheets/_discourses.sass */
 .discourse-assigners {
+  padding-left: 20px;
   padding-top: 6px;
   font-size: 11px;
   color: gray;
 }
-/* line 33, ../../app/stylesheets/_discourses.sass */
+/* line 38, ../../app/stylesheets/_discourses.sass */
 .discourse-assigners a {
   color: gray;
 }
@@ -2174,17 +2177,18 @@ ol.section li.discourse {
   color: red;
 }
 
-/* line 35, ../../app/stylesheets/_discourses.sass */
+/* line 40, ../../app/stylesheets/_discourses.sass */
 .discourse-actions {
+  padding-left: 20px;
   padding-top: 7px;
   font-size: 11px;
 }
 
-/* line 41, ../../app/stylesheets/_discourses.sass */
+/* line 47, ../../app/stylesheets/_discourses.sass */
 .new_discourses .block {
   width: 300px;
 }
-/* line 43, ../../app/stylesheets/_discourses.sass */
+/* line 49, ../../app/stylesheets/_discourses.sass */
 .new_discourses .desc {
   padding-top: 10px;
   font-size: 12px;

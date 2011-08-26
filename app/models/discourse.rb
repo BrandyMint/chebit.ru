@@ -46,7 +46,6 @@ class Discourse < ActiveRecord::Base
     to_s
   end
 
-
   def is_rated_by_user?(user)
     return false unless user
     ratings.exists?(:user_id=>user.id)

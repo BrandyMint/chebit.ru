@@ -6,6 +6,9 @@ Conference:
   fields:
     default: name, date, registration_at, start_at, finish_at, is_passed
     form: name, subject, date, place, address, registration_at, start_at, break_at, break_length, finish_at, is_passed, desc
+    options:
+      read_only: finish_at
+
   order_by: -date
   application: chebit
   relationships: conference_sections, registrations

@@ -1,4 +1,10 @@
-%ul.comments#comments
-  %h2.comments-header Комментарии (#{commentable.comments_count})
-  = render commentable.comments
+- if commentable.is_a? Comment
   = render 'comments/form', :commentable=>commentable
+  %ul.comments.subcomments{:id=>"comments_of-"+commentable_id(commentable)}
+    = render commentable.comments
+- else
+  #comments
+    %ul.comments{:id=>"comments_of-"+commentable_id(commentable)}
+      %h2.comments-header Комментарии (#{commentable.comments_count})
+      = render commentable.comments
+    = render 'comments/form', :commentable=>commentable

@@ -10,6 +10,4 @@
       = link_to 'x', comment, :confirm => 'Удалить комментарий уверен?', :method => :delete, :class=>:admin, :title=>'Удалить комментарий'
 
   .comment-content= simple_format(h comment.content)
-  = render 'comments/form', :commentable=>comment
-  %ul.comments.subcomments
-    = render comment.comments
+  = render 'comments/comments', :commentable=>comment

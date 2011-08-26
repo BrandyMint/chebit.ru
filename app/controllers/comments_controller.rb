@@ -9,7 +9,11 @@ class CommentsController < ApplicationController
   #Создание комментария
   def create
     comment = commentable.comments.create!(:author=>current_user, :content=>params[:comment][:content])
-    redirect_to polymorphic_path(comment.resource, :anchor=>"comment_#{comment.id}")
+    if request.xhr?
+      render 'comments/_comment', :layout=>false, :locals => {:comment=>comment}
+    else
+      redirect_to polymorphic_path(comment.resource, :anchor=>"comment_#{comment.id}")
+    end
   end
 
   def destroy

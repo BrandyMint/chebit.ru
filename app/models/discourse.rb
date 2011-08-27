@@ -13,7 +13,8 @@ class Discourse < ActiveRecord::Base
   belongs_to :assigner, :class_name => "User"
   belongs_to :section
   belongs_to :conference_section
-  has_one :conference, :through => :conference_section
+  # has_one :conference, :through => :conference_section
+  belongs_to :conference
 
   validates_presence_of :subject
 
@@ -31,12 +32,9 @@ class Discourse < ActiveRecord::Base
 
   before_save :set_author
   before_save :update_conferences_finish_at
+  before_save :set_conference
 
   KIND=%w(discourse seminar other)
-
-  def set_author
-    self.author = self.assigner if assigner.present? && !author
-  end
 
   def to_s
     subject
@@ -52,6 +50,14 @@ class Discourse < ActiveRecord::Base
   end
 
   private
+
+  def set_author
+    self.author = self.assigner if assigner.present? && !author
+  end
+
+  def set_conference
+    self.conference_id = self.conference_section.conference_id if self.conference_section_id and self.conference_section
+  end
 
   def conference_was
     return false unless conference_section_id_was

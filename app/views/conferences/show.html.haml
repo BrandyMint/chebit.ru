@@ -1,15 +1,17 @@
 %p.conference_date
   - if @conference.is_passed?
     passed at
-  = @conference.date.to_s(:human)
+  .hide= @conference.date.to_s(:human)
 %h1.conference_name= @conference.name
-.conference_desc
-  %p
+.conference_desc.hide
+  %p.hide
     %b= simple_format @conference.subject
-  %p= simple_format @conference.desc
-  %p
+  %p.hide= simple_format @conference.desc
+  %p.hide
     Регистрация участников с #{@conference.registration_at.to_s(:time)} до #{@conference.start_at.to_s(:time)}.
+  %p.hide
     Перерыв в #{@conference.break_at.to_s(:time)} на #{@conference.break_length} минут.
+  %p.hide
     Окончание в #{@conference.finish_at.to_s(:time)}
   %p.hide
     Место проведения:

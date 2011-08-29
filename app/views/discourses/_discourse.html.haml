@@ -1,7 +1,7 @@
 - if discourse.kind=='discourse'
   = human_time_of_discourse(discourse.conference)
   = link_to "&laquo;#{discourse}&raquo;".html_safe, discourse
-  = render 'discourses/rating', :discourse=>discourse if discourse.can_be_rated
+  = render 'discourses/rating', :discourse=>discourse
 
   .discourse-assigners
     - if discourse.assigners.exists?

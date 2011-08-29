@@ -1,8 +1,10 @@
 %span.discourse-rating
   - if discourse.is_rated_by_user?(current_user)
     = image_tag('good_s.gif', :size=>'13x13', :title=>'Вы оценили этот доклад')
-  - else
+  - elsif discourse.can_be_rated
     = link_to image_tag('good.gif', :size=>'13x13', :title=>'Кликни если доклад понравился', :class=>'rating-icon'), discourse_ratings_path(discourse), :method=>:post, 'data-type'=>:html, :remote=>true, :class=>'j-rating-link'
+  - else
+    = image_tag('good_s.gif', :size=>'13x13', :title=>'Голосование окончено')
   - if discourse.ratings_count>0
     %span.discourse-rating-numeric= discourse.ratings_count
 

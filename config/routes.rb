@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 Chebit::Application.routes.draw do
 
+  resources :tags, :only=>[:show, :index]
+
   get "discourse_rating/create"
 
   resources :conferences, :only=>[:show] do

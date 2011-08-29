@@ -7,6 +7,10 @@ class Conference < ActiveRecord::Base
   has_many :discourses, :through=>:conference_sections
   has_many :registrations
 
+  acts_as_taggable
+  acts_as_taggable_on :tags
+
+
   def to_s
     name
   end

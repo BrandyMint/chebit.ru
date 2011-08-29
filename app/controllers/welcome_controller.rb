@@ -1,7 +1,6 @@
 class WelcomeController < ApplicationController
 
   def index
-    redirect_to Conference.find(2)
     @tags = User.tag_counts
     # %w=[Ruby PHP Jave Servlet ASP.NET Perl Flash Flex MySQL postgresql JavaScript AJAX HTML5 xHTML CSS Apache ngnix Linux TDD/BDD rspec cucumber]
   end

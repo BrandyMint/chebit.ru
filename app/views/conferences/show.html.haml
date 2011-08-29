@@ -7,17 +7,17 @@
   %p.hide
     %b= simple_format @conference.subject
   %p.hide= simple_format @conference.desc
-  %p.hide
-    Регистрация участников с #{@conference.registration_at.to_s(:time)} до #{@conference.start_at.to_s(:time)}.
-  %p.hide
-    Перерыв в #{@conference.break_at.to_s(:time)} на #{@conference.break_length} минут.
-  %p.hide
-    Окончание в #{@conference.finish_at.to_s(:time)}
-  %p.hide
-    Место проведения:
+  - unless @conference.is_passed
+    %p.hide
+      Регистрация участников с #{@conference.registration_at.to_s(:time)} до #{@conference.start_at.to_s(:time)}.
+    %p.hide
+      Перерыв в #{@conference.break_at.to_s(:time)} на #{@conference.break_length} минут.
+    %p.hide
+      Окончание в #{@conference.finish_at.to_s(:time)}
+    %p.hide
+      Место проведения:
     %b= @conference.place
     (#{@conference.address})
-  - unless @conference.is_passed
     .hide
       %p
         - if @conference.vacancies>0
@@ -28,8 +28,9 @@
       = render 'conferences/register'
 
 .clear
-.hide.right{:style=>'width:300px; padding-left: 20px'}
-  = render 'shared/twitter_widget'
+- unless @conference.is_passed
+  .hide.right{:style=>'width:300px; padding-left: 20px'}
+    = render 'shared/twitter_widget'
 
 - @time_length = 0
 - is_break_showed = false

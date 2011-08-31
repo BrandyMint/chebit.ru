@@ -3,8 +3,8 @@ class Comment < ActiveRecord::Base
 
   attr_accessible :content, :commentable_id, :commentable_type, :author, :resource_id
 
-  belongs_to :commentable, :polymorphic => true, :counter_cache=>:comments_count, :dependent => :destroy
-  belongs_to :resource, :polymorphic => true, :counter_cache=>:all_comments_count, :dependent => :destroy
+  belongs_to :commentable, :polymorphic => true, :counter_cache=>:comments_count
+  belongs_to :resource, :polymorphic => true, :counter_cache=>:all_comments_count
 
   belongs_to :author, :class_name => "User"
 

@@ -4,6 +4,7 @@ class TagsController < ApplicationController
   end
 
   def show
+    # asdasds
   end
 
 end

@@ -16,6 +16,9 @@ class Discourse < ActiveRecord::Base
   # has_one :conference, :through => :conference_section
   belongs_to :conference
 
+  acts_as_taggable
+  acts_as_taggable_on :tags
+
   validates_presence_of :subject
 
   # default :is_moderated=>true

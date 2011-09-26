@@ -1,7 +1,7 @@
 %ul#login
   - if signed_in?
     %li
-      .avatar= img_gravatar( current_user.email, :size => 12 ).html_safe
+      = current_user.gravatar
       = current_user.full_name || current_user.email
       (#{ link_to "профиль", edit_user_registration_path })
     %li= link_to 'выйти', destroy_user_session_path

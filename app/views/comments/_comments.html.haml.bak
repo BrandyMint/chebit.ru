@@ -1,16 +1,16 @@
 .comments
-  -if ! item.instance_of?(Comment)#Если не комментарий
+  - if ! commentable.instance_of?(Comment)#Если не комментарий
     %h2.comments-header
       комментарии (
       %span.js-comments-count
-      = item.comments.count
+      = commentable.comments.count
       )
-  - if item.comments.empty?
-    -if ! item.instance_of?(Comment)#Если не комментарий
+  - if commentable.comments.empty?
+    -if ! commentable.instance_of?(Comment)#Если не комментарий
       Нет комментариев для показа.
   - else
     %ul.all_comments
-      - for comment in item.comments
+      - for comment in commentable.comments
         %li.comment_holder.vote_holder{:onmouseover => "showdiv(this,'folding-dot-holder')", :onmouseout => "hidediv(this,'folding-dot-holder')"}
           .msg-meta
             .folding-dot-holder
@@ -28,11 +28,11 @@
           .comment_menu
             - if can? :destroy, comment
               = link_to 'Удалить', comment, :confirm => 'Вы уверены?', :method => :delete
-  - if ! item.instance_of?(Comment)#Если не комментарий
+  - if ! commentable.instance_of?(Comment)#Если не комментарий
     .comment_new
       %h3
         Добавить комментарий
-      - form_for [item, Comment.new()] do |f|
+      - form_for [commentable, Comment.new()] do |f|
         = f.error_messages
         %p
           = f.label  'Сообщение'

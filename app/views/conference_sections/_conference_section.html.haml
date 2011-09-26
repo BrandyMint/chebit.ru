@@ -1,5 +1,7 @@
 %h2.section_name Секция &laquo;#{conference_section.section.name}&raquo;
 %ol.section
-  - conference_section.discourses.each do |d|
+  - conference_section.discourses.moderated.each do |d|
     %li.discourse
       = render 'discourses/discourse', :discourse=>d
+      - @time_length += d.time_length
+

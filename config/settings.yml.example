@@ -5,6 +5,17 @@ global:
     from: notifier@chebit.ru
     to: danil@pismenny.ru
     return_path: danil@pismenny.ru
+  typus:
+    username: admin
+    password: password
+  mailer:
+    address: smtp.orionet.ru
+    port: 25
+    domain: chebit.ru
+    user_name: user@user.ru
+    password: password
+    authentication: login # :plain, :login or :cram_md5
+    enable_starttls_auto: false
 
 development:
   mail:

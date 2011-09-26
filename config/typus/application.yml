@@ -4,11 +4,14 @@
 
 Conference:
   fields:
-    default: name, date, is_passed
-    form: name, date, is_passed, desc
+    default: name, date, registration_at, start_at, finish_at, is_passed
+    form: name, subject, date, place, address, registration_at, start_at, break_at, break_length, finish_at, is_passed, desc
+    options:
+      read_only: finish_at
+
   order_by: -date
   application: chebit
-  relationships: sections
+  relationships: conference_sections, registrations
   actions:
     show: show
   options:
@@ -18,7 +21,6 @@ Conference:
 ConferenceSection:
   fields:
     default: conference, section, position
-  relationships: conference, section
   order_by: -conference_id, position
   options:
     action_after_save: index
@@ -27,15 +29,17 @@ ConferenceSection:
 
 Discourse:
   fields:
-    #default: subject, position #, text, author, assigner, is_moderated
-    default: conference_section, subject, section, assigner, is_moderated, position
-    form: subject, conference_section, section, text, kind, author, assigner, position, is_moderated
+    # default: subject, position #, text, author, assigner, is_moderated
+    #default: conference, conference_section, section, subject, presenters, time_length, can_be_rated, ratings_count, is_moderated, position, tag_list
+    default: conference, section, subject, presenters, can_be_rated, is_moderated
+    form: subject, conference_section, section, text, slide_url, video_url, kind, author, time_length, position, is_moderated, can_be_rated, tag_list
     options:
       selectors: kind
-  order_by: conference_section_id, section_id, position
-  relationships:
-  filters: conference_section, section
-  search:
+      read_only: ratings_count, conference_id
+  #order_by: conference_id, conference_section_id, section_id, position
+  relationships: assigners
+  filters: conference,section, can_be_rated, is_moderated
+  search: subject, text
   application: chebit
   options:
     per_page: 50
@@ -51,19 +55,38 @@ Section:
   options:
     action_after_save: index
 
+Registration:
+  fields:
+    default: conference, user, firm
+    form: conference, user
+  order_by: conference_id
+  relationships: conference, user
+  export: csv, xml
+  application: chebit
+  actions:
+    index: export
+  options:
+    action_after_save: create
+
 User:
   fields:
-    default: full_name, email, last_sign_in_at, invest_money, firm, website, occupation, tel
-    form: full_name, email, firm, website, occupation, note, tel, twitter, invest_money, tag_list
-  order_by: created_at
-  # relationships: assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
+    default: full_name, email, firm, occupation, role, tel
+    form: full_name, email, firm, website, occupation, note, role, tel, twitter, tag_list
+    options:
+      selectors: role
+      read_only: role
+  export: csv, xml
+  order_by: full_name
+  relationships: registrations, assigned_discourses #assigned_discourses, authored_discourses, base_tags, tag_taggings, taggings, tags
   filters: created_at
-  search:
+  search: full_name, email, firm
+  options:
+    per_page: 50
   application: chebit
 
 Comment:
   fields:
-    default: content 
+    default: content
     form: content
   order_by: id
   application: chebit

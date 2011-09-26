@@ -1,19 +1,56 @@
 %p.conference_date
   - if @conference.is_passed?
     passed at
-  = @conference.date.to_s(:human)
+  .hide= @conference.date.to_s(:human)
 %h1.conference_name= @conference.name
-%p.conference_desc= @conference.desc.html_safe
+.conference_desc.hide
+  %p.hide
+    %b= simple_format @conference.subject
+  %p.hide= simple_format @conference.desc
+  - unless @conference.is_passed
+    %p.hide
+      Регистрация участников с #{@conference.registration_at.to_s(:time)} до #{@conference.start_at.to_s(:time)}.
+    %p.hide
+      Перерыв в #{@conference.break_at.to_s(:time)} на #{@conference.break_length} минут.
+    %p.hide
+      Окончание в #{@conference.finish_at.to_s(:time)}
+    %p.hide
+      Место проведения:
+    %b= @conference.place
+    (#{@conference.address})
+    .hide
+      %p
+        - if @conference.vacancies>0
+          Количество мест ограничено, поэтому просим записаться на участие в конференции заранее.
+        - else
+          .red
+            Извините, но свободных мест больше нет.
+      = render 'conferences/register'
 
+.clear
+- unless @conference.is_passed
+  .hide.right{:style=>'width:300px; padding-left: 20px'}
+    = render 'shared/twitter_widget'
+
+- @time_length = 0
+- is_break_showed = false
 - @conference.conference_sections.each do |cs|
+  - if @time_length >= @conference.minutes_to_break and not is_break_showed
+    %h2.section_name #{human_time_of_discourse(@conference)}. Перерыв #{@conference.break_length} мин.
+    - is_break_showed = true
+    - @time_length += @conference.break_length
+
   - if cs.discourses.exists?
     = render 'conference_sections/conference_section', :conference_section=>cs
 
-- unless @conference.is_passed?
-  %h2 Темы, которые ищут докладчика:
+-# - unless @conference.is_passed?
+-#   %h2 Темы, которые ищут докладчика:
 
-  %ol.free_discourses
-    - Discourse.free.each do |discourse|
-      %li.free_discourse= discourse
+-#   %ol.free_discourses
+-#     - Discourse.free.each do |discourse|
+-#       %li.free_discourse= discourse
 
-  = render 'discourses/form'
+-#   = render 'discourses/form'
+
+.hide
+  = comments @conference

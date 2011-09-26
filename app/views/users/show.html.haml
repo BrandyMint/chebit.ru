@@ -5,13 +5,14 @@
     = img_gravatar( @user.email, :size => 80 ).html_safe
 
   - if signed_in?
-    = show_table( @user, [:full_name, :firm, :occupation, :email, :tel, :website, :tag_list ])
-  - else 
-    = show_table( @user, [:full_name, :firm, :occupation, :website, :tag_list ])
+    = show_table( @user, [:full_name, :firm, :occupation, :email, :tel, :website ])
+  - else
+    = show_table( @user, [:full_name, :firm, :occupation, :website ])
   .clear
   %p.note= @user.note
+  = show_tags @user.tag_list
 
 .right= link_to "другие участники &rarr;".html_safe, users_path
-.left= go_back  
+.left= go_back
 
 .clear

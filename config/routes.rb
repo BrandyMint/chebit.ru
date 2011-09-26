@@ -1,9 +1,19 @@
+# -*- coding: utf-8 -*-
 Chebit::Application.routes.draw do
 
-  resources :conferences, :only=>[:show]
-  #Для создания и редактирования комментариев внутри дискуссий
-  resources :discourses do 
+  resources :tags, :only=>[:show, :index]
+
+  get "discourse_rating/create"
+
+  resources :conferences, :only=>[:show] do
     resources :comments, :only=>[:create]
+    resources :registrations, :only=>[:create, :index]
+
+  end
+  #Для создания и редактирования комментариев внутри дискуссий
+  resources :discourses do
+    resources :comments, :only=>[:create]
+    resources :ratings, :only=>[:create], :controller=>:discourse_ratings
   end
   #Для удаления комментариев
   #Для добавления к комментариям комментариев
@@ -16,7 +26,7 @@ Chebit::Application.routes.draw do
   devise_scope :user do
     resources :users, :only => [:show, :index]
   end
-  
+
   resources :vacancies
 
   #Для отображения комментариев после создания

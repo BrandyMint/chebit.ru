@@ -4,21 +4,11 @@ class Ability
 
   def initialize(user)
     # user ||= User.new # guest user (not logged in)
-    # Неавторизованным ничего не разрешаем
-    return false unless user
 
-    #Полный доступ, если пользователь в роли админа
-    if user.role? :admin
-     can :manage, :all    
-    end
-
-    #Если пользователь не в роли админа
-    if not user.role? :admin
-      #читать
-      can :read, :all
-      # полный доступ, если пользователь владелец объекта 
-      can :manage, Comment, :author => user
-    end
+    can :read, :all
+    return unless user
+    can :manage, Comment, :author => user
+    can :manage, :all if user.role? :admin
   end
 end
 

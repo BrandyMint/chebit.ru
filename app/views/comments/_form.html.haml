@@ -1,0 +1,13 @@
+- if commentable.is_a? Comment
+  .comment-answer-link= link_to 'ответить', '#', :class=>'j-comment-answer', :id=>'comment_answer_link-'+commentable_id(commentable), 'data-commentable'=>commentable_id(commentable)
+  = form_for [commentable, Comment.new()], :remote => true, :html => { :'data-type' => 'html', :class=>'comment_new subcomment_new', :id=>'new_comment_form-'+commentable_id(commentable), 'data-commentable'=>commentable_id(commentable) } do |f|
+    = f.text_area :content, :rows => 3, :cols=>80
+    .actions
+      %button.cupid-green Отправить..
+
+- else
+  %h3.add_comment_header Добавить комментарий:
+  = form_for [commentable, Comment.new()], :remote => true, :html => { :'data-type' => 'html', :class=>'comment_new', :id=>'new_comment_form-'+commentable_id(commentable), 'data-commentable'=>commentable_id(commentable) } do |f|
+    = f.text_area :content, :rows => 3, :cols=>80
+    .actions
+      %button.cupid-green Отправить..

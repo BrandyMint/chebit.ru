@@ -4,6 +4,9 @@ $padding_width: 80px
 $padding_bottom: 40px
 $padding_top: $padding_bottom
 
+$link_color: #4b7399
+
+
 @import "compass/css3/border-radius"
 /* @import "compass/css3/gradient"
 @import "compass/css3/box-shadow"
@@ -12,6 +15,10 @@ $padding_top: $padding_bottom
 @import "compass/utilities/lists/horizontal-list"
 @import "compass/utilities/links/hover-link"
 @import "compass/css3/text-shadow"
+@import "compass/css3/background-clip"
+@import "compass/css3/opacity"
+@import "compass/css3/gradient"
+@import "compass/typography/links/unstyled-link"
 
 @import nifty
 
@@ -30,7 +37,57 @@ $padding_top: $padding_bottom
 @import b-discourse
 @import b-user
 @import b-user-show
+@import multi-line-button
 
+
+a.multi-line-button
+  +multi-line-button(#60a3d8)
+  &:hover
+    color: white
+  &.green
+    +color-multi-line-button(#63bb4a)
+  &.red
+    +color-multi-line-button(#bf4040)
+  &.orange
+    +color-multi-line-button(#d98026)
+
+.multi-line
+  +multi-line-button(#60a3d8)
+  &.green
+    +color-multi-line-button(#63bb4a)
+  &.red
+    +color-multi-line-button(#bf4040)
+  &.orange
+    +color-multi-line-button(#d98026)
+
+a.admin
+  font-family: sans
+  padding: 0 1px 0px 2px
+  color: red
+  text-decoration: none
+  &:hover
+    color: white
+    background-color: red
+
+.red
+  color: red
+
+img.avatar
+  +border-radius(3px)
+  margin-right: 7px
+  vertical-align: middle
+
+
+a.userpic
+  text-decoration: none
+  span.username
+    border-bottom: 1px dotted #999
+    &:hover
+      border-color: red
+  +link-colors(#999)
+
+#liveinternet
+  padding-top: 17px
 
 .users
   padding-top: 20px
@@ -42,6 +99,7 @@ $padding_top: $padding_bottom
       color: gray
 
 @import discourses
+@import conferences
 
 .leftside
   float: left
@@ -55,7 +113,6 @@ $padding_top: $padding_bottom
 @import welcome
 @import comments
 
-$link_color: #4b7399
 
 h1
   padding-bottom: 30px
@@ -70,6 +127,10 @@ a
   &.lucid
 
     +link-colors(red, red)
+
+.subtitle
+  a
+    +link-colors(white)
 
 h2
   padding-top: 20px

@@ -1,9 +1,13 @@
 %p#notice= notice
 
 .b-discourse
-  %p.right
+  %p
+    Конференция:
+    %span
+      = link_to @discourse.conference
+  %p
     Секция
-    %span  &laquo;#{@discourse.section}&raquo;
+    %span &laquo;#{@discourse.section}&raquo;
   .clear
 
   %h1 Доклад &laquo;#{@discourse}&raquo;
@@ -13,8 +17,10 @@
       %span= @discourse.author
   %p
     Докладчик:
-    - if @discourse.assigner
-      = link_to @discourse.assigner, @discourse.assigner
+    - if @discourse.assigners.exists?
+      - @discourse.assigners.each_with_index do |a, index|
+        = index>0 ? ', ' : ''
+        = show_user(a, true)
     - else
       %i
         в поисках.
@@ -26,6 +32,10 @@
           на сайт или
           = link_to 'зарегистрируйтесь', new_user_registration_path
           , чтобы взять этот доклад на себя
+    %p
+      Продолжительность:
+      = @discourse.time_length
+      мин.
   %p.text
     = @discourse.text.html_safe
 -# = link_to 'Edit', edit_discourse_path(@discourse)
@@ -33,6 +43,4 @@
 -# = link_to 'Back', discourses_path
 
 = go_back root_path
--content_for(:head) do
-  = javascript_include_tag 'comment'#Скрипты для комментариев
-= render :partial => "shared/comments", :locals => {:item => @discourse}
+= comments @discourse

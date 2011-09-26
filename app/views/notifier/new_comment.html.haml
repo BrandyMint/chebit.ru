@@ -1,0 +1,9 @@
+!!!
+%html
+  %body
+    %p
+      = link_to @comment.resource, polymorphic_url(@comment.resource, :anchor=>"comment_#{@comment.id}")
+    %p
+      = @comment.content
+    %p
+      = link_to @comment.author, user_url(@comment.author)

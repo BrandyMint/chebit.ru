@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 source 'http://rubygems.org'
 gem 'rails', '~> 3.0.8'
 gem 'pg'
@@ -18,7 +19,12 @@ gem 'acts-as-taggable-on'
 gem "simple_form"
 gem "active_record_defaults"
 gem "rfc-822"
+
+gem "fastercsv"
+
+# TODO От этого избавиться
 gem "img_gravatar"
+gem 'gravtastic'
 gem "gritter_notices"
 
 #gem "copycopter_client"
@@ -46,6 +52,7 @@ gem 'inherited_resources'
 
 group :development, :test do
   gem "nifty-generators"
+  gem 'pry'  # Use as binding.pry
   gem "wirble"
    gem 'ruby-debug19', :require => 'ruby-debug'
    gem "rcov"

@@ -12,23 +12,28 @@ class User < ActiveRecord::Base
                    :occupation, :website, :note, :twitter,
                    :discourse_state, :discourse_subject, :price_confirm, :tag_list )
 
+  include Gravtastic
+  gravtastic
 
   defaults :price_confirm => true
 
-  validates_presence_of :full_name
+  validates_presence_of :full_name, :email, :password, :password_confirmation
   # validates_presence_of :login
   # validates_uniqueness_of :login
 
   # validates_format_of :email, :with => RFC822::EMAIL
 
-  # after_create :notify_admin
+  after_create :notify_admin
 
-  has_many :assigned_discourses, :class_name => Discourse.name, :foreign_key => :assigner_id
+  has_many :discourse_ratings
+  has_many :presenters
+  has_many :assigned_discourses, :source=>:discourse, :through=>:presenters
   has_many :authored_discourses, :class_name => Discourse.name, :foreign_key => :author_id
   has_many :vacancies, :dependent => :destroy
+  has_many :registrations
+  has_many :comments, :foreign_key => :author_id
 
-  default_scope order(:id)
-
+  # default_scope order(:full_name)
 
   state_machine :discourse_state, :initial => :maybe do
     state :maybe
@@ -38,6 +43,8 @@ class User < ActiveRecord::Base
 
   acts_as_taggable
   acts_as_taggable_on :tags
+
+  ROLE = [nil, :admin]
 
   def to_s
     firm? ? "#{full_name} (#{firm})" : full_name
@@ -53,6 +60,13 @@ class User < ActiveRecord::Base
 
   def show_website
     "<a href=\"#{website}\">#{website}</a>".html_safe
+  end
+
+  include ActionView::Helpers::AssetTagHelper
+  include ActionView::Helpers::TagHelper
+
+  def gravatar
+    image_tag gravatar_url(:size=>20), :size=>'20x20', :class=>:avatar
   end
 
   def update_with_password(params={})
@@ -78,7 +92,7 @@ class User < ActiveRecord::Base
   #совпадает ли настоящая роль пользователя с предлагаемой base_role
   #role - хранится в БД и имеет вид, н-р "admin"
   def role?(base_role)
-    base_role==role
+    base_role.to_s==role
   end
 
   protected

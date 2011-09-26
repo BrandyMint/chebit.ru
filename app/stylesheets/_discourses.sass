@@ -1,14 +1,3 @@
-p.conference_date
-  font-size: 18px
-  font-weight: bold
-  color: #ccc
-  padding-bottom: 0
-  float: right
-
-h1.conference_name
-  font-size: 24px
-  color: #999
-  padding-bottom: 0
 
 h2.section_name
   padding: 0
@@ -16,18 +5,17 @@ h2.section_name
   color: #333
   font-size: 18px
 
+$discourse-padding: 20px
+
 p.discourse-description
+  padding-left: $discourse-padding
   font-size: 11px
 
-.conference_desc
-  font-style: italic
-  color: gray
-
 ol.section
-  padding-left: 20px
+  padding-left: 0px
   li.discourse
-    padding: 5px 0 5px 0
-
+    list-style: none
+    padding: 5px 0 7px 0
 
 .wait_assigner
   padding-top: 3px
@@ -35,12 +23,24 @@ ol.section
   color: green
   font-size: 11px
 
-.assigner
-  padding-top: 3px
+
+.discourse-rating
+  padding-left: 15px
+.discourse-rating-numeric
+  color: #aaa
+  font-size: 11px
+
+.discourse-assigners
+  padding-left: $discourse-padding
+  padding-top: 6px
   font-size: 11px
   color: gray
   a
     +link-colors(gray, red)
+.discourse-actions
+  padding-left: $discourse-padding
+  padding-top: 7px
+  font-size: 11px
 
 
 .new_discourses

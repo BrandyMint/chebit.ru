@@ -4,6 +4,9 @@ gem 'rails', '~> 3.0.8'
 gem 'pg'
 
 
+
+gem 'activeadmin'
+
 gem 'sass', '~> 3.1'
 gem 'haml', '~> 3.1.2'
 
@@ -37,8 +40,8 @@ gem "unicorn"
 
 gem "annotate"
 gem "cancan"
-# gem "typus"
-gem 'typus', :git => 'https://github.com/typus/typus.git'
+gem "typus"
+# gem 'typus', :git => 'https://github.com/typus/typus.git'
 
 #https://github.com/swanandp/acts_as_list
 gem "acts_as_list"
@@ -64,10 +67,4 @@ group :development, :test do
    gem "hpricot"
    gem "ruby_parser"
    gem "mocha"
-
-  gem 'vlad', :git=>'git://github.com/dapi/vlad.git' #  , :path => '~/code/gems/vlad/' '~> 2.2.0',
-  gem 'vlad-extras', :git =>'git://github.com/dapi/vlad-extras.git'
-  gem 'vlad-git', :git=>'git://github.com/dapi/vlad-git.git' #, :path => '~/code/gems/vlad-git/'
-  gem 'vlad-unicorn'
-
 end

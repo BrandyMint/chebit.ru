@@ -4,6 +4,7 @@ Chebit::Application.routes.draw do
   resources :tags, :only=>[:show, :index]
 
   get "discourse_rating/create"
+  get 'reports' => 'welcome#reports'
 
   resources :conferences, :only=>[:show] do
     resources :comments, :only=>[:create]
@@ -34,6 +35,7 @@ Chebit::Application.routes.draw do
   # https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-edit-their-password-
 
   root :to => "welcome#index"
+
 
   # resources :users do
   #   member do

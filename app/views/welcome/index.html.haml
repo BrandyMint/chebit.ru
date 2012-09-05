@@ -1,14 +1,26 @@
-= render 'shared/fotki_yandex'
+%h2
+  CHEBIT'12-10. Технологии разработки веб-приложений.
+  
+%p
+  =link_to '29-го сентября 2012 г.', 'http://www.facebook.com/events/155131824610806/'
+  Чебоксары, площадь Речников, 5. Бар-Клуб Манхеттен
 
 %p
-  = link_to 'Еще фото', 'http://foto.mail.ru/mail/kostya_sokolov/chebit'
+  Вход строго по регистрации, количество мест ограничено.
+  
+
+= render 'shared/timepad'
+
+%h2 Комментарии
 
 %p
-  = link_to 'Видео-отчет', 'http://chebit.ru/system/chebit11-02/video/'
+  = link_to 'Группа CHEBIT на facebook', 'http://www.facebook.com/groups/chebit.ruby/'
 
-= render 'shared/twitter_widget'
-%br/
-%br/
+= render 'shared/fb_comments'
+
+-#= render 'shared/twitter_widget'
+-#%br/
+-#%br/
 -# = render 'shared/reformal_widget'
 
 = render 'shared/tag_cloud'

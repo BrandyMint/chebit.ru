@@ -21,20 +21,22 @@
     = csrf_meta_tag
     = yield(:head)
   %body
+    = render 'shared/fb_sdk'
     = gritter_flash_messages
     #topper
-      = render "devise/shared/login"
+      -# = render "devise/shared/login"
       .clear
     #container
       #header
         = render "layouts/header"
 
       %ul#mainmenu.hide
-        %li= link_to_unless_current "CHEBIT'11-02 (27 августа 2011)", conference_path(2)
-        %li= link_to_unless_current "прошедший CHEBIT'11-01", conference_path(1)
-        %li= link_to_unless_current "Форум", "https://groups.google.com/forum/#!forum/chebit"
+        %li= link_to_unless_current "Предстоящий CHEBIT'12-10 (29 сентября)", '/'
+        %li= link_to_unless_current "2011-10", conference_path(2)
+        %li= link_to_unless_current "2011-02", conference_path(1)
+        %li= link_to_unless_current 'Отчеты', '/reports'
         -# %li= link_to_unless_current "Участники", users_path
-        %li= link_to_unless_current "Вакансии", vacancies_path
+        -#%li= link_to_unless_current "Вакансии", vacancies_path
       #content
         - if show_title?
           %h2= yield(:title)

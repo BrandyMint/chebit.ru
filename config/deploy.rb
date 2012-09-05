@@ -1,65 +1,54 @@
 # -*- coding: utf-8 -*-
 
+# Деплой на личный тестовый
+#   rake vlad:deploy
+#
+# Деплой на продакшен
+#   rake vlad:deploy to=production
+#
+
 namespace :vlad do
+  set :revision, 'origin/HEAD/production'
   set :application, "chebit.ru"
-  set :domain, "wwwdata@chebit.ru"
-  set :rails_env, "production"
-  set :deploy_to, "/home/wwwdata/chebit.ru"
-  set :keep_releases,	3
-  set :repository, 'git@github.com:dapi/chebit.ru.git'
 
-  set :copy_files, [ 'config/database.yml', 'config/settings.yml' ]
-  set :symlinks, copy_files
+  set :repository, "git@github.com:BrandyMint/#{application}.git"
 
-  set :shared_paths, {
-    'log'    => 'log',
-    'system' => 'public/system',
-    'pids'   => 'tmp/pids',
-    'bundle' => 'vendor/bundle'
-  }
+  set :deploy_tasks, %w[
+           vlad:update
+           vlad:symlink
+           vlad:bundle:install
+           vlad:migrate
+           vlad:put_revision
+           vlad:precompile_assets
+           vlad:unicorn:upgrade
+           vlad:cleanup
+   ]
 
-  set :unicorn_command, "cd #{current_path}; RAILS_ENV=#{rails_env} bundle exec unicorn_rails"
+
+   # Long story
+   #
+   #set :deploy_tasks, %w[
+           #vlad:update
+           #vlad:symlink
+           #vlad:bundle:install
+           #vlad:migrate
+           #vlad:put_revision
+           #vlad:foreverb
+           #vlad:precompile
+           #vlad:unicorn:upgrade
+           #vlad:delayed_job:restart
+           #vlad:cleanup
+   #]
 end
 
-# namespace :vlad do
-#   set :application, "chebit.ru"
-#   set :domain, "wwwdata@chebit.ru"
-#   set :rails_env, "production"
-#   set :deploy_to, "/home/wwwdata/chebit.ru"
-#   # set :revision,  current_revision # 'master/HEAD'
-#   set :keep_releases,	3
-#   set :repository, 'git@github.com:dapi/chebit.ru.git'
-#   set :web_command, "sudo apache2ctl"
 
-#   set :copy_files, [ 'config/database.yml' ]
-#   set :symlinks, copy_files
-
-#   # for rails
-#   set :shared_paths, {
-#     'log'    => 'log',
-#     'system' => 'public/system',
-#     'pids'   => 'tmp/pids',
-#     'bundle' => 'vendor/bundle',
-#     'config/database.yml' => 'config/database.yml',
-#     'config/settings' => 'config/settings',
-#     'config/settings.yml' => 'config/settings.yml'
-#   }
-
-#   desc "Full deployment cycle"
-#   task "deploy2" => %w[
-#       vlad:update
-#       vlad:bundle_install
-#       vlad:migrate
-#       vlad:start_app
-#       vlad:hoptoad
-#       vlad:cleanup
-#     ]
-
-#   namespace :db do
-#     task :clone2 do
-#       run "ssh wwwdata@chebit.ru 'cd /home/wwwdata/chebit.ru/current/; pg_dump -U danil -c -O chebit_orionet' > ./tmp/production_dump.sql"
-#       sh 'cat ./tmp/production_dump.sql | psql chebit_development'
-#       Rake::Task["db:migrate"].invoke
-#     end
-#   end
-# end
+# Однажды
+# rake vlad:setup
+#
+# Когда нужно скопировать database.yml на сервер
+# rake vlad:copy
+# rake vlad:symlink
+#
+# Руглярно
+# git push
+# rake vlad:deploy

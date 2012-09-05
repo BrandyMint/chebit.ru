@@ -1,0 +1,3 @@
+[submodule "script/vlad"]
+	path = script/vlad
+	url = git://github.com/BrandyMint/vlad_deploy.git

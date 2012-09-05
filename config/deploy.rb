@@ -7,11 +7,16 @@
 #   rake vlad:deploy to=production
 #
 
+require './script/vlad/vlad/defaults'
+
 namespace :vlad do
   set :revision, 'origin/HEAD/production'
   set :application, "chebit.ru"
 
   set :repository, "git@github.com:BrandyMint/#{application}.git"
+  
+  set :copy_files, [ 'config/database.yml', 'config/settings.yml' ]
+  set :symlinks, copy_files
 
   set :deploy_tasks, %w[
            vlad:update
@@ -19,7 +24,6 @@ namespace :vlad do
            vlad:bundle:install
            vlad:migrate
            vlad:put_revision
-           vlad:precompile_assets
            vlad:unicorn:upgrade
            vlad:cleanup
    ]

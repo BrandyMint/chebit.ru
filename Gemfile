@@ -48,7 +48,7 @@ gem "acts_as_list"
 gem "cancan"
 
 # gem "russian", :git => "https://github.com/dima4p/russian.git"
-gem "russian", :git => "https://github.com/yaroslav/russian.git"
+gem "russian"# , :git => "https://github.com/yaroslav/russian.git"
 # gem 'russian'
 
 gem 'inherited_resources'
@@ -57,7 +57,7 @@ group :development, :test do
   gem "nifty-generators"
   gem 'pry'  # Use as binding.pry
   gem "wirble"
-   gem 'ruby-debug19', :require => 'ruby-debug'
+   # gem 'ruby-debug19', :require => 'ruby-debug'
    gem "rcov"
    gem "rspec"
    gem "rspec-rails"

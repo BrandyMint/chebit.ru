@@ -2547,27 +2547,32 @@ h2 span {
 }
 
 /* line 160, ../../app/stylesheets/screen.sass */
+.register p {
+  margin-bottom: 0px;
+}
+
+/* line 163, ../../app/stylesheets/screen.sass */
 dt {
   font-weight: bold;
   color: #666666;
 }
 
-/* line 163, ../../app/stylesheets/screen.sass */
+/* line 166, ../../app/stylesheets/screen.sass */
 dd {
   font-size: smaller;
   padding-top: 0.5em;
   padding-bottom: 1em;
 }
 
-/* line 168, ../../app/stylesheets/screen.sass */
+/* line 171, ../../app/stylesheets/screen.sass */
 ul {
   padding: 0px;
 }
-/* line 171, ../../app/stylesheets/screen.sass */
+/* line 174, ../../app/stylesheets/screen.sass */
 ul li {
   padding: 10px 0px 0px 0px;
 }
-/* line 173, ../../app/stylesheets/screen.sass */
+/* line 176, ../../app/stylesheets/screen.sass */
 ul#login {
   margin: 0;
   padding: 0;
@@ -2600,14 +2605,14 @@ ul#login li:last-child {
 ul#login li.last {
   padding-right: 0;
 }
-/* line 177, ../../app/stylesheets/screen.sass */
+/* line 180, ../../app/stylesheets/screen.sass */
 ul#login li:before {
   color: #666666;
   content: "|";
   margin-left: -1ex;
   margin-right: 1ex;
 }
-/* line 182, ../../app/stylesheets/screen.sass */
+/* line 185, ../../app/stylesheets/screen.sass */
 ul#login li {
   padding-left: 10px;
 }

@@ -3,20 +3,27 @@
   
 %p
   = link_to '29-го сентября 2012 г.', 'http://www.facebook.com/events/155131824610806/'
-  Чебоксары, площадь Речников, 5. Бар-Клуб Манхеттен
+  Чебоксары, площадь Речников, 5. Бар-Клуб Манхеттен.
+  = link_to 'Группа на facebook', 'http://www.facebook.com/groups/chebit.ruby/'
 
 = render 'programm'
 
-= render 'shared/timepad'
-
-%h2 Комментарии
+%h2
+  Регистрация
 
 %p
-  = link_to 'Группа CHEBIT на facebook', 'http://www.facebook.com/groups/chebit.ruby/'
+  Регистрация платная (390 рублей). Количество мест ограничено (50 шт.). В стоимость билета входит комплексный обед.
 
-= render 'shared/fb_comments'
+= link_to 'Зарегистрироваться', 'http://arwr.timepad.ru/event/32207', :class => 'multi-line-button green'
 
--#= render 'shared/twitter_widget'
+
+%h2 #chebit
+-# = render 'shared/timepad'
+
+
+-# = render 'shared/fb_comments'
+
+= render 'shared/twitter_widget'
 -#%br/
 -#%br/
 -# = render 'shared/reformal_widget'

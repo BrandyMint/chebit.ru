@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 source 'http://rubygems.org'
-gem 'rails', '~> 3.0.8'
+gem 'rails', '~> 3.0.12'
 gem 'pg'
 
 

@@ -1428,3 +1428,9 @@ h1 {
   margin-bottom: 0.7em;
   padding-bottom: 0em;
 }
+
+/* line 210, ../../app/stylesheets/screen.sass */
+#banner_container {
+  width: 700px;
+  margin: -220px auto 0px auto;
+}

@@ -7,8 +7,11 @@ Chebit::Application.routes.draw do
 
   resources :tags, :only=>[:show, :index]
 
-  get "discourse_rating/create"
+  root :to => "welcome#banner"
+
   get 'reports' => 'welcome#reports'
+  get 'details' => 'welcome#details'
+  get "discourse_rating/create"
 
   resources :conferences, :only=>[:show] do
     resources :comments, :only=>[:create]
@@ -37,8 +40,6 @@ Chebit::Application.routes.draw do
   #Для отображения комментариев после создания
  # match '/discourses/:id/comments'=> redirect('/discourses/%{id}')
   # https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-edit-their-password-
-
-  root :to => "welcome#index"
 
 
   # resources :users do

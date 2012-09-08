@@ -1,12 +1,26 @@
 class WelcomeController < ApplicationController
 
+  before_filter :prepare_tags
+
   def index
-    @tags = User.tag_counts
-    # %w=[Ruby PHP Jave Servlet ASP.NET Perl Flash Flex MySQL postgresql JavaScript AJAX HTML5 xHTML CSS Apache ngnix Linux TDD/BDD rspec cucumber]
   end
 
   def reports
 
+  end
+
+  def banner
+    render :layout => 'banner'
+  end
+
+  def details
+
+  end
+
+  private
+
+  def prepare_tags
+    @tags = User.tag_counts
   end
 
 end

@@ -1,29 +1,40 @@
-%h2
-  CHEBIT'12-10. Технологии разработки веб-приложений.
+%h1
+  CHEBIT'12-10, 29 сентября 2012 
+  %br
+  Технологии разработки веб-приложений.
   
-%p
-  = link_to '29-го сентября 2012 г.', 'http://www.facebook.com/events/155131824610806/'
+%p.pull-right
+  -#= link_to '29-го сентября 2012 г.', 'http://www.facebook.com/events/155131824610806/'
   Чебоксары, площадь Речников, 5. Бар-Клуб Манхеттен.
-  = link_to 'Группа на facebook', 'http://www.facebook.com/groups/chebit.ruby/'
+  -#= link_to 'Группа на facebook', 'http://www.facebook.com/groups/chebit.ruby/'
 
 = render 'programm'
 
-%h2
+%h1
   Регистрация
 
 %p
   Регистрация платная (390 рублей). Количество мест ограничено (50 шт.). В стоимость билета входит комплексный обед.
 
+%p 
+  На 10 сентября свободных мест осталось 10 штук.
+
 = link_to 'Зарегистрироваться', 'http://arwr.timepad.ru/event/32207', :class => 'multi-line-button green'
 
 
-%h2 #chebit
+%h1
+  = link_to '#chebit', 'https://twitter.com/search?q=%23chebit'
 -# = render 'shared/timepad'
 
 
 -# = render 'shared/fb_comments'
 
 = render 'shared/twitter_widget'
+
+%h1 Рассылка
+%p Мы делаем рассылку редко, максимум два раза в год, анонсируя конференцию.
+
+= render 'shared/subscribe'
 -#%br/
 -#%br/
 -# = render 'shared/reformal_widget'

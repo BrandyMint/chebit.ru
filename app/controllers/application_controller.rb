@@ -2,7 +2,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-public
+  private
       #Находим общее количество комментариев(рексрсивно в коллекции)
   def common_count_comments(commentable)
    if commentable.comments.any?
@@ -22,5 +22,7 @@ public
    end
    return i
   end
+
+
 
 end

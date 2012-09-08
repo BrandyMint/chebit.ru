@@ -5,10 +5,8 @@ gem 'pg'
 
 
 
-gem 'activeadmin'
-
-gem 'sass', '~> 3.1'
-gem 'haml', '~> 3.1.2'
+gem 'sass'
+gem 'haml'
 
 gem "haml-rails"
 gem 'rails_settings', '~> 0.1.1' # path => '/Users/danil/code/gems/rails_settings'
@@ -40,7 +38,8 @@ gem "unicorn"
 
 gem "annotate"
 gem "cancan"
-gem "typus"
+# gem "typus"
+gem 'activeadmin', '~> 0.5'
 # gem 'typus', :git => 'https://github.com/typus/typus.git'
 
 #https://github.com/swanandp/acts_as_list

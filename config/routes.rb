@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 Chebit::Application.routes.draw do
 
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :tags, :only=>[:show, :index]
 
   get "discourse_rating/create"

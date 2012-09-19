@@ -32,7 +32,7 @@ gem "gritter_notices"
 
 
 
-gem 'hoptoad_notifier'
+gem 'airbrake'
 #
 gem "unicorn"
 

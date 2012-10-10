@@ -24,7 +24,7 @@ class WelcomeController < ApplicationController
     ]
 
     # get video files
-    files_dir = Pathname.new(Rails.root.join("public", "system", "chebit-12-10"))
+    files_dir = Pathname.new(Rails.root.join("public", "system", "chebit12-10"))
     @videos.each do |item|
       [:webm, :mp4].each do |type|
         file_path = Dir[File.join(files_dir, "chebit-2012-10_#{item[:number]}*.#{type}")].first

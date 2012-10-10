@@ -40,3 +40,5 @@ features/rcov/
 *~
 *.swp
 *.swo
+.idea
+public/system

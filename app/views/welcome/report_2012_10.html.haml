@@ -1,0 +1,7 @@
+%h1 Отчеты
+
+%h2 Видео
+
+- @videos.each do |video|
+  = render :partial => "lecture_video", :locals => {video: video}
+

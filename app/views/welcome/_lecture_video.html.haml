@@ -1,0 +1,19 @@
+%h4
+  = "#{video[:number]}."
+  = video[:title]
+  = "-"
+  %em= video[:author]
+
+-# video
+- if video[:webm] || video[:mp4]
+  %video{width: 320, height: 240}
+    - [:webm, :mp4].each do |type|
+      - if video[type]
+        %source{ src: video[type], type: "video/#{type}"}
+- else
+  %em Видео скоро будет...
+-# links to video
+%p
+  - [:webm, :mp4].each do |type|
+    = link_to type, video[type] if video[type]
+%hr

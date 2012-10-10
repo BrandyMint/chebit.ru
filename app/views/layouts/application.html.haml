@@ -15,6 +15,20 @@
     = javascript_include_tag :defaults, 'jquery.form'
     = javascript_include_tag 'comment'
     = include_gritter
+
+    -# video on mediaelement.js
+    = javascript_include_tag "/vendor/mediaelement/jquery.js"
+    = javascript_include_tag '/vendor/mediaelement/mediaelement-and-player.min.js'
+    = stylesheet_link_tag '/vendor/mediaelement/mediaelementplayer.min.css'
+    :javascript
+      $(function(){
+        $('video,audio').mediaelementplayer();
+      })
+
+    -# video on video.js
+    -#%link{ href: "http://vjs.zencdn.net/c/video-js.css", rel: "stylesheet"}
+    -#%script{ src: "http://vjs.zencdn.net/c/video.js" }
+
     %script(src="http://vkontakte.ru/js/api/openapi.js" type="text/javascript" charset="utf-8")
     :javascript
       VK.init({ apiId: 2157228, onlyWidgets: true });
@@ -32,8 +46,9 @@
         = render "layouts/header"
 
       %ul#mainmenu.hide
-        %li= link_to_unless_current "Предстоящий CHEBIT'12-10 (29 сентября)", '/'
-        %li= link_to_unless_current 'Отчеты (2011 - 02,10)', '/reports'
+        -#%li= link_to_unless_current "Предстоящий CHEBIT'12-10 (29 сентября)", '/'
+        %li= link_to_unless_current 'Отчеты (2012 - 10)', '/conferences/2012_10/report'
+        %li= link_to_unless_current 'Отчеты (2011 - 02,10)', '/conferences/2011_02_10/report'
         -# %li= link_to_unless_current "Участники", users_path
         -#%li= link_to_unless_current "Вакансии", vacancies_path
       #content

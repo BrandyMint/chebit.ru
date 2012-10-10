@@ -7,16 +7,18 @@ Chebit::Application.routes.draw do
 
   resources :tags, :only=>[:show, :index]
 
-  root :to => "welcome#banner"
+  root :to => "welcome#reports"
 
-  get 'reports' => 'welcome#reports'
+  get 'conferences/last/report' => 'welcome#reports'
+  get 'conferences/2012_10/report' => 'welcome#report_2012_10'
+  get 'conferences/2011_02_10/report' => 'welcome#report_2011_02_10'
+
   get 'details' => 'welcome#details'
   get "discourse_rating/create"
 
   resources :conferences, :only=>[:show] do
     resources :comments, :only=>[:create]
     resources :registrations, :only=>[:create, :index]
-
   end
   #Для создания и редактирования комментариев внутри дискуссий
   resources :discourses do

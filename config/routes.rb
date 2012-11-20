@@ -7,7 +7,9 @@ Chebit::Application.routes.draw do
 
   resources :tags, :only=>[:show, :index]
 
-  root :to => "welcome#reports"
+  #root :to => "welcome#reports"
+  #
+  root :to => redirect('https://www.facebook.com/events/371426619616049/')
 
   get 'conferences/last/report' => 'welcome#reports'
   get 'conferences/2012_10/report' => 'welcome#report_2012_10'

@@ -52,6 +52,8 @@ gem "russian"# , :git => "https://github.com/yaroslav/russian.git"
 
 gem 'inherited_resources'
 
+gem 'rvm'
+
 group :development, :test do
   gem "nifty-generators"
   gem 'pry'  # Use as binding.pry
@@ -67,3 +69,10 @@ group :development, :test do
    gem "ruby_parser"
    gem "mocha"
 end
+
+group :development do
+   gem 'capistrano'
+   gem 'capistrano-recipes0', :git => 'git://github.com/BrandyMint/capistrano-recipes0.git'
+   gem 'rvm-capistrano'
+end
+

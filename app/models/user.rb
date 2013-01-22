@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
   include Gravtastic
   gravtastic
 
-  defaults :price_confirm => true
+  # TODO Поправить в связи с новыми рельсами
+  #defaults :price_confirm => true
 
   validates_presence_of :full_name, :email, :password, :password_confirmation
   # validates_presence_of :login

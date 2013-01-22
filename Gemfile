@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 source 'http://rubygems.org'
-gem 'rails', '~> 3.0.12'
+gem 'rails', '~> 3.2.11'
 gem 'pg'
 
 
@@ -8,6 +8,7 @@ gem 'pg'
 gem 'sass'
 gem 'haml'
 
+gem 'sass-rails'
 gem "haml-rails"
 gem 'rails_settings', '~> 0.1.1' # path => '/Users/danil/code/gems/rails_settings'
 gem "stateful_link"
@@ -18,7 +19,8 @@ gem "jquery-rails", ">= 0.2.6"
 gem "state_machine"
 gem 'acts-as-taggable-on'
 gem "simple_form"
-gem "active_record_defaults"
+# TODO Поправить в связи с новыми рельсами
+#gem "active_record_defaults"
 gem "rfc-822"
 
 gem "fastercsv"
@@ -39,7 +41,7 @@ gem "unicorn"
 gem "annotate"
 gem "cancan"
 # gem "typus"
-gem 'activeadmin', '~> 0.5'
+gem 'activeadmin'
 # gem 'typus', :git => 'https://github.com/typus/typus.git'
 
 #https://github.com/swanandp/acts_as_list
@@ -57,7 +59,8 @@ group :development, :test do
   gem 'pry'  # Use as binding.pry
   gem "wirble"
    # gem 'ruby-debug19', :require => 'ruby-debug'
-   gem "rcov"
+   #gem "rcov"
+  gem 'simplecov-rcov', :require => false
    gem "rspec"
    gem "rspec-rails"
    gem "shoulda"
